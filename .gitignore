@@ -1,0 +1,24 @@
+# dependencies
+node_modules
+.yarn-integrity
+
+# coverage
+lib-cov
+coverage
+.nyc*
+*.lcov
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+api-debug*
+dependency-update-log.txt
+
+# misc
+.docs
+.env
+.fixtures
+.archive
