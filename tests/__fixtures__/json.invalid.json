@@ -1,0 +1,20 @@
+{
+  "validKey": "validValue",
+  "numberValue": 42,
+  "booleanValue": true,
+  "arrayValue": [1, 2, 3],
+  "nestedObject": {
+    "key1": "value1",
+    "key2": "value2"
+  },
+  "formattingIssue":"no space after colon",
+  "quotesIssue": 'single quotes are not valid in JSON',
+  "indentationIssue": {
+  "badIndent": "this should be indented properly"
+  },
+  "trailingComma": [
+    1,
+    2,
+    3,
+  ]
+}
