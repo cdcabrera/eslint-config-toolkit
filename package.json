@@ -1,0 +1,36 @@
+{
+  "name": "@cdcabrera/eslint-config-toolkit",
+  "version": "0.1.0",
+  "description": "An ESLint multipurpose config collection.",
+  "author": "cdcabrera",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdcabrera/eslint-config-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cdcabrera/eslint-config-toolkit/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "javascript",
+    "nodejs",
+    "react",
+    "lint",
+    "style",
+    "code-quality"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "files": [],
+  "scripts": {
+    "test": ""
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}
