@@ -1,5 +1,6 @@
 # ESLint Config Toolkit
 
+[![Build](https://github.com/cdcabrera/eslint-config-toolkit/actions/workflows/integration.yml/badge.svg?branch=main)](https://github.com/cdcabrera/eslint-config-toolkit/actions/workflows/integration.yml)
 [![License](https://img.shields.io/github/license/cdcabrera/eslint-config-toolkit.svg)](https://github.com/cdcabrera/eslint-config-toolkit/blob/main/LICENSE)
 
 An ESLint multipurpose config collection.
