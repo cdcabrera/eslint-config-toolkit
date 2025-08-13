@@ -43,6 +43,7 @@
   ],
   "scripts": {
     "build:deps": "bash ./scripts/dependencies.sh --doctor -u --doctorTest \"npm run test\"",
+    "release": "changelog --link-url https://github.com/cdcabrera/eslint-config-toolkit.git",
     "test": "run-s -l test:lint test:spell* test:types test:ci",
     "test:ci": "export CI=true; npm run test:jest -- --collectCoverage --coverageReporters=\"lcov\" --coverageReporters=\"json-summary\"",
     "test:clearCache": "run-s test:jest -- --clearCache",
