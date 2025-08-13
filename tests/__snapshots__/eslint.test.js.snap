@@ -1,9 +1,16 @@
 // Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
-exports[`ESLint Configurations base.invalid.js should have the expected linting issues 1`] = `
+exports[`ESLint Configurations invalid.base.js should have the expected linting issues 1`] = `
 {
-  "errorCount": 14,
-  "filePath": "base.invalid.js",
+  "errorCount": 15,
+  "filePath": "invalid.base.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
   "messages": [
     {
       "column": 13,
@@ -34,6 +41,13 @@ exports[`ESLint Configurations base.invalid.js should have the expected linting 
       "severity": "error",
     },
     {
+      "column": 27,
+      "line": 16,
+      "message": "Trailing spaces not allowed.",
+      "ruleId": "@stylistic/no-trailing-spaces",
+      "severity": "error",
+    },
+    {
       "column": 1,
       "line": 19,
       "message": "Missing JSDoc comment.",
@@ -50,14 +64,14 @@ exports[`ESLint Configurations base.invalid.js should have the expected linting 
     {
       "column": 1,
       "line": 23,
-      "message": "Comments may not exceed 120 characters",
+      "message": "Comments may not exceed 180 characters",
       "ruleId": "comment-length/limit-single-line-comments",
       "severity": "warning",
     },
     {
       "column": 1,
-      "line": 24,
-      "message": "This line has a length of 163. Maximum allowed is 120.",
+      "line": 23,
+      "message": "This line has a comment length of 234. Maximum allowed is 180.",
       "ruleId": "@stylistic/max-len",
       "severity": "error",
     },
@@ -119,21 +133,28 @@ exports[`ESLint Configurations base.invalid.js should have the expected linting 
     },
     {
       "column": 1,
-      "line": 42,
+      "line": 54,
       "message": "'module' is not defined.",
       "ruleId": "no-undef",
       "severity": "error",
     },
   ],
-  "totalIssues": 17,
+  "totalIssues": 18,
   "warningCount": 3,
 }
 `;
 
-exports[`ESLint Configurations jest.invalid.js should have the expected linting issues 1`] = `
+exports[`ESLint Configurations invalid.jest.js should have the expected linting issues 1`] = `
 {
   "errorCount": 5,
-  "filePath": "jest.invalid.js",
+  "filePath": "invalid.jest.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
   "messages": [
     {
       "column": 1,
@@ -183,10 +204,17 @@ exports[`ESLint Configurations jest.invalid.js should have the expected linting 
 }
 `;
 
-exports[`ESLint Configurations json.invalid.json should have the expected linting issues 1`] = `
+exports[`ESLint Configurations invalid.json.json should have the expected linting issues 1`] = `
 {
   "errorCount": 2,
-  "filePath": "json.invalid.json",
+  "filePath": "invalid.json.json",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
   "messages": [
     {
       "column": 19,
@@ -208,10 +236,17 @@ exports[`ESLint Configurations json.invalid.json should have the expected lintin
 }
 `;
 
-exports[`ESLint Configurations node.invalid.js should have the expected linting issues 1`] = `
+exports[`ESLint Configurations invalid.node.js should have the expected linting issues 1`] = `
 {
-  "errorCount": 9,
-  "filePath": "node.invalid.js",
+  "errorCount": 11,
+  "filePath": "invalid.node.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
   "messages": [
     {
       "column": 19,
@@ -284,6 +319,13 @@ exports[`ESLint Configurations node.invalid.js should have the expected linting 
       "severity": "warning",
     },
     {
+      "column": 3,
+      "line": 22,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
       "column": 1,
       "line": 26,
       "message": "'test' is not defined.",
@@ -311,16 +353,30 @@ exports[`ESLint Configurations node.invalid.js should have the expected linting 
       "ruleId": "no-undef",
       "severity": "error",
     },
+    {
+      "column": 3,
+      "line": 39,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 14,
+  "totalIssues": 16,
   "warningCount": 5,
 }
 `;
 
-exports[`ESLint Configurations react.invalid.jsx should have the expected linting issues 1`] = `
+exports[`ESLint Configurations invalid.react.jsx should have the expected linting issues 1`] = `
 {
-  "errorCount": 23,
-  "filePath": "react.invalid.jsx",
+  "errorCount": 24,
+  "filePath": "invalid.react.jsx",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
   "messages": [
     {
       "column": 19,
@@ -383,6 +439,13 @@ exports[`ESLint Configurations react.invalid.jsx should have the expected lintin
       "line": 25,
       "message": "Missing JSDoc comment.",
       "ruleId": "jsdoc/require-jsdoc",
+      "severity": "error",
+    },
+    {
+      "column": 3,
+      "line": 27,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
       "severity": "error",
     },
     {
@@ -519,7 +582,530 @@ exports[`ESLint Configurations react.invalid.jsx should have the expected lintin
       "severity": "error",
     },
   ],
-  "totalIssues": 28,
+  "totalIssues": 29,
   "warningCount": 5,
+}
+`;
+
+exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arrow functions with parentheses (Note: Added enforceForArrowConditionals: false to no-extra-parens rule and reduced severity to warning) 1`] = `
+{
+  "errorCount": 1,
+  "filePath": "conflicts.arrow-parens.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+    ],
+    "ruleBreakdown": {
+      "no-undef": 1,
+    },
+    "totalFiltered": 1,
+  },
+  "messages": [
+    {
+      "column": 23,
+      "line": 14,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+    {
+      "column": 32,
+      "line": 17,
+      "message": "Unexpected block statement surrounding arrow body; move the returned value immediately after the \`=>\`.",
+      "ruleId": "arrow-body-style",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 2,
+  "warningCount": 1,
+}
+`;
+
+exports[`Rule Conflicts conflicts.cond-assign-parens.js should not have errors for assignments in conditional expressions with parentheses (Note: Added conditionalAssign: false to no-extra-parens rule to allow parentheses around assignments in conditions) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "conflicts.cond-assign-parens.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+    ],
+    "ruleBreakdown": {
+      "no-undef": 1,
+    },
+    "totalFiltered": 1,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Conflicts conflicts.rule-conflict.js should not have conflicts between padded-blocks and lines-around-comment (Note: Added allowBlockStart: true to lines-around-comment rule) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "conflicts.rule-conflict.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-jsdoc": 1,
+      "jsdoc/tag-lines": 5,
+      "no-undef": 1,
+    },
+    "totalFiltered": 7,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.array-bracket-newline.js should enforce consistent array and object formatting (Note: Set to "consistent" to require consistent line breaks inside array brackets) 1`] = `
+{
+  "errorCount": 1,
+  "filePath": "custom.array-bracket-newline.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-jsdoc": 3,
+      "no-undef": 1,
+    },
+    "totalFiltered": 4,
+  },
+  "messages": [
+    {
+      "column": 14,
+      "line": 65,
+      "message": "Missing space before function parentheses.",
+      "ruleId": "@stylistic/space-before-function-paren",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 1,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.brace-style.js should enforce consistent line breaking and formatting (Note: Configured as 1tbs with allowSingleLine: true to allow consistent brace style with flexibility for single-line blocks) 1`] = `
+{
+  "errorCount": 11,
+  "filePath": "custom.brace-style.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "@stylistic/max-statements-per-line": 1,
+      "jsdoc/require-jsdoc": 11,
+      "no-undef": 1,
+    },
+    "totalFiltered": 13,
+  },
+  "messages": [
+    {
+      "column": 7,
+      "line": 9,
+      "message": "Unexpected constant condition.",
+      "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+    {
+      "column": 3,
+      "line": 16,
+      "message": "Unreachable code.",
+      "ruleId": "no-unreachable",
+      "severity": "error",
+    },
+    {
+      "column": 7,
+      "line": 16,
+      "message": "Unexpected constant condition.",
+      "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+    {
+      "column": 45,
+      "line": 51,
+      "message": "'arg1' is defined but never used.",
+      "ruleId": "no-unused-vars",
+      "severity": "warning",
+    },
+    {
+      "column": 51,
+      "line": 51,
+      "message": "'arg2' is defined but never used.",
+      "ruleId": "no-unused-vars",
+      "severity": "warning",
+    },
+    {
+      "column": 5,
+      "line": 77,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 5,
+      "line": 82,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 3,
+      "line": 91,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 27,
+      "line": 101,
+      "message": "Unexpected constant condition.",
+      "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+    {
+      "column": 73,
+      "line": 102,
+      "message": "'?' should be placed at the beginning of the line.",
+      "ruleId": "@stylistic/operator-linebreak",
+      "severity": "error",
+    },
+    {
+      "column": 35,
+      "line": 103,
+      "message": "':' should be placed at the beginning of the line.",
+      "ruleId": "@stylistic/operator-linebreak",
+      "severity": "error",
+    },
+    {
+      "column": 10,
+      "line": 135,
+      "message": "Expected to return a value at the end of function 'nonblockStatementBodyPositionCorrect'.",
+      "ruleId": "consistent-return",
+      "severity": "warning",
+    },
+    {
+      "column": 7,
+      "line": 136,
+      "message": "Unexpected constant condition.",
+      "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+    {
+      "column": 10,
+      "line": 138,
+      "message": "Unexpected constant condition.",
+      "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 14,
+  "warningCount": 3,
+}
+`;
+
+exports[`Rule Customizations custom.comma-dangle.js should enforce consistent punctuation usage (Note: Set to "never" to disallow trailing commas in objects and arrays) 1`] = `
+{
+  "errorCount": 2,
+  "filePath": "custom.comma-dangle.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-jsdoc": 5,
+      "no-undef": 1,
+    },
+    "totalFiltered": 6,
+  },
+  "messages": [
+    {
+      "column": 1,
+      "line": 69,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 26,
+      "line": 106,
+      "message": "Unexpected unnamed function.",
+      "ruleId": "func-names",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 2,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.cond-assign.js should allow assignments in while loop conditions with parentheses (Note: Changed from "always" to "except-parens" to allow assignments in parenthesized expressions) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "custom.cond-assign.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "no-undef": 1,
+    },
+    "totalFiltered": 1,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.function-paren-newline.js should allow consistent function parameter formatting (Note: Changed from "multiline-arguments" to "consistent" to allow more flexible function parameter formatting) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "custom.function-paren-newline.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-param": 3,
+      "no-undef": 1,
+    },
+    "totalFiltered": 4,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.indent.js should properly indent various code constructs (Note: Expanded configuration to provide consistent indentation for arrays, function calls, function declarations, imports, and objects) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "custom.indent.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "arrow-body-style": 1,
+      "jsdoc/require-jsdoc": 4,
+      "no-undef": 1,
+    },
+    "totalFiltered": 6,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.jsdoc-undefined-types.js should allow undefined types in JSDoc comments (Note: Changed from error (2) to off (0) to allow undefined types in JSDoc comments) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "custom.jsdoc-undefined-types.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "no-undef": 1,
+    },
+    "totalFiltered": 1,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.newline-per-chained-call.js should allow up to 4 method calls in a chain without line breaks (Note: Increased ignoreChainWithDepth from 3 to 4 to allow more method chaining on a single line) 1`] = `
+{
+  "errorCount": 6,
+  "filePath": "custom.newline-per-chained-call.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-jsdoc": 11,
+      "no-undef": 1,
+    },
+    "totalFiltered": 12,
+  },
+  "messages": [
+    {
+      "column": 5,
+      "line": 13,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 5,
+      "line": 18,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 5,
+      "line": 23,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 5,
+      "line": 28,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 5,
+      "line": 33,
+      "message": "Expected blank line before this statement.",
+      "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 67,
+      "line": 73,
+      "message": "Expected line break before \`.method5\`.",
+      "ruleId": "@stylistic/newline-per-chained-call",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 6,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses around logical expressions in spread elements (Note: Configured allowNodesInSpreadElement to allow parentheses around logical expressions in spread elements) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "custom.no-extra-parens.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "no-undef": 1,
+    },
+    "totalFiltered": 1,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.space-before-function-paren.js should enforce consistent spacing in various code constructs (Note: Configured to require space before function parentheses for anonymous and async arrow functions, no space for named functions) 1`] = `
+{
+  "errorCount": 2,
+  "filePath": "custom.space-before-function-paren.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+    ],
+    "ruleBreakdown": {
+      "@stylistic/max-statements-per-line": 1,
+      "arrow-body-style": 1,
+      "jsdoc/require-jsdoc": 5,
+      "no-undef": 1,
+    },
+    "totalFiltered": 8,
+  },
+  "messages": [
+    {
+      "column": 7,
+      "line": 41,
+      "message": "Unexpected constant condition.",
+      "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+    {
+      "column": 42,
+      "line": 86,
+      "message": "Unexpected parentheses around single function argument.",
+      "ruleId": "@stylistic/arrow-parens",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 2,
+  "warningCount": 0,
 }
 `;
