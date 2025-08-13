@@ -90,7 +90,7 @@ Or automatically fix issues where possible:
 npm run lint:fix
 ```
 
-## More Examples
+## Basic Examples
 
 ### Combining Configurations
 
@@ -112,43 +112,11 @@ export default [
 ];
 ```
 
-### Complete Project Example
-
-Here's a complete example for a React project with Jest testing:
-
-```js
-// eslint.config.js
-import toolkit from '@cdcabrera/eslint-config-toolkit';
-
-export default [
-  // Base React configuration
-  ...toolkit.react,
-  
-  // Jest configuration for test files only
-  {
-    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
-    ...toolkit.jest
-  },
-  
-  // JSON configuration for JSON files only
-  {
-    files: ['**/*.json'],
-    ...toolkit.json
-  },
-  
-  // Custom overrides for your project
-  {
-    rules: {
-      // Customize rules for your project needs
-      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-      'react/prop-types': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
-    }
-  }
-];
-```
-
 For more configuration options, detailed examples, and advanced usage, see the [Configuration Details](./DOCS.md#configuration-details) and [Advanced Usage](./DOCS.md#advanced-usage) sections in DOCS.md.
+
+### Using with Prettier
+
+If you prefer to use Prettier for formatting, see the [Prettier Integration section in DOCS.md](./DOCS.md#prettier-integration) for detailed instructions.
 
 ### Legacy Configuration
 

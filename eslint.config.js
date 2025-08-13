@@ -12,6 +12,14 @@ export default [
   ...nodeConfig,
   ...jestConfig,
   {
+    languageOptions: {
+      globals: {
+        countIssues: 'readonly',
+        lintAndProcessFile: 'readonly',
+        lintFile: 'readonly',
+        validateFilterRules: 'readonly'
+      }
+    },
     rules: {
       'import/no-unresolved': 0
     }

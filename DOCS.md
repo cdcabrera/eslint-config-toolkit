@@ -27,21 +27,65 @@ Comprehensive usage and in-depth explanations for each configuration.
 The base configuration includes:
 
 - ESLint recommended rules
-- Comprehensive stylistic rules for consistent code formatting (powered by @stylistic/eslint-plugin)
+- @stylistic plugin rules for consistent code formatting
 - Import rules for proper module imports
 - Comment length rules for readable comments
 - JSDoc rules for documentation
 - GitIgnore integration (automatically respects your project's .gitignore file)
 
-#### GitIgnore Integration
+Key features:
 
-The GitIgnore integration is a powerful feature that automatically excludes files and directories specified in your project's `.gitignore` file from being linted. This provides several benefits:
+- **Stylistic Rules**: A set of 60+ rules from `@stylistic/eslint-plugin` for consistent code formatting
+- **GitIgnore Integration**: Automatically excludes files in your `.gitignore`, improving performance and simplifying configuration
+- **Import Management**: Enforces proper module import order and prevents circular dependencies
+- **Documentation**: Requires JSDoc for public APIs with proper parameter and return type documentation
 
-- **Consistency**: Ensures that files ignored by Git are also ignored by ESLint
-- **Performance**: Improves linting speed by skipping files that don't need to be linted (like build artifacts, node_modules, etc.)
-- **Simplicity**: No need to maintain separate ignore patterns for Git and ESLint
+### Jest Configuration
 
-This integration is implemented using the `includeIgnoreFile` function from the `@eslint/compat` package, which is included as a dependency of this toolkit.
+The Jest configuration includes:
+
+- Jest-specific rules for test files
+- Rules to prevent common testing pitfalls
+- Rules to enforce best practices in tests
+- Jest globals for test files
+
+Key features:
+
+- **Test Quality**: Prevents disabled or focused tests from being committed
+- **Assertion Validation**: Ensures tests contain proper assertions and expectations
+- **Naming Consistency**: Enforces unique test titles for better reporting
+- **Integration**: Designed to work alongside your main configuration
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  {
+    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
+    ...toolkit.jest
+  }
+];
+```
+
+### JSON Configuration
+
+The JSON configuration includes:
+
+- JSON validation rules
+- Syntax error detection
+- Formatting consistency checks
+- Compatibility with the GitIgnore integration
+
+Key features:
+
+- **Validation**: Catches syntax errors and formatting issues in JSON files
+- **Performance**: Automatically ignores `package-lock.json` and files in `node_modules`
+- **Integration**: Works seamlessly with existing ESLint configurations
+- **Simplicity**: Provides reliable JSON validation without complex setup
 
 ### Node.js Configuration
 
@@ -50,49 +94,25 @@ The Node.js configuration extends the base configuration and adds:
 - Node.js specific rules
 - Error handling rules
 - Code style rules
-- JSDoc adjustments
 - Common Node.js globals
 
-#### Node.js Specific Rules
+Key features:
 
-The Node.js configuration includes rules from `eslint-plugin-n` that help ensure your Node.js code follows best practices:
+- **API Safety**: Prevents usage of deprecated Node.js APIs and ensures proper module imports
+- **Error Handling**: Configured for CLI tools with appropriate warnings for debugger statements
+- **Code Style**: Adjusted for Node.js conventions with appropriate rules for server-side code
+- **ES Syntax Validation**: Warns about ES syntax that might not be supported in your Node.js version
 
-- **`n/no-deprecated-api`**: Prevents usage of deprecated Node.js APIs
-- **`n/no-missing-require`**: Ensures all required modules exist
-- **`n/no-unpublished-require`**: Ensures required modules are listed in package.json
-- **`n/no-unpublished-bin`**: Allows unpublished bin files (useful for CLI tools)
-- **`n/no-unsupported-features/es-syntax`**: Warns about ES syntax that might not be supported in your Node.js version
-- **`n/no-process-exit`**: Warns about using process.exit() (can be overridden for CLI tools)
-- **`n/no-path-concat`**: Prevents string concatenation with __dirname and __filename
-- **`n/global-require`**: Ensures require() calls are at the top level
-
-#### Error Handling and Code Style
-
-The configuration includes additional rules that are particularly useful for Node.js applications and CLI tools:
-
-- **Error Handling**:
-  - `no-empty`: Configured to allow empty catch blocks, which is common in CLI tools
-  - `no-debugger`: Set as a warning to discourage debugger statements in production code
-
-- **Code Style**:
-  - `no-plusplus`: Turned off to allow increment/decrement operators
-  - `no-var`: Set to error to enforce using let/const instead of var
-  - `consistent-return`: Set as a warning to encourage consistent return statements
-  - `padded-blocks`: Turned off to allow padding within blocks
-
-#### Customizing for CLI Tools
-
-For CLI tools, you might want to override certain rules. Here's an example:
+Usage example:
 
 ```js
-// eslint.config.js
+// eslint.config.js for a CLI tool
 import toolkit from '@cdcabrera/eslint-config-toolkit';
 
 export default [
   ...toolkit.node,
   {
     rules: {
-      // Override rules for CLI tools
       'n/no-process-exit': 0, // Allow process.exit in CLI tools
       'max-len': [2, { code: 240, ignoreUrls: true }], // Longer line length for CLI tools
     }
@@ -110,73 +130,27 @@ The React configuration extends the base configuration and adds:
 - Common browser globals
 - Babel parser for better JSX support
 
-#### Babel Parser Integration
+Key features:
 
-The React configuration uses the Babel parser (`@babel/eslint-parser`) for improved JSX syntax support. This provides several benefits:
+- **Component Best Practices**: Enforces React patterns and prevents common React anti-patterns
+- **Hooks Validation**: Ensures React Hooks follow the rules of hooks and have proper dependencies
+- **Accessibility**: Includes JSX-a11y rules to make your React applications more accessible
+- **Babel Integration**: Uses Babel parser for improved JSX syntax support without requiring a Babel config file
 
-- Better parsing of modern JavaScript features
-- Improved JSX syntax handling
-- Support for experimental syntax with appropriate presets
-- Consistent parsing with your Babel build configuration
-
-The parser is configured to work without requiring a Babel configuration file, making it easier to use in projects that don't have a specific Babel setup.
-
-### JSON Configuration
-
-The JSON configuration includes:
-
-- JSON validation rules
-- Syntax error detection
-- Formatting consistency checks
-- Compatibility with the GitIgnore integration
-
-The JSON configuration uses the `eslint-plugin-json` package, which provides a processor-based approach to linting JSON files. This approach is more compatible with existing ESLint configurations and provides reliable JSON validation without complex setup.
-
-The configuration automatically ignores `package-lock.json` and files in `node_modules` to improve performance and focus on the JSON files that matter for your project.
-
-### Jest Configuration
-
-The Jest configuration includes:
-
-- Jest-specific rules for test files
-- Rules to prevent common testing pitfalls
-- Rules to enforce best practices in tests
-- Jest globals for test files
-
-The Jest configuration is designed to be used alongside your main configuration (Base, Node.js, or React) to provide specialized linting for test files. It includes rules that help catch common issues in Jest tests:
-
-- **`jest/no-disabled-tests`**: Warns about disabled tests to prevent them from being forgotten
-- **`jest/no-focused-tests`**: Prevents committing focused tests that would skip other tests in CI
-- **`jest/no-identical-title`**: Ensures test titles are unique for better test reporting
-- **`jest/valid-expect`**: Ensures expect() is used correctly
-- **`jest/expect-expect`**: Ensures tests contain at least one assertion
-
-#### Using Jest Configuration
-
-You can use the Jest configuration alongside your main configuration:
+Usage example:
 
 ```js
 // eslint.config.js
 import toolkit from '@cdcabrera/eslint-config-toolkit';
 
 export default [
-  ...toolkit.base, // or toolkit.node, or toolkit.react
-  ...toolkit.jest,
-  // Your custom overrides
-];
-```
-
-You can also target Jest configuration only to test files:
-
-```js
-// eslint.config.js
-import toolkit from '@cdcabrera/eslint-config-toolkit';
-
-export default [
-  ...toolkit.base,
+  ...toolkit.react,
   {
-    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
-    ...toolkit.jest
+    rules: {
+      // Custom overrides for your React project
+      'react/jsx-no-bind': [1, { allowArrowFunctions: true }],
+      'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }]
+    }
   }
 ];
 ```
@@ -347,6 +321,52 @@ module.exports = compat.config(toolkit.json);
 module.exports = compat.config(toolkit.jest);
 ```
 
+### Complete Project Examples
+
+Here are comprehensive examples showing how to combine multiple configurations for different project types:
+
+#### React Project with Jest and JSON Support
+
+This example demonstrates a complete configuration for a React project with Jest testing and JSON linting:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  // Base React configuration
+  ...toolkit.react,
+  
+  // Jest configuration for test files only
+  {
+    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
+    ...toolkit.jest
+  },
+  
+  // JSON configuration for JSON files only
+  {
+    files: ['**/*.json'],
+    ...toolkit.json
+  },
+  
+  // Custom overrides for your project
+  {
+    rules: {
+      // Customize rules for your project needs
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+      'react/prop-types': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
+    }
+  }
+];
+```
+
+This configuration:
+- Uses the React configuration as the base for all files
+- Applies Jest-specific rules only to test files
+- Applies JSON-specific rules only to JSON files
+- Adds custom rule overrides for the entire project
+
 ## Troubleshooting
 
 This section covers common issues you might encounter when using ESLint Config Toolkit and how to resolve them.
@@ -436,18 +456,18 @@ This section provides information about compatibility with different ESLint vers
 
 The toolkit includes and is compatible with the following plugins:
 
-| Plugin                       | Version   | Purpose                                |
-|------------------------------|-----------|----------------------------------------|
-| @stylistic/eslint-plugin     | ≥ 5.2.2   | Code style rules                       |
-| eslint-plugin-import         | ≥ 2.32.0  | Import/export rules                    |
-| eslint-plugin-comment-length | ≥ 2.2.2   | Comment formatting                     |
-| eslint-plugin-jsdoc          | ≥ 51.4.1  | Documentation rules                    |
-| eslint-plugin-n              | ≥ 17.21.0 | Node.js rules                          |
-| eslint-plugin-react          | ≥ 7.37.5  | React rules                            |
-| eslint-plugin-react-hooks    | ≥ 5.2.0   | React Hooks rules                      |
-| eslint-plugin-jsx-a11y       | ≥ 6.10.2  | Accessibility rules                    |
-| eslint-plugin-jest           | ≥ 29.0.1  | Jest testing rules                     |
-| eslint-plugin-json           | ≥ 4.0.1   | JSON linting                           |
+| Plugin                       | Version   | Purpose             |
+|------------------------------|-----------|---------------------|
+| @stylistic/eslint-plugin     | ≥ 5.2.2   | Code style rules    |
+| eslint-plugin-import         | ≥ 2.32.0  | Import/export rules |
+| eslint-plugin-comment-length | ≥ 2.2.2   | Comment formatting  |
+| eslint-plugin-jsdoc          | ≥ 51.4.1  | Documentation rules |
+| eslint-plugin-n              | ≥ 17.21.0 | Node.js rules       |
+| eslint-plugin-react          | ≥ 7.37.5  | React rules         |
+| eslint-plugin-react-hooks    | ≥ 5.2.0   | React Hooks rules   |
+| eslint-plugin-jsx-a11y       | ≥ 6.10.2  | Accessibility rules |
+| eslint-plugin-jest           | ≥ 29.0.1  | Jest testing rules  |
+| eslint-plugin-json           | ≥ 4.0.1   | JSON linting        |
 
 ## Contributing
 

@@ -13,6 +13,7 @@ export default {
   testEnvironment: 'node',
   testMatch: ['**/tests/*.test.js'],
   roots: ['configs', 'tests'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setupTests.js'],
   snapshotFormat: {
     printBasicPrototype: false
   },
