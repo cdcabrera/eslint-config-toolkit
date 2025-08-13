@@ -180,4 +180,4 @@ const actionCommitCheck = commits => {
   return lintResults;
 };
 
-module.exports = actionCommitCheck;
+export { actionCommitCheck as default, actionCommitCheck, availableMessageTypes, parseCommitMessage, messagesList };
