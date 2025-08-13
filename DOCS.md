@@ -15,6 +15,7 @@ Comprehensive usage and in-depth explanations for each configuration.
 - [Advanced Usage](#advanced-usage)
   - [Using Globals](#using-globals)
   - [TypeScript Type Definitions](#typescript-type-definitions)
+  - [Prettier Integration](#prettier-integration)
   - [Legacy Configuration](#legacy-configuration)
 - [Troubleshooting](#troubleshooting)
 - [Compatibility](#compatibility)
@@ -26,11 +27,10 @@ Comprehensive usage and in-depth explanations for each configuration.
 The base configuration includes:
 
 - ESLint recommended rules
-- Stylistic rules for consistent code formatting
+- Comprehensive stylistic rules for consistent code formatting (powered by @stylistic/eslint-plugin)
 - Import rules for proper module imports
 - Comment length rules for readable comments
 - JSDoc rules for documentation
-- Prettier integration (requires prettier to be installed)
 - GitIgnore integration (automatically respects your project's .gitignore file)
 
 #### GitIgnore Integration
@@ -129,7 +129,6 @@ The JSON configuration includes:
 - Syntax error detection
 - Formatting consistency checks
 - Compatibility with the GitIgnore integration
-- Prettier integration for consistent formatting
 
 The JSON configuration uses the `eslint-plugin-json` package, which provides a processor-based approach to linting JSON files. This approach is more compatible with existing ESLint configurations and provides reliable JSON validation without complex setup.
 
@@ -263,6 +262,62 @@ The type definitions cover all exports from the toolkit, including configuration
 
 If you need to lint TypeScript files in your project, you would need to add additional ESLint plugins such as `@typescript-eslint/eslint-plugin` and configure them alongside this toolkit.
 
+### Prettier Integration
+
+The toolkit provides comprehensive `@stylistic` rules that can serve as an alternative to Prettier, but you may still prefer to use it. Here's how to integrate it:
+
+#### Step 1: Install Prettier and related packages
+
+```bash
+# Using npm
+npm install --save-dev prettier eslint-plugin-prettier eslint-config-prettier
+
+# Using yarn
+yarn add --dev prettier eslint-plugin-prettier eslint-config-prettier
+
+# Using pnpm
+pnpm add --save-dev prettier eslint-plugin-prettier eslint-config-prettier
+```
+
+#### Step 2: Update your ESLint configuration
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+import prettierPlugin from 'eslint-plugin-prettier';
+import prettierConfig from 'eslint-config-prettier';
+
+export default [
+  ...toolkit.base,  // Or any other toolkit configuration
+  
+  // Add Prettier plugin
+  {
+    plugins: {
+      prettier: prettierPlugin
+    },
+    rules: {
+      'prettier/prettier': [2, {
+        // Your Prettier options
+        arrowParens: 'avoid',      // Don't add parentheses around single arrow function parameters
+        printWidth: 180,           // Line length where Prettier will try to wrap
+        singleQuote: true,         // Use single quotes instead of double quotes
+        trailingComma: 'none'      // No trailing commas
+      }]
+    }
+  },
+  
+  // Add Prettier config to disable conflicting rules
+  ...prettierConfig
+];
+```
+
+#### Notes on Prettier Integration
+
+1. **Rule Conflicts**: The `eslint-config-prettier` package disables ESLint rules that might conflict with Prettier's formatting.
+2. **Stylistic Rules**: When using Prettier, many of the toolkit's stylistic rules will be disabled by `eslint-config-prettier`.
+3. **Order Matters**: Make sure to add the Prettier configuration after the toolkit configuration to properly override conflicting rules.
+4. **Configuration Options**: You can customize Prettier's behavior by modifying the options in the `'prettier/prettier'` rule.
+
 ### Legacy Configuration
 
 If you're using the legacy ESLint configuration format, create an `.eslintrc.js` file:
@@ -317,15 +372,6 @@ This section covers common issues you might encounter when using ESLint Config T
 3. Verify that the correct configuration is being applied to your files
 4. Check if you need to add specific file extensions to your ESLint command: `eslint --ext .js,.jsx,.json .`
 
-### Prettier Integration Issues
-
-**Issue**: Conflicts between ESLint and Prettier formatting rules.
-
-**Solution**:
-1. Ensure both eslint and prettier are installed
-2. Check that you're not overriding Prettier rules in your custom configuration
-3. Run Prettier first, then ESLint: `npx prettier --write . && npx eslint --fix .`
-4. If using VS Code, ensure the ESLint and Prettier extensions are configured correctly
 
 ### Performance Issues
 
@@ -375,9 +421,9 @@ This section provides information about compatibility with different ESLint vers
 
 ### ESLint Version Compatibility
 
-| ESLint Config Toolkit | ESLint  | Prettier | Node.js  |
-|-----------------------|---------|----------|----------|
-| 0.1.x                 | ≥ 9.0.0 | ≥ 3.0.0  | ≥ 20.0.0 |
+| ESLint Config Toolkit | ESLint  | Node.js  |
+|-----------------------|---------|----------|
+| 0.1.x                 | ≥ 9.0.0 | ≥ 20.0.0 |
 
 ### Configuration Format Compatibility
 
@@ -396,7 +442,6 @@ The toolkit includes and is compatible with the following plugins:
 | eslint-plugin-import         | ≥ 2.32.0  | Import/export rules                    |
 | eslint-plugin-comment-length | ≥ 2.2.2   | Comment formatting                     |
 | eslint-plugin-jsdoc          | ≥ 51.4.1  | Documentation rules                    |
-| eslint-plugin-prettier       | ≥ 5.5.3   | Prettier integration                   |
 | eslint-plugin-n              | ≥ 17.21.0 | Node.js rules                          |
 | eslint-plugin-react          | ≥ 7.37.5  | React rules                            |
 | eslint-plugin-react-hooks    | ≥ 5.2.0   | React Hooks rules                      |
