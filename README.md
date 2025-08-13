@@ -8,7 +8,7 @@ An ESLint multipurpose config collection.
 
 Includes...
 - **Modern JavaScript Support**: Configured for ES6+ syntax
-- **Prettier Integration**: Works seamlessly with Prettier
+- **Stylistic Rules**: Comprehensive code formatting with @stylistic plugin
 - **Accessibility**: Includes JSX accessibility rules
 - **Best Practices**: Enforces coding standards and best practices
 - **GitIgnore Integration**: Automatically respects your project's .gitignore file
@@ -27,19 +27,18 @@ The basic requirements:
 
 ## Installation
 
-Toolkit has **two required peer dependencies**:
+Toolkit has **one required peer dependency**:
 - **eslint**: The core ESLint package (>=9)
-- **prettier**: Required for the Prettier integration (>=3)
 
 ```bash
 # Using npm
-npm install --save-dev @cdcabrera/eslint-config-toolkit eslint prettier
+npm install --save-dev @cdcabrera/eslint-config-toolkit eslint
 
 # Using yarn
-yarn add --dev @cdcabrera/eslint-config-toolkit eslint prettier
+yarn add --dev @cdcabrera/eslint-config-toolkit eslint
 
 # Using pnpm
-pnpm add --save-dev @cdcabrera/eslint-config-toolkit eslint prettier
+pnpm add --save-dev @cdcabrera/eslint-config-toolkit eslint
 ```
 
 ## Getting Started

@@ -6,6 +6,12 @@ const foo = "bar"
 // Double quotes instead of single quotes
 const hello = "world";
 
+// Trailing comma
+const comma = {
+  hello: 'world',
+  foo: 'bar',
+};
+
 // Trailing spaces at the end of this line
 const trailing = 'spaces';
 
@@ -36,6 +42,7 @@ function incompleteJSDoc(param1, param2) {
 module.exports = {
   foo,
   hello,
+  comma,
   trailing,
   badIndent,
   longLine,
