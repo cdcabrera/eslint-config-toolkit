@@ -856,14 +856,14 @@ exports[`Rule Customizations custom.comma-dangle.js should enforce consistent pu
   "messages": [
     {
       "column": 1,
-      "line": 69,
+      "line": 73,
       "message": "Expected blank line before this statement.",
       "ruleId": "@stylistic/padding-line-between-statements",
       "severity": "error",
     },
     {
       "column": 26,
-      "line": 106,
+      "line": 110,
       "message": "Unexpected unnamed function.",
       "ruleId": "func-names",
       "severity": "error",

@@ -283,7 +283,9 @@ const config = [
       '@stylistic/no-extra-semi': 2,
       '@stylistic/no-floating-decimal': 2,
       '@stylistic/quote-props': [2, 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
-      '@stylistic/quotes': [2, 'single', { avoidEscape: true }],
+      // Customized @stylistic/quotes to allow template literals while still enforcing single quotes
+      // Example: `I'm using a template literal because it contains both 'single' and "double" quotes`
+      '@stylistic/quotes': [2, 'single', { avoidEscape: true, allowTemplateLiterals: 'always' }],
       '@stylistic/semi': [2, 'always'],
       '@stylistic/semi-spacing': [2, { before: false, after: true }],
       '@stylistic/semi-style': [2, 'last'],
