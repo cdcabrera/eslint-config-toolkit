@@ -22,21 +22,19 @@ const config = [
     // -------------------------------------------------------------------------
     // JSON file targeting
     // -------------------------------------------------------------------------
-    // Target all JSON files in the project
-    // Exclude package-lock.json which is auto-generated and node_modules
+    // Set to target all JSON files except package-lock.json and node_modules
     files: ['**/*.json'],
     ignores: ['**/package-lock.json', '**/node_modules/**'],
 
     // -------------------------------------------------------------------------
     // JSON plugin configuration
     // -------------------------------------------------------------------------
-    // Register the JSON plugin to enable JSON-specific linting capabilities
+    // Register JSON plugin for JSON-specific linting
     plugins: {
       json: jsonPlugin
     },
 
-    // Use the recommended configuration from the JSON plugin
-    // This includes rules for validating JSON syntax and detecting common errors
+    // Set to use recommended JSON plugin configuration
     extends: [jsonPlugin.configs.recommended]
   }
 ];

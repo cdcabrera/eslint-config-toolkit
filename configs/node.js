@@ -35,43 +35,33 @@ const config = [
     // Node.js specific rules
     // -------------------------------------------------------------------------
     rules: {
-      // Allow default values in JSDoc comments for Node.js modules
-      // This is common in Node.js libraries to document default parameter values
+      // jsdoc/no-defaults: Disabled to allow default values in JSDoc comments
       'jsdoc/no-defaults': 0,
 
-      // Allow require() statements anywhere in the code
-      // This is disabled to support dynamic imports and conditional requires in Node.js
+      // n/global-require: Disabled to allow dynamic and conditional requires
       // Example: if (condition) { const module = require('./module'); }
       'n/global-require': 0,
 
-      // Prevent usage of deprecated Node.js APIs
-      // Set to error level to ensure code doesn't rely on APIs that may be removed
+      // n/no-deprecated-api: Set to error to prevent usage of deprecated Node.js APIs
       'n/no-deprecated-api': 2,
 
-      // Ensure all required modules can be resolved
-      // Prevents typos in module paths and missing dependencies
+      // n/no-missing-require: Set to error to ensure required modules can be resolved
       'n/no-missing-require': 2,
 
-      // Prevent string concatenation with __dirname and __filename
-      // Use path.join() or path.resolve() instead for cross-platform compatibility
+      // n/no-path-concat: Set to error to enforce path.join() instead of string concatenation
       // Example: path.join(__dirname, 'file') instead of __dirname + '/file'
       'n/no-path-concat': 2,
 
-      // Discourage use of process.exit() in Node.js applications
-      // Set to warning level to allow it when necessary but encourage alternatives
-      // Better to throw errors and handle them properly for most cases
+      // n/no-process-exit: Set to warning to discourage direct process.exit() calls
       'n/no-process-exit': 1,
 
-      // Allow bin scripts that aren't published to npm
-      // This is useful for development scripts and local tooling
+      // n/no-unpublished-bin: Disabled to allow unpublished bin scripts
       'n/no-unpublished-bin': 0,
 
-      // Prevent requiring modules that aren't listed as dependencies
-      // Ensures all dependencies are properly declared in package.json
+      // n/no-unpublished-require: Set to error to ensure dependencies are declared
       'n/no-unpublished-require': 2,
 
-      // Warn about ES syntax features not supported in the target Node.js version
-      // Set to warning level with Node.js 20+ as the target version
+      // n/no-unsupported-features/es-syntax: Set to warning with Node.js 20+ as target
       'n/no-unsupported-features/es-syntax': [
         1,
         {
@@ -80,12 +70,10 @@ const config = [
         }
       ],
 
-      // Allow custom shebang directives in Node.js scripts
-      // This is useful for CLI tools and executable scripts
+      // n/shebang: Disabled to allow custom shebang directives
       'n/shebang': 0,
 
-      // Allow console.log statements in Node.js applications
-      // Console output is a standard practice in Node.js, unlike in browser code
+      // no-console: Disabled to allow console.log in Node.js applications
       'no-console': 0
     },
 
@@ -94,8 +82,7 @@ const config = [
     // -------------------------------------------------------------------------
     settings: {
       n: {
-        // No additional modules are allowed beyond what's in package.json
-        // This can be extended for specific projects if needed
+        // Set to empty array for no additional allowed modules beyond package.json
         allowModules: []
       }
     },
@@ -104,8 +91,7 @@ const config = [
     // Node.js environment configuration
     // -------------------------------------------------------------------------
     languageOptions: {
-      // Add Node.js global variables and objects
-      // This includes process, Buffer, __dirname, etc.
+      // Set to include Node.js globals (process, Buffer, __dirname, etc.)
       globals: {
         ...globals.node
       }
