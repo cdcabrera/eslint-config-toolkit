@@ -62,6 +62,10 @@ const quotesCorrect = 'single quotes are required';
 // Exception for strings containing single quotes
 const quotesExceptionCorrect = "I'm allowed to use double quotes when the string contains single quotes";
 
+// Template literals are allowed when they would be more appropriate
+// For example, when the string contains both single and double quotes
+const quotesTemplateLiteralCorrect = `I'm using a template literal because it contains both 'single' and "double" quotes`;
+
 // @stylistic/semi - Require semicolons
 // Correct: const x = 5;
 // Incorrect: const x = 5
@@ -155,6 +159,7 @@ module.exports = {
   quotePropsCorrect,
   quotesCorrect,
   quotesExceptionCorrect,
+  quotesTemplateLiteralCorrect,
   semiCorrect,
   semiCorrectFunction,
   semiSpacingCorrect,
