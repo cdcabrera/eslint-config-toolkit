@@ -100,8 +100,9 @@ const config = [
         }
       ],
 
-      // no-plusplus: Disabled to allow increment/decrement operators
-      'no-plusplus': 0,
+      // no-plusplus: Set to warning; allow ++/-- only in for-loop afterthoughts
+      // Example: for (let i = 0; i < n; i++) { /* i++ allowed here */ }
+      'no-plusplus': [1, { allowForLoopAfterthoughts: true }],
 
       // no-unsafe-optional-chaining: Set to error with disallowArithmeticOperators
       'no-unsafe-optional-chaining': [

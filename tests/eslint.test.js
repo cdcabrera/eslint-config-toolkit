@@ -183,6 +183,18 @@ describe('Rule Customizations', () => {
       rule: '@stylistic/no-extra-parens',
       note: 'Configured allowNodesInSpreadElement to allow parentheses around logical expressions in spread elements',
       disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
+    },
+    {
+      file: 'custom.no-plusplus.js',
+      description: 'should disallow ++/-- except in for-loop afterthought',
+      rule: 'no-plusplus',
+      note: 'Enabled as warning with allowForLoopAfterthoughts: true',
+      disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style],
+      testNotes: [
+        'Expect warnings for count++ and --n outside for-loop afterthoughts',
+        'Expect no warnings for i++ in for-loop afterthought',
+        'Expect no issues for the "+= 1" example'
+      ]
     }
   ])('$file $description (Note: $note)', async ({ file, rule, disableRules }) => {
     const result = await global.lintAndProcessFile(file, { disableRules, testRule: rule });

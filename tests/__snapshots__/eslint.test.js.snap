@@ -1039,6 +1039,48 @@ exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses 
 }
 `;
 
+exports[`Rule Customizations custom.no-plusplus.js should disallow ++/-- except in for-loop afterthought (Note: Enabled as warning with allowForLoopAfterthoughts: true) 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "custom.no-plusplus.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
+    ],
+    "ruleBreakdown": {
+      "@stylistic/padding-line-between-statements": 6,
+      "jsdoc/require-jsdoc": 4,
+    },
+    "totalFiltered": 10,
+  },
+  "messages": [
+    {
+      "column": 3,
+      "line": 20,
+      "message": "Unary operator '++' used.",
+      "ruleId": "no-plusplus",
+      "severity": "warning",
+    },
+    {
+      "column": 3,
+      "line": 34,
+      "message": "Unary operator '--' used.",
+      "ruleId": "no-plusplus",
+      "severity": "warning",
+    },
+  ],
+  "totalIssues": 2,
+  "warningCount": 2,
+}
+`;
+
 exports[`Rule Customizations custom.space-before-function-paren.js should enforce consistent spacing in various code constructs (Note: Configured to require space before function parentheses for anonymous and async arrow functions, no space for named functions) 1`] = `
 {
   "errorCount": 2,
