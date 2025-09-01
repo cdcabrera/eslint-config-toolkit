@@ -26,13 +26,13 @@ Comprehensive usage and in-depth explanations for each configuration.
 
 The base configuration includes:
 
+- GitIgnore integration (automatically respects your project's .gitignore file)
 - ESLint recommended rules
+- Unicorn rules for modern JavaScript best practices
 - @stylistic plugin rules for consistent code formatting
 - Import rules for proper module imports
-- Unicorn rules for modern JavaScript best practices
 - Comment length rules for readable comments
 - JSDoc rules for documentation
-- GitIgnore integration (automatically respects your project's .gitignore file)
 
 Key features:
 
