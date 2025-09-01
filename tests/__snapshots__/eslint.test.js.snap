@@ -686,6 +686,7 @@ exports[`Rule Customizations custom.array-bracket-newline.js should enforce cons
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "jsdoc/require-jsdoc": 3,
@@ -709,7 +710,7 @@ exports[`Rule Customizations custom.array-bracket-newline.js should enforce cons
 
 exports[`Rule Customizations custom.brace-style.js should enforce consistent line breaking and formatting (Note: Configured as 1tbs with allowSingleLine: true to allow consistent brace style with flexibility for single-line blocks) 1`] = `
 {
-  "errorCount": 11,
+  "errorCount": 12,
   "filePath": "custom.brace-style.js",
   "filtering": {
     "appliedFilters": [
@@ -718,15 +719,12 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "jsdoc/tag-lines",
       "jsdoc/require-param",
       "jsdoc/require-returns",
-      "arrow-body-style",
-      "@stylistic/max-statements-per-line",
     ],
     "ruleBreakdown": {
-      "@stylistic/max-statements-per-line": 1,
       "jsdoc/require-jsdoc": 11,
       "no-undef": 1,
     },
-    "totalFiltered": 13,
+    "totalFiltered": 12,
   },
   "messages": [
     {
@@ -748,6 +746,13 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "line": 16,
       "message": "Unexpected constant condition.",
       "ruleId": "no-constant-condition",
+      "severity": "error",
+    },
+    {
+      "column": 15,
+      "line": 16,
+      "message": "This line has 2 statements. Maximum allowed is 1.",
+      "ruleId": "@stylistic/max-statements-per-line",
       "severity": "error",
     },
     {
@@ -828,14 +833,14 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "severity": "error",
     },
   ],
-  "totalIssues": 14,
+  "totalIssues": 15,
   "warningCount": 3,
 }
 `;
 
 exports[`Rule Customizations custom.comma-dangle.js should enforce consistent punctuation usage (Note: Set to "never" to disallow trailing commas in objects and arrays) 1`] = `
 {
-  "errorCount": 2,
+  "errorCount": 1,
   "filePath": "custom.comma-dangle.js",
   "filtering": {
     "appliedFilters": [
@@ -846,21 +851,16 @@ exports[`Rule Customizations custom.comma-dangle.js should enforce consistent pu
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
+      "@stylistic/padding-line-between-statements": 1,
       "jsdoc/require-jsdoc": 5,
       "no-undef": 1,
     },
-    "totalFiltered": 6,
+    "totalFiltered": 7,
   },
   "messages": [
-    {
-      "column": 1,
-      "line": 73,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
-      "severity": "error",
-    },
     {
       "column": 26,
       "line": 110,
@@ -869,7 +869,7 @@ exports[`Rule Customizations custom.comma-dangle.js should enforce consistent pu
       "severity": "error",
     },
   ],
-  "totalIssues": 2,
+  "totalIssues": 1,
   "warningCount": 0,
 }
 `;
@@ -887,6 +887,7 @@ exports[`Rule Customizations custom.cond-assign.js should allow assignments in w
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "no-undef": 1,
@@ -912,6 +913,7 @@ exports[`Rule Customizations custom.function-paren-newline.js should allow consi
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "jsdoc/require-param": 3,
@@ -938,6 +940,7 @@ exports[`Rule Customizations custom.indent.js should properly indent various cod
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "arrow-body-style": 1,
@@ -961,6 +964,7 @@ exports[`Rule Customizations custom.jsdoc-undefined-types.js should allow undefi
       "no-undef",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "no-undef": 1,
@@ -975,7 +979,7 @@ exports[`Rule Customizations custom.jsdoc-undefined-types.js should allow undefi
 
 exports[`Rule Customizations custom.newline-per-chained-call.js should allow up to 4 method calls in a chain without line breaks (Note: Increased ignoreChainWithDepth from 3 to 4 to allow more method chaining on a single line) 1`] = `
 {
-  "errorCount": 6,
+  "errorCount": 1,
   "filePath": "custom.newline-per-chained-call.js",
   "filtering": {
     "appliedFilters": [
@@ -986,49 +990,16 @@ exports[`Rule Customizations custom.newline-per-chained-call.js should allow up 
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
+      "@stylistic/padding-line-between-statements": 5,
       "jsdoc/require-jsdoc": 11,
       "no-undef": 1,
     },
-    "totalFiltered": 12,
+    "totalFiltered": 17,
   },
   "messages": [
-    {
-      "column": 5,
-      "line": 13,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
-      "severity": "error",
-    },
-    {
-      "column": 5,
-      "line": 18,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
-      "severity": "error",
-    },
-    {
-      "column": 5,
-      "line": 23,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
-      "severity": "error",
-    },
-    {
-      "column": 5,
-      "line": 28,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
-      "severity": "error",
-    },
-    {
-      "column": 5,
-      "line": 33,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
-      "severity": "error",
-    },
     {
       "column": 67,
       "line": 73,
@@ -1037,7 +1008,7 @@ exports[`Rule Customizations custom.newline-per-chained-call.js should allow up 
       "severity": "error",
     },
   ],
-  "totalIssues": 6,
+  "totalIssues": 1,
   "warningCount": 0,
 }
 `;
@@ -1055,6 +1026,7 @@ exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses 
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "no-undef": 1,
@@ -1080,6 +1052,7 @@ exports[`Rule Customizations custom.space-before-function-paren.js should enforc
       "jsdoc/require-returns",
       "arrow-body-style",
       "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
     ],
     "ruleBreakdown": {
       "@stylistic/max-statements-per-line": 1,

@@ -44,7 +44,8 @@ global.FILTERABLE_RULES = {
   // Style rules that may conflict with test purposes
   style: [
     'arrow-body-style',
-    '@stylistic/max-statements-per-line'
+    '@stylistic/max-statements-per-line',
+    '@stylistic/padding-line-between-statements'
   ],
 
   // Convenience combinations
