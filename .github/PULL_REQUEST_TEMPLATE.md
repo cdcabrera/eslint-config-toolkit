@@ -12,6 +12,10 @@
 ## How to test
 <!-- Are there directions to test/review? -->
 <!--
+### Prompt an agent to
+1. `> [test prompt]`
+-->
+<!--
 ### Coverage and basic unit test check
 1. update the NPM packages with `$ npm install`
 1. `$ npm test`
