@@ -190,7 +190,14 @@ When adding new rules or configurations:
 
 1. Add the rule to the appropriate configuration file in the `configs` directory
 2. Add tests for the new rule in the `tests/__fixtures__` directory and related files
-3. Update the documentation in `DOCS.md`
+3. Update documentation in `DOCS.md` (required). At minimum update:
+   - Configuration Details → the affected configuration(s) (Base, Node.js, React, JSON, Jest)
+   - Rule Customizations → if adding/tweaking opinionated defaults
+   - Compatibility → ensure plugin list and versions remain accurate (e.g., @stylistic, import, jsdoc, comment-length, eslint)
+   - Advanced Usage → update Prettier Integration, TypeScript Type Definitions, or Legacy Configuration if impacted
+   - Examples → add or update examples demonstrating the new/changed behavior
+   - Troubleshooting → note new issues or migration tips if users may encounter diffs
+   > Tip: Cross-check with `tests/eslint.test.js` and `tests/__fixtures__` to ensure examples in DOCS.md match actual expected behavior.
 4. Run tests to ensure everything works as expected
 
 ## Release Process
