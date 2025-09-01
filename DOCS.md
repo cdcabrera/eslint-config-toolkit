@@ -29,6 +29,7 @@ The base configuration includes:
 - ESLint recommended rules
 - @stylistic plugin rules for consistent code formatting
 - Import rules for proper module imports
+- Unicorn rules for modern JavaScript best practices
 - Comment length rules for readable comments
 - JSDoc rules for documentation
 - GitIgnore integration (automatically respects your project's .gitignore file)
@@ -456,18 +457,19 @@ This section provides information about compatibility with different ESLint vers
 
 The toolkit includes and is compatible with the following plugins:
 
-| Plugin                       | Version   | Purpose             |
-|------------------------------|-----------|---------------------|
-| @stylistic/eslint-plugin     | ≥ 5.2.2   | Code style rules    |
-| eslint-plugin-import         | ≥ 2.32.0  | Import/export rules |
-| eslint-plugin-comment-length | ≥ 2.2.2   | Comment formatting  |
-| eslint-plugin-jsdoc          | ≥ 51.4.1  | Documentation rules |
-| eslint-plugin-n              | ≥ 17.21.0 | Node.js rules       |
-| eslint-plugin-react          | ≥ 7.37.5  | React rules         |
-| eslint-plugin-react-hooks    | ≥ 5.2.0   | React Hooks rules   |
-| eslint-plugin-jsx-a11y       | ≥ 6.10.2  | Accessibility rules |
-| eslint-plugin-jest           | ≥ 29.0.1  | Jest testing rules  |
-| eslint-plugin-json           | ≥ 4.0.1   | JSON linting        |
+| Plugin                       | Version   | Purpose                    |
+|------------------------------|-----------|----------------------------|
+| @stylistic/eslint-plugin     | ≥ 5.2.2   | Code style rules           |
+| eslint-plugin-import         | ≥ 2.32.0  | Import/export rules        |
+| eslint-plugin-comment-length | ≥ 2.2.2   | Comment formatting         |
+| eslint-plugin-jsdoc          | ≥ 51.4.1  | Documentation rules        |
+| eslint-plugin-n              | ≥ 17.21.0 | Node.js rules              |
+| eslint-plugin-react          | ≥ 7.37.5  | React rules                |
+| eslint-plugin-react-hooks    | ≥ 5.2.0   | React Hooks rules          |
+| eslint-plugin-jsx-a11y       | ≥ 6.10.2  | Accessibility rules        |
+| eslint-plugin-jest           | ≥ 29.0.1  | Jest testing rules         |
+| eslint-plugin-json           | ≥ 4.0.1   | JSON linting               |
+| eslint-plugin-unicorn        | ≥ 60.0.0  | Modern best-practice rules |
 
 ## Contributing
 

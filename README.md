@@ -10,6 +10,7 @@ An ESLint multipurpose config collection.
 Includes...
 - **Modern JavaScript Support**: Configured for ES6+ syntax
 - **Stylistic Rules**: Comprehensive code formatting with @stylistic plugin
+- **Unicorn Rules**: Modern best-practices from eslint-plugin-unicorn
 - **Accessibility**: Includes JSX accessibility rules
 - **Best Practices**: Enforces coding standards and best practices
 - **GitIgnore Integration**: Automatically respects your project's .gitignore file

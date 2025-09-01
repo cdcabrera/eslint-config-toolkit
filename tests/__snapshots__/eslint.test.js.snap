@@ -1081,6 +1081,48 @@ exports[`Rule Customizations custom.no-plusplus.js should disallow ++/-- except 
 }
 `;
 
+exports[`Rule Customizations custom.prefer-logical-operator-over-ternary.js should prefer a logical operator over simple ternary fallbacks (Note: Rule enabled without options; the plugin suggests either || or ??) 1`] = `
+{
+  "errorCount": 2,
+  "filePath": "custom.prefer-logical-operator-over-ternary.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
+    ],
+    "ruleBreakdown": {
+      "@stylistic/padding-line-between-statements": 3,
+      "jsdoc/require-jsdoc": 4,
+    },
+    "totalFiltered": 7,
+  },
+  "messages": [
+    {
+      "column": 17,
+      "line": 15,
+      "message": "Prefer using a logical operator over a ternary.",
+      "ruleId": "unicorn/prefer-logical-operator-over-ternary",
+      "severity": "error",
+    },
+    {
+      "column": 10,
+      "line": 34,
+      "message": "Prefer using a logical operator over a ternary.",
+      "ruleId": "unicorn/prefer-logical-operator-over-ternary",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 2,
+  "warningCount": 0,
+}
+`;
+
 exports[`Rule Customizations custom.space-before-function-paren.js should enforce consistent spacing in various code constructs (Note: Configured to require space before function parentheses for anonymous and async arrow functions, no space for named functions) 1`] = `
 {
   "errorCount": 2,

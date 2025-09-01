@@ -195,6 +195,20 @@ describe('Rule Customizations', () => {
         'Expect no warnings for i++ in for-loop afterthought',
         'Expect no issues for the "+= 1" example'
       ]
+    },
+    {
+      file: 'custom.prefer-logical-operator-over-ternary.js',
+      description: 'should prefer a logical operator over simple ternary fallbacks',
+      rule: 'unicorn/prefer-logical-operator-over-ternary',
+      note: 'Rule enabled without options; the plugin suggests either || or ??',
+      disableRules: [
+        ...global.FILTERABLE_RULES.documentation,
+        ...global.FILTERABLE_RULES.style
+      ],
+      testNotes: [
+        'Ternary fallbacks should be flagged by unicorn/prefer-logical-operator-over-ternary',
+        'The rule provides suggestions for both || and ?? in this version'
+      ]
     }
   ])('$file $description (Note: $note)', async ({ file, rule, disableRules }) => {
     const result = await global.lintAndProcessFile(file, { disableRules, testRule: rule });

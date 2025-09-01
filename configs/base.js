@@ -14,6 +14,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import importPlugin from 'eslint-plugin-import';
 import commentLength from 'eslint-plugin-comment-length';
 import jsdoc from 'eslint-plugin-jsdoc';
+import unicornPlugin from 'eslint-plugin-unicorn';
 
 const { configs: jsConfigs } = eslintJs;
 
@@ -39,6 +40,9 @@ const config = [
   // Variable rules
   // -------------------------------------------------------------------------
   {
+    plugins: {
+      unicorn: unicornPlugin
+    },
     rules: {
       // no-cond-assign: Set to except-parens to allow assignments in conditional expressions with parentheses
       // Example: while (someValue = getNextValue()) { ... }
@@ -138,7 +142,11 @@ const config = [
       ],
 
       // prefer-spread: Set to warning to encourage spread syntax over .apply()
-      'prefer-spread': 1
+      'prefer-spread': 1,
+
+      // unicorn/prefer-logical-operator-over-ternary: Prefer logical operator for simple fallbacks; the rule may suggest || or ??
+      // Example: val ? val : 'fallback' -> val || 'fallback'
+      'unicorn/prefer-logical-operator-over-ternary': 2
     }
   },
   // -------------------------------------------------------------------------
