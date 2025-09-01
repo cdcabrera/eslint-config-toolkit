@@ -161,7 +161,7 @@ describe('Rule Customizations', () => {
       description: 'should enforce consistent line breaking and formatting',
       rule: '@stylistic/brace-style',
       note: 'Configured as 1tbs with allowSingleLine: true to allow consistent brace style with flexibility for single-line blocks',
-      disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
+      disableRules: [...global.FILTERABLE_RULES.documentation]
     },
     {
       file: 'custom.comma-dangle.js',
