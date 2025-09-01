@@ -125,7 +125,7 @@ If you're using the legacy ESLint configuration format, see the [Legacy Configur
 
 ## Documentation
 
-For comprehensive usage and in-depth explanations for each configuration, including advanced usage examples, see [DOCS.md](./DOCS.md). 
+For comprehensive usage and in-depth explanations for each configuration, including advanced usage examples, see [DOCS.md](./DOCS.md).
 
 ## Contributing
 

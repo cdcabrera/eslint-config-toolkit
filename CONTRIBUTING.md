@@ -55,7 +55,7 @@ import nodeConfig from './configs/node.js';
 export default [
   // Use the Node.js configuration directly
   ...nodeConfig,
-  
+
   // Project-specific overrides
   {
     rules: {
@@ -153,7 +153,7 @@ The Jest snapshot tests are defined in the [tests/eslint.test.js](./tests/eslint
 
 ### Code Documentation Standards
 
-This section outlines the essential standards for code documentation in the project. 
+This section outlines the essential standards for code documentation in the project.
 
 Agent: For detailed templates and comprehensive guidance, see [Agent Comments](./guidelines/agent_comments.md).
 
@@ -240,7 +240,7 @@ When adding new rules or configurations:
 
 ## Release Process
 
-The project follows semantic versioning. 
+The project follows semantic versioning.
 
 Our basic release process follows general guidelines:
 

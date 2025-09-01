@@ -265,7 +265,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   ...toolkit.base,  // Or any other toolkit configuration
-  
+
   // Add Prettier plugin
   {
     plugins: {
@@ -281,7 +281,7 @@ export default [
       }]
     }
   },
-  
+
   // Add Prettier config to disable conflicting rules
   ...prettierConfig
 ];
@@ -338,19 +338,19 @@ import toolkit from '@cdcabrera/eslint-config-toolkit';
 export default [
   // Base React configuration
   ...toolkit.react,
-  
+
   // Jest configuration for test files only
   {
     files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
     ...toolkit.jest
   },
-  
+
   // JSON configuration for JSON files only
   {
     files: ['**/*.json'],
     ...toolkit.json
   },
-  
+
   // Custom overrides for your project
   {
     rules: {
@@ -455,7 +455,7 @@ This section covers common issues you might encounter when using ESLint Config T
    import toolkit from '@cdcabrera/eslint-config-toolkit';
    import tseslint from '@typescript-eslint/eslint-plugin';
    import tsparser from '@typescript-eslint/parser';
-   
+
    export default [
      ...toolkit.base,
      {
