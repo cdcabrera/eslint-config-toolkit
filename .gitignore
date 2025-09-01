@@ -22,3 +22,4 @@ dependency-update-log.txt
 .env
 .fixtures
 .archive
+.agent

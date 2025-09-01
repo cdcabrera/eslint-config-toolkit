@@ -1,6 +1,6 @@
 # Contributing
 
-For detailed documentation on using this toolkit, including configuration details and advanced usage examples, see [DOCS.md](./DOCS.md).
+This document provides guidelines for contributing to the ESLint Config Toolkit project. It covers the development workflow, testing procedures, and release process.
 
 ## Commits
 We make use of [Conventional Commits](https://www.conventionalcommits.org) to provide a consistent history and generate [CHANGELOG.md](./CHANGELOG.md) updates.
@@ -55,7 +55,7 @@ import nodeConfig from './configs/node.js';
 export default [
   // Use the Node.js configuration directly
   ...nodeConfig,
-  
+
   // Project-specific overrides
   {
     rules: {
@@ -151,6 +151,44 @@ This approach provides several benefits:
 
 The Jest snapshot tests are defined in the [tests/eslint.test.js](./tests/eslint.test.js) file, and the snapshots are stored in the [tests/__snapshots__](./tests/__snapshots__) directory.
 
+### Code Documentation Standards
+
+This section outlines the essential standards for code documentation in the project.
+
+Agent: For detailed templates and comprehensive guidance, see [Agent Comments](./guidelines/agent_comments.md).
+
+#### General Principles
+
+- **Be concise and clear** - Comments should be direct and informative
+- **Avoid redundancy** - Don't repeat information that can be inferred from code or test properties
+- **Document the "why" not just the "what"** - Focus on explaining reasoning behind implementation choices
+
+#### When to Use Comments vs. Test Properties
+
+| Use Comments For                        | Use Test Properties For                         |
+|-----------------------------------------|-------------------------------------------------|
+| Explaining complex logic                | Test descriptions (`description`)               |
+| Providing context not obvious from code | Rule customization notes (`note`)               |
+| Documenting edge cases                  | Developer reminders (`testNotes`)               |
+| Explaining "why" not "what"             | Rule IDs being tested (`rule`, `rules`)         |
+
+#### Essential Documentation Requirements
+
+1. **File Headers** - Include a brief JSDoc-style description of the file's purpose
+2. **Function Documentation** - Document parameters with consistent JSDoc formatting
+3. **Configuration Files** - Follow the standard structure:
+   - File header comment (JSDoc-style)
+   - Imports
+   - Configuration description comment
+   - Configuration definition with organized sections
+   - Type annotation for exports
+   - Exports
+
+#### Spacing Standards
+
+1. **NO blank line** between rule comments and the rule definition
+2. **ONE blank line** between different rules
+
 ### Code Coverage
 The requirements for code coverage are currently set at the 50% mark and have no checks against changes in coverage.
 
@@ -202,7 +240,7 @@ When adding new rules or configurations:
 
 ## Release Process
 
-The project follows semantic versioning. 
+The project follows semantic versioning.
 
 Our basic release process follows general guidelines:
 
@@ -211,3 +249,45 @@ Our basic release process follows general guidelines:
 3. `dependency updates` are evaluated against security concerns, otherwise they're targeted for a once-a-month release
 4. `documentation updates` are ignored against our release process unless they highlight a major issue, otherwise they're rolled against the monthly dependency updates
 
+## AI agent
+
+### User Section
+
+Current agent interaction can be triggered with the chat command
+
+- **`review the repo guidelines`** - Your agent should attempt to scan common markdown files and the guidelines directory
+
+For detailed information on agent interaction, see [guidelines/README.md](./guidelines/README.md).
+
+#### Customizing developer experience
+
+As developers, we often have our own flavor of working, and now that includes working with AI agents. To that point we've added agent guidance
+to allow customization for your work environment through a gitignored directory `./.agent` in the root of the project.
+
+#### Noting AI Agent contributions
+
+Asking the agent to review the repo and its git history should provide code-style references your agent can leverage based on this codebase's patterns. That
+helps alleviate some concerns around where your agent is generating/pulling references from, but not all.
+
+For transparency, we encourage (but don't require) labeling AI-assisted contributions with the `bot-assisted` PR/MR label.
+
+> By contributing AI-assisted or AI-generated work, you accept liability for work that infringes or uses copyrighted material outside the scope of the related license.
+
+### Agent Only
+Agents: This repository contains a hierarchical guideline system. Agents should review agent-only comment blocks.
+
+<!--
+Agents must analyze these files when asked for guidance:
+
+**Guidelines review order:**
+1. **`./README.md`** - Main agent guidance and behavior standards (including agent-only comment block)
+2. **`./guidelines/README.md`** - Core agent guidance and behavior standards
+3. **`./guidelines/**/*.md`** - Specialized workflow and domain-specific instructions
+4. **`./.agent/**/*.md`** - gitignored directory and local guidelines intended for agent-specific state and new agent-generated guidance, and user workflows that enhance the core guidelines
+
+The guideline system should be processed in this order, with specialized guidelines taking precedence for their specific domains, and local guidelines overriding general guidelines when present.
+
+**Next Steps:**
+5. **Review guidance under the `./.agent/**/*.md` directory.** If the `./.agent` directory exists, the user may ask the agent about the guidance located here.
+6. **If the `./.agent` directory does not exist, ask the user if they want to create it.** The agent should explain how it's going to be used.
+-->

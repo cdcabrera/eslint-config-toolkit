@@ -125,8 +125,14 @@ If you're using the legacy ESLint configuration format, see the [Legacy Configur
 
 ## Documentation
 
-For detailed documentation, including configuration details, advanced usage examples, and development information, see [DOCS.md](./DOCS.md).
+For comprehensive usage and in-depth explanations for each configuration, including advanced usage examples, see [DOCS.md](./DOCS.md).
 
 ## Contributing
 
 Contributing? Guidelines can be found here [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+### AI agent
+
+If you're using an AI assistant to help with development in this repository, please prompt it to `> review the repo guidelines` first to ensure it follows the project's conventions and best practices.
+
+Guidelines for user, agent, interaction can be found in [CONTRIBUTING.md](./CONTRIBUTING.md#ai-agent).

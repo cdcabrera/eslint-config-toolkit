@@ -17,6 +17,7 @@ Comprehensive usage and in-depth explanations for each configuration.
   - [TypeScript Type Definitions](#typescript-type-definitions)
   - [Prettier Integration](#prettier-integration)
   - [Legacy Configuration](#legacy-configuration)
+- [Testing Guide](#testing-guide)
 - [Troubleshooting](#troubleshooting)
 - [Compatibility](#compatibility)
 
@@ -264,7 +265,7 @@ import prettierConfig from 'eslint-config-prettier';
 
 export default [
   ...toolkit.base,  // Or any other toolkit configuration
-  
+
   // Add Prettier plugin
   {
     plugins: {
@@ -280,7 +281,7 @@ export default [
       }]
     }
   },
-  
+
   // Add Prettier config to disable conflicting rules
   ...prettierConfig
 ];
@@ -337,19 +338,19 @@ import toolkit from '@cdcabrera/eslint-config-toolkit';
 export default [
   // Base React configuration
   ...toolkit.react,
-  
+
   // Jest configuration for test files only
   {
     files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
     ...toolkit.jest
   },
-  
+
   // JSON configuration for JSON files only
   {
     files: ['**/*.json'],
     ...toolkit.json
   },
-  
+
   // Custom overrides for your project
   {
     rules: {
@@ -367,6 +368,40 @@ This configuration:
 - Applies Jest-specific rules only to test files
 - Applies JSON-specific rules only to JSON files
 - Adds custom rule overrides for the entire project
+
+## Testing Guide
+
+The ESLint Config Toolkit uses Jest for testing, with a focus on snapshot testing to verify that ESLint configurations work as expected.
+
+Agent: For comprehensive testing procedures and detailed guidance, see [Agent Testing](./guidelines/agent_testing.md).
+
+### Test Structure
+
+- **Test Fixtures**: Located in `tests/__fixtures__/`, these files contain code examples that demonstrate specific ESLint rules
+- **Test Suites**: Defined in `tests/eslint.test.js`, these group related test cases
+- **Snapshots**: Located in `tests/__snapshots__/`, these capture the expected output for each test case
+
+### Running Tests
+
+```bash
+# Run unit tests
+npm run test:jest
+
+# Run all tests
+npm test
+
+# Test specific configurations
+npm run test:configs
+
+# Update snapshots when changes are intentional
+npm run test:jest-update
+```
+
+### Test Types
+
+1. **ESLint Configurations Tests**: Verify that ESLint configurations correctly identify issues
+2. **Rule Conflicts Tests**: Verify that configurations resolve conflicts between rules
+3. **Rule Customizations Tests**: Verify that custom rule configurations work correctly
 
 ## Troubleshooting
 
@@ -420,7 +455,7 @@ This section covers common issues you might encounter when using ESLint Config T
    import toolkit from '@cdcabrera/eslint-config-toolkit';
    import tseslint from '@typescript-eslint/eslint-plugin';
    import tsparser from '@typescript-eslint/parser';
-   
+
    export default [
      ...toolkit.base,
      {
