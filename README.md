@@ -8,13 +8,12 @@ An ESLint multipurpose config collection.
 ## Features
 
 Includes...
-- **Modern JavaScript Support**: Configured for ES6+ syntax
-- **Stylistic Rules**: Comprehensive code formatting with @stylistic plugin
-- **Unicorn Rules**: Modern best-practices from eslint-plugin-unicorn
-- **Accessibility**: Includes JSX accessibility rules
-- **Best Practices**: Enforces coding standards and best practices
 - **GitIgnore Integration**: Automatically respects your project's .gitignore file
-- **TypeScript Type Definitions**: Type definitions for consuming the toolkit (not for linting TypeScript files)
+- **Modern JavaScript Support**: Configured for ES6+ syntax
+- **Unicorn Rules**: Modern best-practices from eslint-plugin-unicorn
+- **Stylistic Rules**: Comprehensive code formatting with @stylistic plugin
+- **Accessibility**: Includes JSX accessibility rules when using the React configuration
+- **TypeScript Type Definitions**: Type definitions for consuming the toolkit
 
 And configuration for...
 - **Base Configuration**: Core JavaScript rules for any project
