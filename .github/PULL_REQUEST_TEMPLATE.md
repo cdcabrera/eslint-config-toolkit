@@ -3,7 +3,11 @@
 ...
 
 <!-- ### Notes -->
-<!-- Anything funky about your updates. Or issues that aren't resolved by this merge request, things of note? -->
+<!--
+- Any issues that aren't resolved by this merge request, or things of note? 
+- Did you use an AI Agent to help with this work? By contributing AI-assisted or AI-generated work, you accept liability for work that infringes or uses copyrighted material outside the scope of the related license. Please follow the `CONTRIBUTING.md` agent guidelines. 
+-->
+
 
 ## How to test
 <!-- Are there directions to test/review? -->
