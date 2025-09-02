@@ -1,6 +1,6 @@
 {
   "name": "@cdcabrera/eslint-config-toolkit",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "An ESLint multipurpose config collection.",
   "author": "cdcabrera",
   "license": "MIT",
