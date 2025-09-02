@@ -1,5 +1,5 @@
 // FIXTURE: This file demonstrates the use of logical expressions in spread elements
-// to test the behavior of the @stylistic/no-extra-parens rule with allowNodesInSpreadElement option.
+// to test the behavior of the @stylistic/no-extra-parens rule configured via ignoredNodes selectors.
 
 /**
  * Examples of spread elements with logical expressions, both with and without parentheses.
