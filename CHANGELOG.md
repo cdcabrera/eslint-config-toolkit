@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/e7be76eaf61510984c2d655f0a5ba297a0af235e...8473f01f4511fe46fed7355334511675022f24df) (2025-09-02)
+
+
+### Tests
+*  filter padding-line-between-statements noise ([#14](https://github.com/cdcabrera/eslint-config-toolkit/pull/14)) ([103eddc](https://github.com/cdcabrera/eslint-config-toolkit/commit/103eddc6a50406ea4ca398d4651350d376fb07f8))
+
+### Features
+*  add unicorn/prefer-logical-operator-over-ternary ([#17](https://github.com/cdcabrera/eslint-config-toolkit/pull/17)) ([e458e5e](https://github.com/cdcabrera/eslint-config-toolkit/commit/e458e5e4611e6bab31c0876fbe3b7eb57057e767))
+
+### Documentation
+*  agent guidance for features, maintenance, testing ([#19](https://github.com/cdcabrera/eslint-config-toolkit/pull/19)) ([cba66ec](https://github.com/cdcabrera/eslint-config-toolkit/commit/cba66ec94ec7da9be30f937318631c85f71cbf79))
+*  align sequence to inclusion ([#18](https://github.com/cdcabrera/eslint-config-toolkit/pull/18)) ([98c05ac](https://github.com/cdcabrera/eslint-config-toolkit/commit/98c05ac9de386c45e355389192c2842c1658205d))
+*  explain adding rules, configs ([#15](https://github.com/cdcabrera/eslint-config-toolkit/pull/15)) ([1848b0e](https://github.com/cdcabrera/eslint-config-toolkit/commit/1848b0e433d33fb9fa17cff265be038b6a079c60))
+
+### Builds
+* **deps** bump @eslint/js from 9.33.0 to 9.34.0 ([#22](https://github.com/cdcabrera/eslint-config-toolkit/pull/22)) ([8473f01](https://github.com/cdcabrera/eslint-config-toolkit/commit/8473f01f4511fe46fed7355334511675022f24df))
+* **deps** bump @stylistic/eslint-plugin from 5.2.3 to 5.3.1 ([#21](https://github.com/cdcabrera/eslint-config-toolkit/pull/21)) ([cf32c02](https://github.com/cdcabrera/eslint-config-toolkit/commit/cf32c02d91c9a4564279fd802f5a73ff4b4aa039))
+* **deps-dev** bump the dev group with 3 updates ([#20](https://github.com/cdcabrera/eslint-config-toolkit/pull/20)) ([3c3f816](https://github.com/cdcabrera/eslint-config-toolkit/commit/3c3f816a495ce70372042950d411404b78e9bf10))
+
+### Bug Fixes
+*  no-plusplus warning, limit increments to loops ([#16](https://github.com/cdcabrera/eslint-config-toolkit/pull/16)) ([227cb54](https://github.com/cdcabrera/eslint-config-toolkit/commit/227cb54a996290eda12db72f07452af305690389))
+
 ## [0.1.1](https://github.com/cdcabrera/eslint-config-toolkit/compare/05f0345bd047f76964a6bc500913aca8022e3d5d...eced0a8a7275867ecbdae31c54415a946d2a1b65) (2025-08-26)
 
 
