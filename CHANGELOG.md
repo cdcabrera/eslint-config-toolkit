@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/ee141f5b356771b730335662dac1ca842b025b56...dea4039cf5fcbd1e2b3f39a65a5872f85b429283) (2025-11-10)
+⚠ eslint-plugin-jsdoc may contain breaking changes, see [#31](https://github.com/cdcabrera/eslint-config-toolkit/pull/31)
+
+### Builds
+* **deps** bump actions/setup-node from 5 to 6 ([#47](https://github.com/cdcabrera/eslint-config-toolkit/pull/47)) ([dea4039](https://github.com/cdcabrera/eslint-config-toolkit/commit/dea4039cf5fcbd1e2b3f39a65a5872f85b429283))
+* **deps-dev** npm-check-updates from 18.1.1 to 19.0.0 ([#43](https://github.com/cdcabrera/eslint-config-toolkit/pull/43)) ([f62c213](https://github.com/cdcabrera/eslint-config-toolkit/commit/f62c213b2963b9c660fb9b0bea928820b2806230))
+* **deps-dev** bump dev group with 3 updates ([#39](https://github.com/cdcabrera/eslint-config-toolkit/pull/39)) ([4989b0f](https://github.com/cdcabrera/eslint-config-toolkit/commit/4989b0fb7cb04a9b0150a95baefe0220527da0e4))
+*  add nodejs 24 check ([#41](https://github.com/cdcabrera/eslint-config-toolkit/pull/41)) ([4327b3b](https://github.com/cdcabrera/eslint-config-toolkit/commit/4327b3b494afb09140c1dcd2c68ba24bc749b779))
+*  dependabot, package cooldown ([#40](https://github.com/cdcabrera/eslint-config-toolkit/pull/40)) ([aa90d71](https://github.com/cdcabrera/eslint-config-toolkit/commit/aa90d71ece17acaaaff8594cc661ce26c001c828))
+* **deps** bump actions/setup-node from 4 to 5 ([#38](https://github.com/cdcabrera/eslint-config-toolkit/pull/38)) ([b35b8c2](https://github.com/cdcabrera/eslint-config-toolkit/commit/b35b8c2cfd76292b09b8bc1e0e0f8bcde5f38569))
+* **deps** bump actions/github-script from 7 to 8 ([#37](https://github.com/cdcabrera/eslint-config-toolkit/pull/37)) ([69cdfe0](https://github.com/cdcabrera/eslint-config-toolkit/commit/69cdfe09f921b7cb95dc237bfea8f1abc0a1d504))
+* **deps** eslint-plugin-jsdoc from 54.1.1 to 57.0.8 ([#31](https://github.com/cdcabrera/eslint-config-toolkit/pull/31)) ([ff45763](https://github.com/cdcabrera/eslint-config-toolkit/commit/ff457636063b531e1718c67e16fad237a2bf20ab))
+* **deps** eslint-plugin-unicorn from 60.0.0 to 61.0.2 ([#27](https://github.com/cdcabrera/eslint-config-toolkit/pull/27)) ([43908c8](https://github.com/cdcabrera/eslint-config-toolkit/commit/43908c8d4d815322ea088a7df9d030fbacf81c46))
+* **deps** bump the prod group with 2 updates ([#32](https://github.com/cdcabrera/eslint-config-toolkit/pull/32)) ([9dd05f9](https://github.com/cdcabrera/eslint-config-toolkit/commit/9dd05f9cdf8452dd4e9b807007bb354182ae567e))
+* **deps-dev** npm-check-updates from 18.1.0 to 18.1.1 ([#30](https://github.com/cdcabrera/eslint-config-toolkit/pull/30)) ([b1fbf93](https://github.com/cdcabrera/eslint-config-toolkit/commit/b1fbf93336a2bbc1fd5d0948989225d921278f68))
+* **deps-dev** bump the dev group with 4 updates ([#28](https://github.com/cdcabrera/eslint-config-toolkit/pull/28)) ([eba5769](https://github.com/cdcabrera/eslint-config-toolkit/commit/eba5769adda8f690edb1488f948a5c35bebeead2))
+* **deps** bump the prod group with 2 updates ([#26](https://github.com/cdcabrera/eslint-config-toolkit/pull/26)) ([4c8c34c](https://github.com/cdcabrera/eslint-config-toolkit/commit/4c8c34cabb1128ffba005e3a439645de5ad334c2))
+* **deps** bump actions/checkout from 4 to 5 ([#25](https://github.com/cdcabrera/eslint-config-toolkit/pull/25)) ([9233696](https://github.com/cdcabrera/eslint-config-toolkit/commit/9233696b478caab97c51db34bb52a05962d07f36))
+
 ## [0.2.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/e7be76eaf61510984c2d655f0a5ba297a0af235e...8473f01f4511fe46fed7355334511675022f24df) (2025-09-02)
 
 
