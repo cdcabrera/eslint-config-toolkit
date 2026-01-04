@@ -349,17 +349,18 @@ const config = [
       // @stylistic/comma-dangle: Set to never allow trailing commas
       '@stylistic/comma-dangle': [2, 'never'],
 
-      // @stylistic/no-extra-parens: Set to warning with exceptions to avoid conflict with no-confusing-arrow
+      // @stylistic/no-extra-parens: Warn with exceptions; use ignoredNodes selectors for arrow conditionals and spread elements
       '@stylistic/no-extra-parens': [1, 'all', {
-        allowNodesInSpreadElement: {
-          ConditionalExpression: true,
-          LogicalExpression: true,
-          AwaitExpression: true
-        },
         conditionalAssign: false,
         nestedBinaryExpressions: false,
         ignoreJSX: 'all',
-        enforceForArrowConditionals: false
+        ignoredNodes: [
+          'ArrowFunctionExpression > ConditionalExpression',
+          'ArrowFunctionExpression > LogicalExpression',
+          'SpreadElement > ConditionalExpression',
+          'SpreadElement > LogicalExpression',
+          'SpreadElement > AwaitExpression'
+        ]
       }],
 
       // @stylistic/no-extra-semi: Set to error to prevent unnecessary semicolons

@@ -587,7 +587,7 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
 }
 `;
 
-exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arrow functions with parentheses (Note: Added enforceForArrowConditionals: false to no-extra-parens rule and reduced severity to warning) 1`] = `
+exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arrow functions with parentheses (Note: Handled arrow conditionals via ignoredNodes selectors; rule remains at warning) 1`] = `
 {
   "errorCount": 1,
   "filePath": "conflicts.arrow-parens.js",
@@ -606,6 +606,13 @@ exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arr
   },
   "messages": [
     {
+      "column": 32,
+      "line": 11,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+    {
       "column": 23,
       "line": 14,
       "message": "Unnecessary parentheses around expression.",
@@ -620,8 +627,8 @@ exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arr
       "severity": "error",
     },
   ],
-  "totalIssues": 2,
-  "warningCount": 1,
+  "totalIssues": 3,
+  "warningCount": 2,
 }
 `;
 
@@ -1013,7 +1020,7 @@ exports[`Rule Customizations custom.newline-per-chained-call.js should allow up 
 }
 `;
 
-exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses around logical expressions in spread elements (Note: Configured allowNodesInSpreadElement to allow parentheses around logical expressions in spread elements) 1`] = `
+exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses around logical expressions in spread elements (Note: Configured via ignoredNodes selectors to allow parentheses around logical expressions/conditionals/await in spread elements) 1`] = `
 {
   "errorCount": 0,
   "filePath": "custom.no-extra-parens.js",
@@ -1033,9 +1040,45 @@ exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses 
     },
     "totalFiltered": 1,
   },
-  "messages": [],
-  "totalIssues": 0,
-  "warningCount": 0,
+  "messages": [
+    {
+      "column": 6,
+      "line": 26,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+    {
+      "column": 6,
+      "line": 36,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+    {
+      "column": 6,
+      "line": 46,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+    {
+      "column": 6,
+      "line": 56,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+    {
+      "column": 6,
+      "line": 66,
+      "message": "Unnecessary parentheses around expression.",
+      "ruleId": "@stylistic/no-extra-parens",
+      "severity": "warning",
+    },
+  ],
+  "totalIssues": 5,
+  "warningCount": 5,
 }
 `;
 

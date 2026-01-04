@@ -78,7 +78,7 @@ describe('Rule Conflicts', () => {
       file: 'conflicts.arrow-parens.js',
       description: 'should not have errors for arrow functions with parentheses',
       rules: ['@stylistic/no-confusing-arrow', '@stylistic/no-extra-parens'],
-      note: 'Added enforceForArrowConditionals: false to no-extra-parens rule and reduced severity to warning',
+      note: 'Handled arrow conditionals via ignoredNodes selectors; rule remains at warning',
       disableRules: global.FILTERABLE_RULES.documentation
     },
     {
@@ -181,7 +181,7 @@ describe('Rule Customizations', () => {
       file: 'custom.no-extra-parens.js',
       description: 'should allow parentheses around logical expressions in spread elements',
       rule: '@stylistic/no-extra-parens',
-      note: 'Configured allowNodesInSpreadElement to allow parentheses around logical expressions in spread elements',
+      note: 'Configured via ignoredNodes selectors to allow parentheses around logical expressions/conditionals/await in spread elements',
       disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
     },
     {
