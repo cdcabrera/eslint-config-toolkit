@@ -1020,7 +1020,7 @@ exports[`Rule Customizations custom.newline-per-chained-call.js should allow up 
 }
 `;
 
-exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses around logical expressions in spread elements (Note: Configured via ignoredNodes selectors to allow parentheses around logical/conditional/await in spread elements) 1`] = `
+exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses around logical expressions in spread elements (Note: Configured via ignoredNodes selectors to allow parentheses around logical expressions/conditionals/await in spread elements) 1`] = `
 {
   "errorCount": 0,
   "filePath": "custom.no-extra-parens.js",

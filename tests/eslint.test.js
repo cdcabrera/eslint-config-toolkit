@@ -181,7 +181,7 @@ describe('Rule Customizations', () => {
       file: 'custom.no-extra-parens.js',
       description: 'should allow parentheses around logical expressions in spread elements',
       rule: '@stylistic/no-extra-parens',
-      note: 'Configured via ignoredNodes selectors to allow parentheses around logical/conditional/await in spread elements',
+      note: 'Configured via ignoredNodes selectors to allow parentheses around logical expressions/conditionals/await in spread elements',
       disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
     },
     {
