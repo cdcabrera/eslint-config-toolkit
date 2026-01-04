@@ -24,6 +24,8 @@ import { base as baseConfig } from './base.js';
  * - **Accessibility**: Includes a11y rules for creating accessible components
  * - **Component structure**: Enforces best practices for component definitions and props
  * - **Babel integration**: Provides advanced parsing for modern React syntax
+ *
+ * @type {Config[]}
  */
 const config = [
   {
@@ -361,7 +363,7 @@ const config = [
   }
 ];
 
-/** @type {import("eslint").Linter.Config<config>[]} Processed config. */
+/** @type {Config[]} - Processed config. */
 const react = defineConfig(config);
 
 export { react as default, react, config };

@@ -19,6 +19,8 @@ import { base as baseConfig } from './base.js';
  * - **API compatibility**: Warns about deprecated APIs and ensures compatibility with the target Node.js version
  * - **Module resolution**: Validates require() statements and prevents missing dependencies
  * - **CLI tool support**: Includes special configurations for command-line tools and scripts
+ *
+ * @type {Config[]}
  */
 const config = [
   {
@@ -99,7 +101,7 @@ const config = [
   }
 ];
 
-/** @type {import("eslint").Linter.Config<config>[]} Processed config. */
+/** @type {Config[]} - Processed config. */
 const node = defineConfig(config);
 
 export { node as default, node, config };

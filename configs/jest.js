@@ -17,6 +17,8 @@ import globals from 'globals';
  * - **Test validation**: Ensures tests have proper expectations and valid assertions
  * - **Test organization**: Prevents duplicate test titles and disabled/focused tests
  * - **Jest globals**: Provides access to Jest-specific global variables and functions
+ *
+ * @type {Config[]}
  */
 const config = [
   {
@@ -54,7 +56,7 @@ const config = [
   }
 ];
 
-/** @type {import("eslint").Linter.Config<config>[]} Processed config. */
+/** @type {Config[]} - Processed config. */
 const jest = defineConfig(config);
 
 export { jest as default, jest, config };

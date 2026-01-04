@@ -30,6 +30,8 @@ const { configs: jsConfigs } = eslintJs;
  * - **Comment length rules**: Ensures maximum lengths for single-line and multi-line comments with logical wrapping
  *     support.
  * - **JSDoc rules**: Enforces proper documentation for public APIs, parameter definitions, and return types.
+ *
+ * @type {Config[]}
  */
 const config = [
   // GitIgnore integration
@@ -560,7 +562,7 @@ const config = [
   }
 ];
 
-/** @type {import("eslint").Linter.Config<config>[]} Processed config. */
+/** @type {Config[]} - Processed config. */
 const base = defineConfig(config);
 
 export { base as default, base, config };

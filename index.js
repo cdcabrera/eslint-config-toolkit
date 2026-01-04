@@ -12,6 +12,14 @@ import { json } from './configs/json.js';
 import { jest } from './configs/jest.js';
 
 /**
+ * ESLint config object type alias.
+ *
+ * Resolves portability issues between different @eslint/core versions.
+ *
+ * @typedef {import("eslint").Linter.Config} Config
+ */
+
+/**
  * A toolkit object containing configuration utilities and helper functions
  * for ESLint. It includes pre-defined configurations for base projects,
  * `Node.js`, `React`, `JSON`, `Jest`, and `globals`.
