@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/3e6067def38266728838a6022cd1f319b6ee6403...74ef0fbfc2632cd58d1f6b13e2c7b37551e5438d) (2026-01-04)
+⚠ @eslint/compat may contain breaking changes, see [#58](https://github.com/cdcabrera/eslint-config-toolkit/pull/58)
+
+### Continuous Integrations
+*  npm publishing, remove matrix ([#62](https://github.com/cdcabrera/eslint-config-toolkit/pull/62)) ([0c10703](https://github.com/cdcabrera/eslint-config-toolkit/commit/0c10703135c45fbb36563cbdcac5f8980c2d2e5d))
+
+### Code Refactoring
+*  deprecated stylistic/no-extra-parens  options ([#23](https://github.com/cdcabrera/eslint-config-toolkit/pull/23)) ([b05a89a](https://github.com/cdcabrera/eslint-config-toolkit/commit/b05a89a591a28bd5d68d11c1bca8b0f455e80b74))
+
+### Builds
+* **deps** bump @eslint/compat from 1.3.2 to 2.0.0 ([#58](https://github.com/cdcabrera/eslint-config-toolkit/pull/58)) ([74ef0fb](https://github.com/cdcabrera/eslint-config-toolkit/commit/74ef0fbfc2632cd58d1f6b13e2c7b37551e5438d))
+* **deps-dev** bump dev group with 4 updates ([#63](https://github.com/cdcabrera/eslint-config-toolkit/pull/63)) ([4a52d68](https://github.com/cdcabrera/eslint-config-toolkit/commit/4a52d683a55acc31614b4f22279b15569c474af9))
+* **deps** bump eslint-plugin-unicorn from 61.0.2 to 62.0.0 ([#59](https://github.com/cdcabrera/eslint-config-toolkit/pull/59)) ([d587305](https://github.com/cdcabrera/eslint-config-toolkit/commit/d587305e6ccd0bea65a312fc3fbd6ba075324d23))
+* **deps** bump actions/cache from 4 to 5 ([#60](https://github.com/cdcabrera/eslint-config-toolkit/pull/60)) ([e257a43](https://github.com/cdcabrera/eslint-config-toolkit/commit/e257a43e5723d9b24274539cb17dd236b57fbf30))
+* **deps** bump actions/checkout from 5 to 6 ([#61](https://github.com/cdcabrera/eslint-config-toolkit/pull/61)) ([c31205e](https://github.com/cdcabrera/eslint-config-toolkit/commit/c31205e6c905eabdb3ef7857ced4058bafd83a1c))
+* **deps** bump prod group with 7 updates ([#54](https://github.com/cdcabrera/eslint-config-toolkit/pull/54)) ([544d6d1](https://github.com/cdcabrera/eslint-config-toolkit/commit/544d6d125961653b5c6ed1220d2ed3a18fce45fe))
+*  relax audit check ([#55](https://github.com/cdcabrera/eslint-config-toolkit/pull/55)) ([8fbb563](https://github.com/cdcabrera/eslint-config-toolkit/commit/8fbb563e50ad750e68682b3b64d507288efd64f4))
+
 ## [0.3.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/ee141f5b356771b730335662dac1ca842b025b56...dea4039cf5fcbd1e2b3f39a65a5872f85b429283) (2025-11-10)
 ⚠ eslint-plugin-jsdoc may contain breaking changes, see [#31](https://github.com/cdcabrera/eslint-config-toolkit/pull/31)
 
