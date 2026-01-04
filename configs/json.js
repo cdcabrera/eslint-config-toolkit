@@ -16,6 +16,8 @@ import jsonPlugin from 'eslint-plugin-json';
  * - **JSON validation**: Ensures all JSON files are valid and well-formed
  * - **Syntax error detection**: Identifies common JSON syntax errors like trailing commas
  * - **Selective targeting**: Applies only to .json files while ignoring package-lock.json
+ *
+ * @type {Config[]}
  */
 const config = [
   {
@@ -39,7 +41,7 @@ const config = [
   }
 ];
 
-/** @type {import("eslint").Linter.Config<config>[]} Processed config. */
+/** @type {Config[]} - Processed config. */
 const json = defineConfig(config);
 
 export { json as default, json, config };
