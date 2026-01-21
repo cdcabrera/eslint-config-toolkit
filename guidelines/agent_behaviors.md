@@ -65,6 +65,7 @@ Configurations can be used independently or combined.
 ### Trigger: "Verify what happens when we add this rule"
 
 1. **Research**
+   - Check the [Problematic Rules Manifest](./agent_manifest.md) for existing constraints.
    - Check ESLint documentation
    - Review existing implementations
    - Identify potential conflicts
@@ -82,6 +83,7 @@ Configurations can be used independently or combined.
 ### Trigger: "Add rule [rule-name] to enforce [behavior]"
 
 1. **Research**
+   - Check the [Problematic Rules Manifest](./agent_manifest.md) for existing constraints.
    - Check ESLint documentation
    - Review existing implementations
    - Identify potential conflicts
@@ -109,6 +111,7 @@ Configurations can be used independently or combined.
 ### Trigger: "Research rule conflicts between X and Y"
 
 1. **Analyze**
+   - Check the [Problematic Rules Manifest](./agent_manifest.md) for existing constraints.
    - Research both rules
    - Identify conflict scenarios
    - Create test cases

@@ -1,27 +1,23 @@
 // FIXTURE: This file demonstrates the use of logical expressions in spread elements
 // to test the behavior of the @stylistic/no-extra-parens rule configured via ignoredNodes selectors.
 
-/**
- * Examples of spread elements with logical expressions, both with and without parentheses.
- * The issue is whether parentheses should be required around logical expressions in spread elements.
- */
-
-// Variables for testing
 const someBool = true;
 const anotherValue = { key: 'value' };
 const someArray = [1, 2, 3];
 const someCondition = true;
 const someObject = { a: 1 };
 const fallbackObject = { b: 2 };
+const asyncFunc = async () => ({ c: 3 });
+const value = { value: 'test' };
+
+// --- Spread Elements ---
 
 // Example 1: Object spread with logical AND (without parentheses)
-// This is the syntax we want to avoid
 const objectWithoutParensAnd = {
   ...someBool && anotherValue
 };
 
 // Example 2: Object spread with logical AND (with parentheses)
-// This is the syntax we want to enforce
 const objectWithParensAnd = {
   ...(someBool && anotherValue)
 };
@@ -66,7 +62,24 @@ const complexWithParens = {
   ...(someCondition ? someObject : fallbackObject)
 };
 
-// Export all examples for testing
+// Example 11: Spread with await (with parentheses)
+const spreadWithAwait = async () => ({
+  ...(await asyncFunc())
+});
+
+// Example 12: Specific pattern requested by user
+const specificPattern = {
+  ...(value && { value })
+};
+
+// --- Arrow Function Bodies ---
+
+// Example 13: Arrow function with conditional body (with parentheses)
+const arrowWithConditional = condition => (condition ? 'yes' : 'no');
+
+// Example 14: Arrow function with logical body (with parentheses)
+const arrowWithLogical = () => (someBool && anotherValue);
+
 module.exports = {
   objectWithParensAnd,
   objectWithoutParensAnd,
@@ -77,5 +90,9 @@ module.exports = {
   arrayWithParensAnd,
   arrayWithoutParensAnd,
   complexWithParens,
-  complexWithoutParens
+  complexWithoutParens,
+  spreadWithAwait,
+  specificPattern,
+  arrowWithConditional,
+  arrowWithLogical
 };

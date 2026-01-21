@@ -16,6 +16,7 @@ Agent-specific guidelines for the ESLint Config Toolkit project, optimized for m
 - [Agent Testing](./agent_testing.md) - Testing procedures
 - [Agent Rule Management](./agent_rule_management.md) - ESLint rule management
 - [Agent Comments](./agent_comments.md) - Comment templates and standards
+- [Problematic Rules Manifest](./agent_manifest.md) - Registry for rules and APIs requiring complex configuration or conflict resolution
 
 ## User Guide
 
