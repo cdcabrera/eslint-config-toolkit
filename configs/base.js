@@ -357,11 +357,11 @@ const config = [
         nestedBinaryExpressions: false,
         ignoreJSX: 'all',
         ignoredNodes: [
-          'ArrowFunctionExpression > ConditionalExpression',
-          'ArrowFunctionExpression > LogicalExpression',
-          'SpreadElement > ConditionalExpression',
-          'SpreadElement > LogicalExpression',
-          'SpreadElement > AwaitExpression'
+          'ArrowFunctionExpression[body.type="ConditionalExpression"]',
+          'ArrowFunctionExpression[body.type="LogicalExpression"]',
+          'SpreadElement[argument.type="ConditionalExpression"]',
+          'SpreadElement[argument.type="LogicalExpression"]',
+          'SpreadElement[argument.type="AwaitExpression"]'
         ]
       }],
 
