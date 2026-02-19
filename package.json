@@ -44,11 +44,11 @@
   "scripts": {
     "build:deps": "bash ./scripts/dependencies.sh --doctor -u --doctorTest \"npm run test\"",
     "release": "changelog --link-url https://github.com/cdcabrera/eslint-config-toolkit.git",
-    "test": "run-s -l test:lint test:spell* test:types test:ci",
+    "test": "npm run test:lint && npm run test:spell && npm run test:spell-docs && npm run test:types && npm run test:ci",
     "test:ci": "export CI=true; npm run test:jest -- --collectCoverage --coverageReporters=\"lcov\" --coverageReporters=\"json-summary\"",
-    "test:clearCache": "run-s test:jest -- --clearCache",
+    "test:clearCache": "npm run test:jest -- --clearCache",
     "test:configs": "eslint --config ./tests/eslint.config.js ./tests/__fixtures__/*.js*",
-    "test:dev": "run-s -l test:spell* test:types; run-s test:jest-watch",
+    "test:dev": "npm run test:spell && npm run test:spell-docs && npm run test:types && npm run test:jest-watch",
     "test:lint": "eslint ./configs ./tests/*.js ./index.js",
     "test:lint-watch": "nodemon --watch configs --watch tests --watch index.js --ext js,jsx --exec \"npm run test:lint\"",
     "test:jest": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
@@ -84,7 +84,6 @@
     "jest": "^30.2.0",
     "nodemon": "^3.1.11",
     "npm-check-updates": "^19.3.2",
-    "npm-run-all": "^4.1.5",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
