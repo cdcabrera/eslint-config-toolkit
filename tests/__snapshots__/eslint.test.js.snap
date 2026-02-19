@@ -606,29 +606,22 @@ exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arr
   },
   "messages": [
     {
-      "column": 32,
-      "line": 11,
-      "message": "Unnecessary parentheses around expression.",
-      "ruleId": "@stylistic/no-extra-parens",
-      "severity": "warning",
-    },
-    {
       "column": 23,
-      "line": 14,
+      "line": 6,
       "message": "Unnecessary parentheses around expression.",
       "ruleId": "@stylistic/no-extra-parens",
       "severity": "warning",
     },
     {
       "column": 32,
-      "line": 17,
+      "line": 8,
       "message": "Unexpected block statement surrounding arrow body; move the returned value immediately after the \`=>\`.",
       "ruleId": "arrow-body-style",
       "severity": "error",
     },
   ],
-  "totalIssues": 3,
-  "warningCount": 2,
+  "totalIssues": 2,
+  "warningCount": 1,
 }
 `;
 
@@ -1040,45 +1033,9 @@ exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses 
     },
     "totalFiltered": 1,
   },
-  "messages": [
-    {
-      "column": 6,
-      "line": 26,
-      "message": "Unnecessary parentheses around expression.",
-      "ruleId": "@stylistic/no-extra-parens",
-      "severity": "warning",
-    },
-    {
-      "column": 6,
-      "line": 36,
-      "message": "Unnecessary parentheses around expression.",
-      "ruleId": "@stylistic/no-extra-parens",
-      "severity": "warning",
-    },
-    {
-      "column": 6,
-      "line": 46,
-      "message": "Unnecessary parentheses around expression.",
-      "ruleId": "@stylistic/no-extra-parens",
-      "severity": "warning",
-    },
-    {
-      "column": 6,
-      "line": 56,
-      "message": "Unnecessary parentheses around expression.",
-      "ruleId": "@stylistic/no-extra-parens",
-      "severity": "warning",
-    },
-    {
-      "column": 6,
-      "line": 66,
-      "message": "Unnecessary parentheses around expression.",
-      "ruleId": "@stylistic/no-extra-parens",
-      "severity": "warning",
-    },
-  ],
-  "totalIssues": 5,
-  "warningCount": 5,
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
 }
 `;
 

@@ -55,11 +55,12 @@ Rule issues typically come from one of these sources:
 
 Before making changes:
 
-1. Check the [ESLint documentation](https://eslint.org/docs/latest/rules/) for the rule
-2. For plugin rules, use upstream plugin docs (for example, Unicorn: https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules)
-3. Review the rule options and their effects
-4. Look for known conflicts with other rules
-5. Consider the impact on existing code
+1. Check the [Problematic Rules Manifest](./agent_manifest.md) for any known issues, mandatory logic, or conflicts associated with the rule.
+2. Check the [ESLint documentation](https://eslint.org/docs/latest/rules/) for the rule
+3. For plugin rules, use upstream plugin docs (for example, Unicorn: https://github.com/sindresorhus/eslint-plugin-unicorn/tree/main/docs/rules)
+4. Review the rule options and their effects
+5. Look for known conflicts with other rules
+6. Consider the impact on existing code
 
 ### Step 2: Make the Change
 
