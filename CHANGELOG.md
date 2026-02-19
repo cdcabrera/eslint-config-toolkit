@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/491cb4c97f086c4a2805cc55ba80c781cb3995ae...eec682325441e714dc6705b4bb31d0fd077249ac) (2026-02-19)
+
+
+### Builds
+* **deps** eslint-plugin-jsdoc from 58.1.1 to 62.5.0 ([#78](https://github.com/cdcabrera/eslint-config-toolkit/pull/78)) ([eec6823](https://github.com/cdcabrera/eslint-config-toolkit/commit/eec682325441e714dc6705b4bb31d0fd077249ac))
+* **deps** bump group with 4 updates ([#84](https://github.com/cdcabrera/eslint-config-toolkit/pull/84)) ([3e93a06](https://github.com/cdcabrera/eslint-config-toolkit/commit/3e93a06739695d6ec595e7dfe4afaef9028b7c32))
+* **deps-dev** remove npm-check-updates ([#83](https://github.com/cdcabrera/eslint-config-toolkit/pull/83)) ([40d01e4](https://github.com/cdcabrera/eslint-config-toolkit/commit/40d01e41cdaf151d0a91f0a4ee8b5f3d26e0ef42))
+* **deps-dev** remove npm-run-all ([#82](https://github.com/cdcabrera/eslint-config-toolkit/pull/82)) ([8019f9a](https://github.com/cdcabrera/eslint-config-toolkit/commit/8019f9a606af523be062be0aa133b91497a09b03))
+*  lock update ([#81](https://github.com/cdcabrera/eslint-config-toolkit/pull/81)) ([f986820](https://github.com/cdcabrera/eslint-config-toolkit/commit/f9868201632885e0b4b0d5a69c520412cea63833))
+*  pin deps ([#79](https://github.com/cdcabrera/eslint-config-toolkit/pull/79)) ([149dfd2](https://github.com/cdcabrera/eslint-config-toolkit/commit/149dfd2f110635b7786cdccadfc39be34d3730e1))
+* **deps** bump prod group with 3 updates ([#77](https://github.com/cdcabrera/eslint-config-toolkit/pull/77)) ([ad86ec0](https://github.com/cdcabrera/eslint-config-toolkit/commit/ad86ec06af2208f0b3411c3a080335d5c2a4760f))
+* **deps-dev** bump dev group with 2 updates ([#76](https://github.com/cdcabrera/eslint-config-toolkit/pull/76)) ([32625d7](https://github.com/cdcabrera/eslint-config-toolkit/commit/32625d7d7cbb00e24bb93c663576b99778bcf6ce))
+* **deps** bump prod group with 2 updates ([#74](https://github.com/cdcabrera/eslint-config-toolkit/pull/74)) ([9790182](https://github.com/cdcabrera/eslint-config-toolkit/commit/97901827a87d15077cbbd24b124b482767f1e2f6))
+* **deps-dev** bump dev group with 2 updates ([#73](https://github.com/cdcabrera/eslint-config-toolkit/pull/73)) ([c46887b](https://github.com/cdcabrera/eslint-config-toolkit/commit/c46887bec5e70b0007358364ca5b0f54df10f6ad))
+* **deps** bump globals from 16.5.0 to 17.0.0 ([#70](https://github.com/cdcabrera/eslint-config-toolkit/pull/70)) ([9d6e539](https://github.com/cdcabrera/eslint-config-toolkit/commit/9d6e539733f404a8e2d32cff039c2d90d03af36e))
+* **deps** bump prod group with 4 updates ([#69](https://github.com/cdcabrera/eslint-config-toolkit/pull/69)) ([4d29179](https://github.com/cdcabrera/eslint-config-toolkit/commit/4d29179b363c67bb01cdd7526173bc6083083b53))
+* **deps-dev** bump cspell from 9.4.0 to 9.6.0 ([#68](https://github.com/cdcabrera/eslint-config-toolkit/pull/68)) ([6fe04e1](https://github.com/cdcabrera/eslint-config-toolkit/commit/6fe04e1fc8ea50de8035ef892e6d451dd62838d7))
+* **deps** bump eslint-plugin-jest from 29.2.1 to 29.11.0 ([#65](https://github.com/cdcabrera/eslint-config-toolkit/pull/65)) ([c163e51](https://github.com/cdcabrera/eslint-config-toolkit/commit/c163e51c4e6d9dd8096c36a51d90b6960bd22f29))
+* **deps-dev** bump dev group with 2 updates ([#66](https://github.com/cdcabrera/eslint-config-toolkit/pull/66)) ([dcf5482](https://github.com/cdcabrera/eslint-config-toolkit/commit/dcf54828847fadeea32742c91a4a8d1afef5ef48))
+
+### Bug Fixes
+*  restore @stylistic/no-extra-parens behavior ([#67](https://github.com/cdcabrera/eslint-config-toolkit/pull/67)) ([832e948](https://github.com/cdcabrera/eslint-config-toolkit/commit/832e948596e009bd3cc2490d76cd7010b6f0d96f))
+
 ## [0.4.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/3e6067def38266728838a6022cd1f319b6ee6403...74ef0fbfc2632cd58d1f6b13e2c7b37551e5438d) (2026-01-04)
 ⚠ @eslint/compat may contain breaking changes, see [#58](https://github.com/cdcabrera/eslint-config-toolkit/pull/58)
 
