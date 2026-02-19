@@ -662,10 +662,10 @@ exports[`Rule Conflicts conflicts.rule-conflict.js should not have conflicts bet
     ],
     "ruleBreakdown": {
       "jsdoc/require-jsdoc": 1,
-      "jsdoc/tag-lines": 5,
+      "jsdoc/tag-lines": 4,
       "no-undef": 1,
     },
-    "totalFiltered": 7,
+    "totalFiltered": 6,
   },
   "messages": [],
   "totalIssues": 0,
