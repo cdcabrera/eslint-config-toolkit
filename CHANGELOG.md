@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.1](https://github.com/cdcabrera/eslint-config-toolkit/compare/1d65e2b7094fef7258cfb15b403036983f059a62...513ce91ab622a11d52f505cb76189d49527f721c) (2026-03-06)
+
+
+### Chores
+*  license badge ([#93](https://github.com/cdcabrera/eslint-config-toolkit/pull/93)) ([e4e12b2](https://github.com/cdcabrera/eslint-config-toolkit/commit/e4e12b2bffa175f2c4bdec9c7abb2c137ea3812f))
+
+### Builds
+* **deps-dev** bump eslint from 9.39.2 to 9.39.3 ([#94](https://github.com/cdcabrera/eslint-config-toolkit/pull/94)) ([513ce91](https://github.com/cdcabrera/eslint-config-toolkit/commit/513ce91ab622a11d52f505cb76189d49527f721c))
+* **deps** lock update ([#92](https://github.com/cdcabrera/eslint-config-toolkit/pull/92)) ([205f265](https://github.com/cdcabrera/eslint-config-toolkit/commit/205f2657d77ca5d1a18f15d27858c4b2cb120909))
+* **deps** bump prod group with 5 updates ([#91](https://github.com/cdcabrera/eslint-config-toolkit/pull/91)) ([31d88b8](https://github.com/cdcabrera/eslint-config-toolkit/commit/31d88b8577f4d3649c153ba2f450d3c92b85bd2c))
+* **deps** eslint-plugin-unicorn from 62.0.0 to 63.0.0 ([#89](https://github.com/cdcabrera/eslint-config-toolkit/pull/89)) ([42b75fb](https://github.com/cdcabrera/eslint-config-toolkit/commit/42b75fbe6b31073144ded0d12bd9b613eefeaa42))
+
 ## [0.5.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/491cb4c97f086c4a2805cc55ba80c781cb3995ae...eec682325441e714dc6705b4bb31d0fd077249ac) (2026-02-19)
 
 
