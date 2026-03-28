@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.2](https://github.com/cdcabrera/eslint-config-toolkit/compare/8e9719ea9682c1ea5ae298a20438da877f51a4d5...b477fae24d653722c522a801b2bfa4aaad1867ad) (2026-03-28)
+
+
+### Builds
+* **deps** lock update ([#104](https://github.com/cdcabrera/eslint-config-toolkit/pull/104)) ([b477fae](https://github.com/cdcabrera/eslint-config-toolkit/commit/b477fae24d653722c522a801b2bfa4aaad1867ad))
+* **deps-dev** bump dev group with 3 updates ([#103](https://github.com/cdcabrera/eslint-config-toolkit/pull/103)) ([8615dc0](https://github.com/cdcabrera/eslint-config-toolkit/commit/8615dc040c61afe768915482af901aa775868ba1))
+* **deps** bump prod group with 2 updates ([#101](https://github.com/cdcabrera/eslint-config-toolkit/pull/101)) ([8d30670](https://github.com/cdcabrera/eslint-config-toolkit/commit/8d3067061e28e0d63cda2cc7f97cba07fbf6d30f))
+* **deps** bump globals from 17.3.0 to 17.4.0 ([#99](https://github.com/cdcabrera/eslint-config-toolkit/pull/99)) ([05b2ec8](https://github.com/cdcabrera/eslint-config-toolkit/commit/05b2ec801870f295a2de5dd7df74120d6911e5bd))
+* **deps** eslint-plugin-jsdoc from 62.6.1 to 62.7.1 ([#97](https://github.com/cdcabrera/eslint-config-toolkit/pull/97)) ([30862bc](https://github.com/cdcabrera/eslint-config-toolkit/commit/30862bc75b5e3099ecac5192c988d87a4303f075))
+* **deps-dev** bump dev group with 2 updates ([#96](https://github.com/cdcabrera/eslint-config-toolkit/pull/96)) ([30662bf](https://github.com/cdcabrera/eslint-config-toolkit/commit/30662bf171b8a8cfc9643edbbe64a44163a10b42))
+
 ## [0.5.1](https://github.com/cdcabrera/eslint-config-toolkit/compare/1d65e2b7094fef7258cfb15b403036983f059a62...513ce91ab622a11d52f505cb76189d49527f721c) (2026-03-06)
 
 
