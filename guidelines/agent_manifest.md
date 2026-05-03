@@ -13,3 +13,9 @@ This manifest serves as a central registry for rules and APIs that have historic
 - **Mandatory Logic/Configuration**:
   - **Correct Key**: Always use `ignoredNodes` (with a 'd'). Do not use `ignoreNodes` even if suggested by upstream deprecation warnings.
   - **Selector Strategy**: Use attribute-based parent selectors (e.g., `SpreadElement[argument.type="LogicalExpression"]`) rather than child combinators (`>`). Parent selectors trigger a "subtree ignore," which is necessary to prevent warnings on nested expressions within the target node.
+
+## n/no-unsupported-features/es-syntax
+
+- **Mandatory Logic**: The `version` field must always be synchronized with the `engines.node` field in the root `package.json`.
+
+Last updated: May 3, 2026

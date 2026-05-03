@@ -24,7 +24,7 @@ And configuration for...
 
 ## Requirements
 The basic requirements:
-- [NodeJS version 20+](https://nodejs.org/)
+- [NodeJS version 22+](https://nodejs.org/)
 
 ## Installation
 

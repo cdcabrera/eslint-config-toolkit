@@ -49,9 +49,9 @@ Test files named `invalid.[config].[extension]` verify that ESLint configuration
 
 Test files named `conflicts.[eslint reference].[extension]` verify that the ESLint configuration correctly resolves known conflicts between different ESLint rules.
 
-### Rule Customizations Tests
+### Rule Customizations (Custom) Tests
 
-Test files named `custom.[eslint reference].[extension]` verify that custom rule configurations work correctly for specific programming patterns.
+Test files named `custom.[eslint reference].[extension]` verify that custom rule configurations work correctly for specific programming patterns. These are often referred to as "custom tests" within the toolkit.
 
 ## Creating Test Cases
 
@@ -270,4 +270,4 @@ When implementing or modifying tests, follow these guidelines:
 - See the [Guidelines Index](./README.md#guidelines-index) for all related guidelines
 - [Jest Documentation](https://jestjs.io/docs/getting-started) for more information on Jest testing
 
-Last updated: August 22, 2025
+Last updated: May 3, 2026

@@ -16,33 +16,40 @@ function exitProcess() {
 const path = require('path');
 const filePath = __dirname + '/file.js';
 
-// Using require inside a function (should use global-require)
+// Using require inside a function (triggers import/no-dynamic-require)
 function dynamicRequire(moduleName) {
   const module = require(moduleName);
   return module;
 }
 
-// Jest test with no expect
-test('this test has no expectations', () => {
-  const value = 1 + 1;
-  // Missing expect statement
-});
+// Node.js 22 Features
+// This will trigger for 'n/no-unsupported-features/es-syntax' when version is >=22.0.0 but not >=22.11.0
+const { promise, resolve, reject } = Promise.withResolvers();
 
-// Jest test with focused test
-test.only('this is a focused test', () => {
-  expect(1 + 1).toBe(2);
-});
+// These should NOT trigger 'n/no-unsupported-features/es-syntax' when version is >=22.0.0
+const asyncArray = async () => await Array.fromAsync([1, 2, 3]);
 
-// Using unsupported ES syntax for Node.js
-const arrowFunction = async () => {
-  await Promise.resolve();
-  return { ...{ a: 1 }, ...{ b: 2 } };
-};
+// Import/Export Declarations in CJS (should be flagged if treated as CJS)
+import { readFile } from 'fs';
+export const someData = 1;
+
+// Top-Level Await in CJS (should be flagged)
+await Promise.resolve();
+
+// Import Attributes (Node 22)
+// These should be supported in Node 22
+import dataJson from './data.json' with { type: 'json' };
 
 module.exports = {
   oldMethod,
   exitProcess,
   filePath,
   dynamicRequire,
-  arrowFunction
+  promise,
+  resolve,
+  reject,
+  asyncArray,
+  readFile,
+  someData,
+  dataJson
 };

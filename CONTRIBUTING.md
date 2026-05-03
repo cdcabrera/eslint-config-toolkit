@@ -31,7 +31,7 @@ Creating a pull request activates the following checks through GitHub actions.
 ### Build Requirements
 
 To set up your work environment, you'll need to use:
-- [NodeJS](https://nodejs.org/) version 20+
+- [NodeJS](https://nodejs.org/)
 - NPM
 
 ### Getting Started
@@ -82,11 +82,7 @@ This will automatically run the linter whenever files in the `configs` directory
 ### Testing
 Jest is used for the unit test framework. The toolkit includes test files with intentional linting issues to verify that the configurations catch common problems:
 
-- `tests/base.test.js`: Tests the base configuration
-- `tests/node.test.js`: Tests the Node.js configuration
-- `tests/react.test.jsx`: Tests the React configuration
-- `tests/json.test.json`: Tests the JSON configuration
-- `tests/jest.test.js`: Tests the Jest configuration
+- `tests/eslint.test.js`: Tests the toolkit's ESLint configurations
 
 #### Running Tests
 
@@ -107,11 +103,7 @@ $ npm run test:configs
 
 You can also test individual configurations:
 ```bash
-npx eslint --config ./tests/eslint.config.js ./tests/base.test.js
-npx eslint --config ./tests/eslint.config.js ./tests/node.test.js
-npx eslint --config ./tests/eslint.config.js ./tests/react.test.jsx
-npx eslint --config ./tests/eslint.config.js ./tests/json.test.json
-npx eslint --config ./tests/eslint.config.js ./tests/jest.test.js
+npx eslint --config ./tests/eslint.config.js ./tests/eslint.test.js
 ```
 
 #### Using Jest Snapshots for Testing
@@ -223,6 +215,7 @@ $ npm run test:jest -- --clearCache
 4. Submit a pull request towards `dev`
 
 ## Adding New Rules or Configurations
+> **Important Node.js Engine Requirements**: The ESlint configs may make use of the Node.js engine requirements for this package. Make sure to always review the guidelines when updating Node.js versions.
 
 When adding new rules or configurations:
 
@@ -231,7 +224,7 @@ When adding new rules or configurations:
 3. Update documentation in `DOCS.md` (required). At minimum update:
    - Configuration Details → the affected configuration(s) (Base, Node.js, React, JSON, Jest)
    - Rule Customizations → if adding/tweaking opinionated defaults
-   - Compatibility → ensure plugin list and versions remain accurate (e.g., @stylistic, import, jsdoc, comment-length, eslint)
+   - Compatibility → ensure the plugin list remains accurate (e.g., @stylistic, import, jsdoc, comment-length, eslint).
    - Advanced Usage → update Prettier Integration, TypeScript Type Definitions, or Legacy Configuration if impacted
    - Examples → add or update examples demonstrating the new/changed behavior
    - Troubleshooting → note new issues or migration tips if users may encounter diffs

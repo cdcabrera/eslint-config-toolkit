@@ -416,7 +416,7 @@ This section covers common issues you might encounter when using ESLint Config T
 2. Check that you're using the correct import syntax for your environment:
    - For ESM: `import toolkit from '@cdcabrera/eslint-config-toolkit';`
    - For CommonJS: `const toolkit = require('@cdcabrera/eslint-config-toolkit');`
-3. Verify your Node.js version is 20+ as required by the toolkit
+3. Verify your Node.js version as required by the toolkit [package.json engine](./package.json)
 
 ### Rules Not Working as Expected
 
@@ -480,6 +480,7 @@ This section provides information about compatibility with different ESLint vers
 | ESLint Config Toolkit | ESLint  | Node.js  |
 |-----------------------|---------|----------|
 | 0.1.x                 | ≥ 9.0.0 | ≥ 20.0.0 |
+| 1.x.x                 | ≥ 9.0.0 | ≥ 22.0.0 |
 
 ### Configuration Format Compatibility
 
@@ -492,19 +493,19 @@ This section provides information about compatibility with different ESLint vers
 
 The toolkit includes and is compatible with the following plugins:
 
-| Plugin                       | Version   | Purpose                    |
-|------------------------------|-----------|----------------------------|
-| @stylistic/eslint-plugin     | ≥ 5.2.2   | Code style rules           |
-| eslint-plugin-import         | ≥ 2.32.0  | Import/export rules        |
-| eslint-plugin-comment-length | ≥ 2.2.2   | Comment formatting         |
-| eslint-plugin-jsdoc          | ≥ 51.4.1  | Documentation rules        |
-| eslint-plugin-n              | ≥ 17.21.0 | Node.js rules              |
-| eslint-plugin-react          | ≥ 7.37.5  | React rules                |
-| eslint-plugin-react-hooks    | ≥ 5.2.0   | React Hooks rules          |
-| eslint-plugin-jsx-a11y       | ≥ 6.10.2  | Accessibility rules        |
-| eslint-plugin-jest           | ≥ 29.0.1  | Jest testing rules         |
-| eslint-plugin-json           | ≥ 4.0.1   | JSON linting               |
-| eslint-plugin-unicorn        | ≥ 60.0.0  | Modern best-practice rules |
+| Plugin                       | Purpose                    |
+|------------------------------|----------------------------|
+| @stylistic/eslint-plugin     | Code style rules           |
+| eslint-plugin-import         | Import/export rules        |
+| eslint-plugin-comment-length | Comment formatting         |
+| eslint-plugin-jsdoc          | Documentation rules        |
+| eslint-plugin-n              | Node.js rules              |
+| eslint-plugin-react          | React rules                |
+| eslint-plugin-react-hooks    | React Hooks rules          |
+| eslint-plugin-jsx-a11y       | Accessibility rules        |
+| eslint-plugin-jest           | Jest testing rules         |
+| eslint-plugin-json           | JSON linting               |
+| eslint-plugin-unicorn        | Modern best-practice rules |
 
 ## Contributing
 
