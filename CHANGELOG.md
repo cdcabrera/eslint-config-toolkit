@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.3](https://github.com/cdcabrera/eslint-config-toolkit/compare/6c8b96924141d176176dc0e4f7e720cb91c2b877...3a1faebd33d88dcb56adb3fe15846121f08bed19) (2026-05-03)
+
+
+### Continuous Integrations
+*  workflow perms ([#124](https://github.com/cdcabrera/eslint-config-toolkit/pull/124)) ([3a1faeb](https://github.com/cdcabrera/eslint-config-toolkit/commit/3a1faebd33d88dcb56adb3fe15846121f08bed19))
+
+### Builds
+* **deps** lock update ([#123](https://github.com/cdcabrera/eslint-config-toolkit/pull/123)) ([dcdccf7](https://github.com/cdcabrera/eslint-config-toolkit/commit/dcdccf72ec9fb813511e2864771eed6bf1f5e983))
+* **deps** bump eslint-plugin-react-hooks from 7.0.1 to 7.1.1 ([#120](https://github.com/cdcabrera/eslint-config-toolkit/pull/120)) ([d2cb142](https://github.com/cdcabrera/eslint-config-toolkit/commit/d2cb142052310dea176f5a5a46ec2e0ecd038535))
+* **deps** bump actions/github-script from 8 to 9 ([#118](https://github.com/cdcabrera/eslint-config-toolkit/pull/118)) ([f9c4937](https://github.com/cdcabrera/eslint-config-toolkit/commit/f9c49379c5a8060a05e2b08ec9609f83e42dd805))
+* **deps** bump prod group with 3 updates ([#117](https://github.com/cdcabrera/eslint-config-toolkit/pull/117)) ([6d2aadb](https://github.com/cdcabrera/eslint-config-toolkit/commit/6d2aadbcb85625daa71943ff560e1ee2ec71b807))
+* **deps** bump prod group with 2 updates ([#114](https://github.com/cdcabrera/eslint-config-toolkit/pull/114)) ([1fe7c62](https://github.com/cdcabrera/eslint-config-toolkit/commit/1fe7c62ab39d46255de86733fe0971dd065ddd8c))
+* **deps** eslint-plugin-unicorn from 63.0.0 to 64.0.0 ([#113](https://github.com/cdcabrera/eslint-config-toolkit/pull/113)) ([471487d](https://github.com/cdcabrera/eslint-config-toolkit/commit/471487d8a37c77f5a704a2e6e6de42da5efd0ce4))
+* **deps-dev** bump changelog-light from 3.0.7 to 3.0.8 ([#111](https://github.com/cdcabrera/eslint-config-toolkit/pull/111)) ([6c43a5e](https://github.com/cdcabrera/eslint-config-toolkit/commit/6c43a5ee10e987047f3a32082f9b87271e0c0c2f))
+* **deps** bump prod group with 2 updates ([#108](https://github.com/cdcabrera/eslint-config-toolkit/pull/108)) ([5db8ae3](https://github.com/cdcabrera/eslint-config-toolkit/commit/5db8ae3eb054f37dc4e76716e2702cdad48c447f))
+* **deps** lock update ([#106](https://github.com/cdcabrera/eslint-config-toolkit/pull/106)) ([63060de](https://github.com/cdcabrera/eslint-config-toolkit/commit/63060de834312608da094b3c2937f956d0affc0f))
+
 ## [0.5.2](https://github.com/cdcabrera/eslint-config-toolkit/compare/8e9719ea9682c1ea5ae298a20438da877f51a4d5...b477fae24d653722c522a801b2bfa4aaad1867ad) (2026-03-28)
 
 
