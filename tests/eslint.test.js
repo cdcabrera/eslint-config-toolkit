@@ -36,7 +36,12 @@ describe('ESLint Configurations', () => {
     },
     {
       file: 'invalid.node.js',
-      disableRules: []
+      disableRules: [],
+      testNotes: [
+        'Verified that Node.js 22.0.0 features (Array.fromAsync, Import Attributes) are supported.',
+        'Verified that Node.js 22.11.0 features (Promise.withResolvers) are correctly flagged when targeting 22.0.0.',
+        'Verified that deprecated APIs and Node-specific path rules are correctly flagged.'
+      ]
     },
     {
       file: 'invalid.react.jsx',

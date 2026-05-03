@@ -238,7 +238,7 @@ exports[`ESLint Configurations invalid.json.json should have the expected lintin
 
 exports[`ESLint Configurations invalid.node.js should have the expected linting issues 1`] = `
 {
-  "errorCount": 11,
+  "errorCount": 10,
   "filePath": "invalid.node.js",
   "filtering": {
     "appliedFilters": [
@@ -326,42 +326,35 @@ exports[`ESLint Configurations invalid.node.js should have the expected linting 
       "severity": "error",
     },
     {
-      "column": 1,
-      "line": 26,
-      "message": "'test' is not defined.",
-      "ruleId": "no-undef",
-      "severity": "error",
-    },
-    {
-      "column": 9,
+      "column": 38,
       "line": 27,
-      "message": "'value' is assigned a value but never used.",
-      "ruleId": "no-unused-vars",
+      "message": "'promise-withresolvers' is not supported until Node.js >=22.11.0. The configured version range is '>=22.0.0'.",
+      "ruleId": "n/no-unsupported-features/es-syntax",
       "severity": "warning",
     },
     {
       "column": 1,
-      "line": 32,
-      "message": "'test' is not defined.",
-      "ruleId": "no-undef",
-      "severity": "error",
-    },
-    {
-      "column": 3,
       "line": 33,
-      "message": "'expect' is not defined.",
-      "ruleId": "no-undef",
+      "message": "\`fs\` import should occur before import of \`util\`",
+      "ruleId": "import/order",
       "severity": "error",
     },
     {
-      "column": 3,
-      "line": 39,
-      "message": "Expected blank line before this statement.",
-      "ruleId": "@stylistic/padding-line-between-statements",
+      "column": 1,
+      "line": 41,
+      "message": "\`./data.json\` import should occur before import of \`util\`",
+      "ruleId": "import/order",
+      "severity": "error",
+    },
+    {
+      "column": 22,
+      "line": 41,
+      "message": "Unable to resolve path to module './data.json'.",
+      "ruleId": "import/no-unresolved",
       "severity": "error",
     },
   ],
-  "totalIssues": 16,
+  "totalIssues": 15,
   "warningCount": 5,
 }
 `;

@@ -48,4 +48,4 @@ Agent-specific guidelines for the ESLint Config Toolkit project, optimized for m
 3. Provide brief description
 4. Update processing order if needed
 
-Last updated: August 22, 2025
+Last updated: May 3, 2026

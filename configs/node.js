@@ -63,11 +63,11 @@ const config = [
       // n/no-unpublished-require: Set to error to ensure dependencies are declared
       'n/no-unpublished-require': 2,
 
-      // n/no-unsupported-features/es-syntax: Set to warning with Node.js 20+ as target
+      // n/no-unsupported-features/es-syntax: Set to warning with Node.js 22+ as target
       'n/no-unsupported-features/es-syntax': [
         1,
         {
-          version: '>=20.0.0',
+          version: '>=22.0.0',
           ignores: []
         }
       ],

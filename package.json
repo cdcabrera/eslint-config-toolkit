@@ -23,7 +23,7 @@
     "code-quality"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "type": "module",
   "main": "index.js",
@@ -54,7 +54,7 @@
     "test:jest-update": "npm run test:jest -- -u",
     "test:jest-watch": "npm run test:jest -- --watchAll",
     "test:spell-docs": "cspell ./README.md --config ./cspell.config.json",
-    "test:spell": "cspell './configs/**/*.js' './tests/**/*' --config ./cspell.config.json",
+    "test:spell": "cspell './configs/**/*.js' './tests/**/*' --exclude './tests/**/*snap' --config ./cspell.config.json",
     "test:types": "tsc --noEmit --project tsconfig.json"
   },
   "dependencies": {

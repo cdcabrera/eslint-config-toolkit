@@ -394,4 +394,4 @@ This section demonstrates how to transform comments from the old style to the ne
 - [ESLint Documentation](https://eslint.org/docs/latest/) for official ESLint documentation
 - [Technical Writing Best Practices](https://developers.google.com/tech-writing) for guidance on clear, concise documentation
 
-Last updated: August 22, 2025
+Last updated: May 3, 2026

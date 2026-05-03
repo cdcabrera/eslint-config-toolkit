@@ -79,6 +79,12 @@ Example:
 'no-cond-assign': [2, 'except-parens'],
 ```
 
+### Engine-Aware Rules
+
+Some rules are tied to the project's supported Node.js version.
+- **Rule**: `n/no-unsupported-features/es-syntax` in `configs/node.js`.
+- **Requirement**: We leverage the `package.json` min engine version to test rules. When you update the minimum Node.js requirements in `package.json`, you **must** update the `version` property in the related config rules to match.
+
 ### Step 3: Consider Related Rules
 
 Some rules interact with each other. When changing a rule, consider:
@@ -291,4 +297,4 @@ Example of resolving a conflict between `no-extra-parens` and `no-cond-assign`:
 - See the [Guidelines Index](./README.md#guidelines-index) for all related guidelines
 - [ESLint Rules Documentation](https://eslint.org/docs/latest/rules/) for official ESLint rule documentation
 
-Last updated: August 22, 2025
+Last updated: May 3, 2026
