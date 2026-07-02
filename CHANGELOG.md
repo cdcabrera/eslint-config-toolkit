@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/777d52a24de842bf1feb4e3ba52e412ec90ad589...cabe2c9168f5c74183e1982e21d6bffdf6c27c53) (2026-07-02)
+⚠ **BREAKING CHANGES**
+* Node.js 20 support has been removed. See [#126](https://github.com/cdcabrera/eslint-config-toolkit/pull/126)
+
+### Builds
+* **deps** lock update ([#143](https://github.com/cdcabrera/eslint-config-toolkit/pull/143)) ([cabe2c9](https://github.com/cdcabrera/eslint-config-toolkit/commit/cabe2c9168f5c74183e1982e21d6bffdf6c27c53))
+* **deps** bump prod group with 2 updates ([#142](https://github.com/cdcabrera/eslint-config-toolkit/pull/142)) ([2680da7](https://github.com/cdcabrera/eslint-config-toolkit/commit/2680da72da8e8e64aae28727c9e3dfb8d526da58))
+* **deps** bump eslint-plugin-n from 17.24.0 to 18.1.0 ([#136](https://github.com/cdcabrera/eslint-config-toolkit/pull/136)) ([72baf23](https://github.com/cdcabrera/eslint-config-toolkit/commit/72baf230f48e6880894f30a4c77fc351fcc9b127))
+* **deps-dev** bump cspell from 10.0.0 to 10.0.1 ([#134](https://github.com/cdcabrera/eslint-config-toolkit/pull/134)) ([e533f1d](https://github.com/cdcabrera/eslint-config-toolkit/commit/e533f1da0d528df92bf8ed3b961d4a448d104f37))
+* **deps-dev** bump jest from 30.3.0 to 30.4.2 ([#130](https://github.com/cdcabrera/eslint-config-toolkit/pull/130)) ([3116fcb](https://github.com/cdcabrera/eslint-config-toolkit/commit/3116fcbc66664ce174107c7f5c4732355439daa6))
+* **deps** bump actions/checkout from 6 to 6.0.2 ([#132](https://github.com/cdcabrera/eslint-config-toolkit/pull/132)) ([619e93f](https://github.com/cdcabrera/eslint-config-toolkit/commit/619e93f533b974ecdc076ca7493151f0bd3652ca))
+* **deps-dev** bump cspell from 9.7.0 to 10.0.0 ([#115](https://github.com/cdcabrera/eslint-config-toolkit/pull/115)) ([3f986d4](https://github.com/cdcabrera/eslint-config-toolkit/commit/3f986d4a380f67c575a7c247ad7b2ff7b67fe3a1))
+* ⚠ **nodejs** remove 20 support ([#126](https://github.com/cdcabrera/eslint-config-toolkit/pull/126)) ([4be4e80](https://github.com/cdcabrera/eslint-config-toolkit/commit/4be4e804efa96b693cb118b3a7b39b79dfa3ee26))
+
 ## [0.5.3](https://github.com/cdcabrera/eslint-config-toolkit/compare/6c8b96924141d176176dc0e4f7e720cb91c2b877...3a1faebd33d88dcb56adb3fe15846121f08bed19) (2026-05-03)
 
 
