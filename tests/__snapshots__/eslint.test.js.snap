@@ -2,7 +2,7 @@
 
 exports[`ESLint Configurations invalid.base.js should have the expected linting issues 1`] = `
 {
-  "errorCount": 17,
+  "errorCount": 18,
   "filePath": "invalid.base.js",
   "filtering": {
     "appliedFilters": [
@@ -153,14 +153,21 @@ exports[`ESLint Configurations invalid.base.js should have the expected linting 
       "severity": "error",
     },
     {
+      "column": 7,
+      "line": 60,
+      "message": "Identifier name 's' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
       "column": 1,
-      "line": 59,
+      "line": 62,
       "message": "'module' is not defined.",
       "ruleId": "no-undef",
       "severity": "error",
     },
   ],
-  "totalIssues": 21,
+  "totalIssues": 22,
   "warningCount": 4,
 }
 `;
@@ -823,7 +830,7 @@ exports[`Rule Customizations custom.array-bracket-newline.js should enforce cons
 
 exports[`Rule Customizations custom.brace-style.js should enforce consistent line breaking and formatting (Note: Configured as 1tbs with allowSingleLine: true to allow consistent brace style with flexibility for single-line blocks) 1`] = `
 {
-  "errorCount": 15,
+  "errorCount": 21,
   "filePath": "custom.brace-style.js",
   "filtering": {
     "appliedFilters": [
@@ -883,6 +890,13 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "severity": "warning",
     },
     {
+      "column": 11,
+      "line": 76,
+      "message": "Identifier name 'x' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
       "column": 5,
       "line": 77,
       "message": "Expected blank line before this statement.",
@@ -890,10 +904,24 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "severity": "error",
     },
     {
+      "column": 11,
+      "line": 81,
+      "message": "Identifier name 'y' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
       "column": 5,
       "line": 82,
       "message": "Expected blank line before this statement.",
       "ruleId": "@stylistic/padding-line-between-statements",
+      "severity": "error",
+    },
+    {
+      "column": 9,
+      "line": 90,
+      "message": "Identifier name 'x' is too short (< 2).",
+      "ruleId": "id-length",
       "severity": "error",
     },
     {
@@ -922,6 +950,13 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "line": 103,
       "message": "':' should be placed at the beginning of the line.",
       "ruleId": "@stylistic/operator-linebreak",
+      "severity": "error",
+    },
+    {
+      "column": 9,
+      "line": 120,
+      "message": "Identifier name 'x' is too short (< 2).",
+      "ruleId": "id-length",
       "severity": "error",
     },
     {
@@ -966,15 +1001,29 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "ruleId": "curly",
       "severity": "error",
     },
+    {
+      "column": 9,
+      "line": 150,
+      "message": "Identifier name 'x' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
+      "column": 9,
+      "line": 151,
+      "message": "Identifier name 'y' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 18,
+  "totalIssues": 24,
   "warningCount": 3,
 }
 `;
 
 exports[`Rule Customizations custom.comma-dangle.js should enforce consistent punctuation usage (Note: Set to "never" to disallow trailing commas in objects and arrays) 1`] = `
 {
-  "errorCount": 1,
+  "errorCount": 2,
   "filePath": "custom.comma-dangle.js",
   "filtering": {
     "appliedFilters": [
@@ -1002,8 +1051,15 @@ exports[`Rule Customizations custom.comma-dangle.js should enforce consistent pu
       "ruleId": "func-names",
       "severity": "error",
     },
+    {
+      "column": 40,
+      "line": 146,
+      "message": "Identifier name 'c' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 1,
+  "totalIssues": 2,
   "warningCount": 0,
 }
 `;
@@ -1125,6 +1181,55 @@ exports[`Rule Customizations custom.function-paren-newline.js should allow consi
 }
 `;
 
+exports[`Rule Customizations custom.id-length.js should enforce minimum identifier length with exceptions (Note: Set min to 2, exempting properties and common loop/internal variables) 1`] = `
+{
+  "errorCount": 3,
+  "filePath": "custom.id-length.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-jsdoc": 1,
+      "no-undef": 1,
+    },
+    "totalFiltered": 2,
+  },
+  "messages": [
+    {
+      "column": 7,
+      "line": 16,
+      "message": "Identifier name 'x' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
+      "column": 7,
+      "line": 17,
+      "message": "Identifier name 'y' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
+      "column": 15,
+      "line": 19,
+      "message": "Identifier name 'z' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 3,
+  "warningCount": 0,
+}
+`;
+
 exports[`Rule Customizations custom.indent.js should properly indent various code constructs (Note: Expanded configuration to provide consistent indentation for arrays, function calls, function declarations, imports, and objects) 1`] = `
 {
   "errorCount": 0,
@@ -1177,7 +1282,7 @@ exports[`Rule Customizations custom.jsdoc-undefined-types.js should allow undefi
 
 exports[`Rule Customizations custom.newline-per-chained-call.js should allow up to 4 method calls in a chain without line breaks (Note: Increased ignoreChainWithDepth from 3 to 4 to allow more method chaining on a single line) 1`] = `
 {
-  "errorCount": 1,
+  "errorCount": 5,
   "filePath": "custom.newline-per-chained-call.js",
   "filtering": {
     "appliedFilters": [
@@ -1205,8 +1310,36 @@ exports[`Rule Customizations custom.newline-per-chained-call.js should allow up 
       "ruleId": "@stylistic/newline-per-chained-call",
       "severity": "error",
     },
+    {
+      "column": 36,
+      "line": 82,
+      "message": "Identifier name 'n' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
+      "column": 52,
+      "line": 82,
+      "message": "Identifier name 'n' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
+      "column": 50,
+      "line": 86,
+      "message": "Identifier name 'v' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
+      "column": 86,
+      "line": 86,
+      "message": "Identifier name 'v' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 1,
+  "totalIssues": 5,
   "warningCount": 0,
 }
 `;
@@ -1239,7 +1372,7 @@ exports[`Rule Customizations custom.no-extra-parens.js should allow parentheses 
 
 exports[`Rule Customizations custom.no-plusplus.js should disallow ++/-- except in for-loop afterthought (Note: Enabled as warning with allowForLoopAfterthoughts: true) 1`] = `
 {
-  "errorCount": 0,
+  "errorCount": 1,
   "filePath": "custom.no-plusplus.js",
   "filtering": {
     "appliedFilters": [
@@ -1267,6 +1400,13 @@ exports[`Rule Customizations custom.no-plusplus.js should disallow ++/-- except 
       "severity": "warning",
     },
     {
+      "column": 7,
+      "line": 33,
+      "message": "Identifier name 'n' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
       "column": 3,
       "line": 34,
       "message": "Unary operator '--' used.",
@@ -1274,14 +1414,14 @@ exports[`Rule Customizations custom.no-plusplus.js should disallow ++/-- except 
       "severity": "warning",
     },
   ],
-  "totalIssues": 2,
+  "totalIssues": 3,
   "warningCount": 2,
 }
 `;
 
 exports[`Rule Customizations custom.prefer-logical-operator-over-ternary.js should prefer a logical operator over simple ternary fallbacks (Note: Rule enabled without options; the plugin suggests either || or ??) 1`] = `
 {
-  "errorCount": 2,
+  "errorCount": 3,
   "filePath": "custom.prefer-logical-operator-over-ternary.js",
   "filtering": {
     "appliedFilters": [
@@ -1309,6 +1449,13 @@ exports[`Rule Customizations custom.prefer-logical-operator-over-ternary.js shou
       "severity": "error",
     },
     {
+      "column": 39,
+      "line": 32,
+      "message": "Identifier name 'n' is too short (< 2).",
+      "ruleId": "id-length",
+      "severity": "error",
+    },
+    {
       "column": 10,
       "line": 34,
       "message": "Prefer using a logical operator over a ternary.",
@@ -1316,7 +1463,7 @@ exports[`Rule Customizations custom.prefer-logical-operator-over-ternary.js shou
       "severity": "error",
     },
   ],
-  "totalIssues": 2,
+  "totalIssues": 3,
   "warningCount": 0,
 }
 `;

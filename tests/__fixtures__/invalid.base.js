@@ -56,6 +56,9 @@ function missingCurly(condition) {
   if (condition) return 'no-curly';
 }
 
+// Intentional id-length issue
+const s = 'short';
+
 module.exports = {
   foo,
   hello,
@@ -68,5 +71,6 @@ module.exports = {
   arrowWithLineBreak,
   arrowWithoutLineBreak,
   arrowWithObjectLiteral,
-  missingCurly
+  missingCurly,
+  s
 };
