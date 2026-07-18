@@ -12,6 +12,7 @@ Comprehensive usage and in-depth explanations for each configuration.
   - [React Configuration](#react-configuration)
   - [JSON Configuration](#json-configuration)
   - [Jest Configuration](#jest-configuration)
+  - [Vitest Configuration](#vitest-configuration)
 - [Advanced Usage](#advanced-usage)
   - [Using Globals](#using-globals)
   - [TypeScript Type Definitions](#typescript-type-definitions)
@@ -41,53 +42,6 @@ Key features:
 - **GitIgnore Integration**: Automatically excludes files in your `.gitignore`, improving performance and simplifying configuration
 - **Import Management**: Enforces proper module import order and prevents circular dependencies
 - **Documentation**: Requires JSDoc for public APIs with proper parameter and return type documentation
-
-### Jest Configuration
-
-The Jest configuration includes:
-
-- Jest-specific rules for test files
-- Rules to prevent common testing pitfalls
-- Rules to enforce best practices in tests
-- Jest globals for test files
-
-Key features:
-
-- **Test Quality**: Prevents disabled or focused tests from being committed
-- **Assertion Validation**: Ensures tests contain proper assertions and expectations
-- **Naming Consistency**: Enforces unique test titles for better reporting
-- **Integration**: Designed to work alongside your main configuration
-
-Usage example:
-
-```js
-// eslint.config.js
-import toolkit from '@cdcabrera/eslint-config-toolkit';
-
-export default [
-  ...toolkit.base,
-  {
-    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
-    ...toolkit.jest
-  }
-];
-```
-
-### JSON Configuration
-
-The JSON configuration includes:
-
-- JSON validation rules
-- Syntax error detection
-- Formatting consistency checks
-- Compatibility with the GitIgnore integration
-
-Key features:
-
-- **Validation**: Catches syntax errors and formatting issues in JSON files
-- **Performance**: Automatically ignores `package-lock.json` and files in `node_modules`
-- **Integration**: Works seamlessly with existing ESLint configurations
-- **Simplicity**: Provides reliable JSON validation without complex setup
 
 ### Node.js Configuration
 
@@ -157,6 +111,79 @@ export default [
 ];
 ```
 
+### JSON Configuration
+
+The JSON configuration includes:
+
+- JSON validation rules
+- Syntax error detection
+- Formatting consistency checks
+- Compatibility with the GitIgnore integration
+
+Key features:
+
+- **Validation**: Catches syntax errors and formatting issues in JSON files
+- **Performance**: Automatically ignores `package-lock.json` and files in `node_modules`
+- **Integration**: Works seamlessly with existing ESLint configurations
+- **Simplicity**: Provides reliable JSON validation without complex setup
+
+### Jest Configuration
+
+The Jest configuration includes:
+
+- Jest-specific rules for test files
+- Rules to prevent common testing pitfalls
+- Rules to enforce best practices in tests
+- Jest globals for test files
+
+Key features:
+
+- **Test Quality**: Prevents disabled or focused tests from being committed
+- **Assertion Validation**: Ensures tests contain proper assertions and expectations
+- **Naming Consistency**: Enforces unique test titles for better reporting
+- **Integration**: Designed to work alongside your main configuration
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  {
+    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
+    ...toolkit.jest
+  }
+];
+```
+
+### Vitest Configuration
+
+The Vitest configuration provides specialized linting for Vitest testing code, similar to our Jest configuration but tailored for the Vitest ecosystem.
+
+Key features:
+
+- **Test Quality**: Prevents disabled or focused tests from being committed
+- **Assertion Validation**: Ensures tests contain proper assertions and expectations
+- **Naming Consistency**: Enforces unique test titles for better reporting
+- **Environment**: Provides Vitest-specific globals (`vi`, `describe`, `it`, `expect`, etc.)
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  {
+    files: ['**/*.test.js', '**/*.spec.js'],
+    ...toolkit.vitest
+  }
+];
+```
+
 ## Advanced Usage
 
 ### Using Globals
@@ -200,6 +227,7 @@ Available globals include:
 - `globals.browser`: Browser globals (window, document, etc.)
 - `globals.node`: Node.js globals (process, __dirname, etc.)
 - `globals.jest`: Jest testing globals
+- `globals.vitest`: Vitest testing globals
 - `globals.jquery`: jQuery globals
 - And many more
 
@@ -321,6 +349,9 @@ module.exports = compat.config(toolkit.json);
 
 // For Jest testing
 module.exports = compat.config(toolkit.jest);
+
+// For Vitest testing
+module.exports = compat.config(toolkit.vitest);
 ```
 
 ### Complete Project Examples
@@ -504,6 +535,7 @@ The toolkit includes and is compatible with the following plugins:
 | eslint-plugin-react-hooks    | React Hooks rules          |
 | eslint-plugin-jsx-a11y       | Accessibility rules        |
 | eslint-plugin-jest           | Jest testing rules         |
+| @vitest/eslint-plugin        | Vitest testing rules       |
 | eslint-plugin-json           | JSON linting               |
 | eslint-plugin-unicorn        | Modern best-practice rules |
 
