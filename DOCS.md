@@ -43,79 +43,6 @@ Key features:
 - **Import Management**: Enforces proper module import order and prevents circular dependencies
 - **Documentation**: Requires JSDoc for public APIs with proper parameter and return type documentation
 
-### Jest Configuration
-
-The Jest configuration includes:
-
-- Jest-specific rules for test files
-- Rules to prevent common testing pitfalls
-- Rules to enforce best practices in tests
-- Jest globals for test files
-
-Key features:
-
-- **Test Quality**: Prevents disabled or focused tests from being committed
-- **Assertion Validation**: Ensures tests contain proper assertions and expectations
-- **Naming Consistency**: Enforces unique test titles for better reporting
-- **Integration**: Designed to work alongside your main configuration
-
-Usage example:
-
-```js
-// eslint.config.js
-import toolkit from '@cdcabrera/eslint-config-toolkit';
-
-export default [
-  ...toolkit.base,
-  {
-    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
-    ...toolkit.jest
-  }
-];
-```
-
-### Vitest Configuration
-
-The Vitest configuration provides specialized linting for Vitest testing code, similar to our Jest configuration but tailored for the Vitest ecosystem.
-
-Key features:
-
-- **Test Quality**: Prevents disabled or focused tests from being committed
-- **Assertion Validation**: Ensures tests contain proper assertions and expectations
-- **Naming Consistency**: Enforces unique test titles for better reporting
-- **Environment**: Provides Vitest-specific globals (`vi`, `describe`, `it`, `expect`, etc.)
-
-Usage example:
-
-```js
-// eslint.config.js
-import toolkit from '@cdcabrera/eslint-config-toolkit';
-
-export default [
-  ...toolkit.base,
-  {
-    files: ['**/*.test.js', '**/*.spec.js'],
-    ...toolkit.vitest
-  }
-];
-```
-
-### JSON Configuration
-
-The JSON configuration includes:
-
-- JSON validation rules
-- Syntax error detection
-- Formatting consistency checks
-- Compatibility with the GitIgnore integration
-
-Key features:
-
-- **Validation**: Catches syntax errors and formatting issues in JSON files
-- **Performance**: Automatically ignores `package-lock.json` and files in `node_modules`
-- **Integration**: Works seamlessly with existing ESLint configurations
-- **Simplicity**: Provides reliable JSON validation without complex setup
-
 ### Node.js Configuration
 
 The Node.js configuration extends the base configuration and adds:
@@ -180,6 +107,79 @@ export default [
       'react/jsx-no-bind': [1, { allowArrowFunctions: true }],
       'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }]
     }
+  }
+];
+```
+
+### JSON Configuration
+
+The JSON configuration includes:
+
+- JSON validation rules
+- Syntax error detection
+- Formatting consistency checks
+- Compatibility with the GitIgnore integration
+
+Key features:
+
+- **Validation**: Catches syntax errors and formatting issues in JSON files
+- **Performance**: Automatically ignores `package-lock.json` and files in `node_modules`
+- **Integration**: Works seamlessly with existing ESLint configurations
+- **Simplicity**: Provides reliable JSON validation without complex setup
+
+### Jest Configuration
+
+The Jest configuration includes:
+
+- Jest-specific rules for test files
+- Rules to prevent common testing pitfalls
+- Rules to enforce best practices in tests
+- Jest globals for test files
+
+Key features:
+
+- **Test Quality**: Prevents disabled or focused tests from being committed
+- **Assertion Validation**: Ensures tests contain proper assertions and expectations
+- **Naming Consistency**: Enforces unique test titles for better reporting
+- **Integration**: Designed to work alongside your main configuration
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  {
+    files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
+    ...toolkit.jest
+  }
+];
+```
+
+### Vitest Configuration
+
+The Vitest configuration provides specialized linting for Vitest testing code, similar to our Jest configuration but tailored for the Vitest ecosystem.
+
+Key features:
+
+- **Test Quality**: Prevents disabled or focused tests from being committed
+- **Assertion Validation**: Ensures tests contain proper assertions and expectations
+- **Naming Consistency**: Enforces unique test titles for better reporting
+- **Environment**: Provides Vitest-specific globals (`vi`, `describe`, `it`, `expect`, etc.)
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  {
+    files: ['**/*.test.js', '**/*.spec.js'],
+    ...toolkit.vitest
   }
 ];
 ```
