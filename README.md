@@ -13,7 +13,7 @@ Includes...
 - **Unicorn Rules**: Modern best-practices from eslint-plugin-unicorn
 - **Stylistic Rules**: Comprehensive code formatting with @stylistic plugin
 - **Accessibility**: Includes JSX accessibility rules when using the React configuration
-- **TypeScript Type Definitions**: Type definitions for consuming the toolkit
+- **TypeScript Support**: Linting support for TypeScript projects
 
 And configuration for...
 - **Base Configuration**: Core JavaScript rules for any project
@@ -22,6 +22,7 @@ And configuration for...
 - **JSON Configuration**: Specific rules for JSON files
 - **Jest Configuration**: Specific rules for Jest testing
 - **Vitest Configuration**: Specific rules for Vitest testing
+- **TypeScript Configuration**: Specific rules for TypeScript projects
 
 ## Requirements
 The basic requirements:
@@ -65,6 +66,8 @@ export default toolkit.node;  // For Node.js projects
 export default toolkit.react; // For React projects
 // OR
 export default toolkit.vitest; // For Vitest projects
+// OR
+export default toolkit.typescript; // For TypeScript projects
 ```
 
 ### Step 2: Add NPM scripts
@@ -108,6 +111,7 @@ export default [
   ...toolkit.base,
   ...toolkit.jest,    // Add Jest configuration for test files
   ...toolkit.vitest,  // OR Add Vitest configuration for test files
+  ...toolkit.typescript, // Add TypeScript configuration
   {
     // Add your custom overrides
     rules: {

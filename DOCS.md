@@ -13,6 +13,7 @@ Comprehensive usage and in-depth explanations for each configuration.
   - [JSON Configuration](#json-configuration)
   - [Jest Configuration](#jest-configuration)
   - [Vitest Configuration](#vitest-configuration)
+  - [TypeScript Configuration](#typescript-configuration)
 - [Advanced Usage](#advanced-usage)
   - [Using Globals](#using-globals)
   - [TypeScript Type Definitions](#typescript-type-definitions)
@@ -181,6 +182,27 @@ export default [
     files: ['**/*.test.js', '**/*.spec.js'],
     ...toolkit.vitest
   }
+];
+```
+
+### TypeScript Configuration
+
+Provides specialized linting for TypeScript projects using `typescript-eslint`.
+
+Key features:
+- **Parser Integration**: Uses `@typescript-eslint/parser` for full type awareness.
+- **Smart Resets**: Disables JavaScript rules (like `no-undef`) that TypeScript handles natively.
+- **Type Safety**: Enforces consistent type imports and restricts unsafe patterns.
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  ...toolkit.typescript
 ];
 ```
 
@@ -475,32 +497,18 @@ This section covers common issues you might encounter when using ESLint Config T
 **Issue**: Confusion about TypeScript linting support.
 
 **Solution**:
-1. Remember that this toolkit provides TypeScript type definitions for consuming the toolkit itself, but does not lint TypeScript files
-2. To lint TypeScript files, install and configure additional packages:
-   ```bash
-   npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
-   ```
-3. Then extend your configuration:
+1. This toolkit provides built-in TypeScript support via `toolkit.typescript`.
+2. To use it, simply extend your configuration:
    ```js
    // eslint.config.js
    import toolkit from '@cdcabrera/eslint-config-toolkit';
-   import tseslint from '@typescript-eslint/eslint-plugin';
-   import tsparser from '@typescript-eslint/parser';
 
    export default [
      ...toolkit.base,
-     {
-       files: ['**/*.ts', '**/*.tsx'],
-       plugins: { '@typescript-eslint': tseslint },
-       languageOptions: {
-         parser: tsparser,
-       },
-       rules: {
-         // TypeScript-specific rules
-       }
-     }
+     ...toolkit.typescript
    ];
    ```
+3. Type definitions for the toolkit itself are also provided.
 
 ## Compatibility
 
@@ -536,6 +544,7 @@ The toolkit includes and is compatible with the following plugins:
 | eslint-plugin-jsx-a11y       | Accessibility rules        |
 | eslint-plugin-jest           | Jest testing rules         |
 | @vitest/eslint-plugin        | Vitest testing rules       |
+| typescript-eslint            | TypeScript support         |
 | eslint-plugin-json           | JSON linting               |
 | eslint-plugin-unicorn        | Modern best-practice rules |
 
