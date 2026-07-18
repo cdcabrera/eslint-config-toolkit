@@ -35,6 +35,10 @@ describe('ESLint Configurations', () => {
       disableRules: []
     },
     {
+      file: 'invalid.typescript.ts',
+      disableRules: []
+    },
+    {
       file: 'invalid.json.json',
       disableRules: []
     },

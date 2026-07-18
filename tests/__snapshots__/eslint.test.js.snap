@@ -580,6 +580,45 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
 }
 `;
 
+exports[`ESLint Configurations invalid.typescript.ts should have the expected linting issues 1`] = `
+{
+  "errorCount": 2,
+  "filePath": "invalid.typescript.ts",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
+  "messages": [
+    {
+      "column": 15,
+      "line": 2,
+      "message": "'BaseConfig' is defined but never used. Allowed unused vars must match /^_/u.",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "severity": "error",
+    },
+    {
+      "column": 13,
+      "line": 5,
+      "message": "Unexpected any. Specify a different type.",
+      "ruleId": "@typescript-eslint/no-explicit-any",
+      "severity": "warning",
+    },
+    {
+      "column": 7,
+      "line": 10,
+      "message": "'unusedVar' is assigned a value but never used. Allowed unused vars must match /^_/u.",
+      "ruleId": "@typescript-eslint/no-unused-vars",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 3,
+  "warningCount": 1,
+}
+`;
+
 exports[`ESLint Configurations invalid.vitest.js should have the expected linting issues 1`] = `
 {
   "errorCount": 5,

@@ -11,6 +11,7 @@ import { react } from './configs/react.js';
 import { json } from './configs/json.js';
 import { jest } from './configs/jest.js';
 import { vitest } from './configs/vitest.js';
+import { typescript } from './configs/typescript.js';
 
 /**
  * ESLint config object type alias.
@@ -26,7 +27,7 @@ import { vitest } from './configs/vitest.js';
  * `Node.js`, `React`, `JSON`, `Jest`, and `globals`.
  *
  * @module toolkit
- * @type {{ base: base, node: node, react: react, json: json, jest: jest, vitest: vitest, globals: globals, defineConfig: typeof defineConfig }}
+ * @type {{ base: base, node: node, react: react, json: json, jest: jest, vitest: vitest, typescript: typescript, globals: globals, defineConfig: typeof defineConfig }}
  */
 const toolkit = {
   base,
@@ -35,9 +36,10 @@ const toolkit = {
   json,
   jest,
   vitest,
+  typescript,
   globals,
   defineConfig,
   ...base
 };
 
-export { toolkit as default, toolkit, base, node, react, json, jest, vitest, globals };
+export { toolkit as default, toolkit, base, node, react, json, jest, vitest, typescript, globals };
