@@ -580,6 +580,66 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
 }
 `;
 
+exports[`ESLint Configurations invalid.vitest.js should have the expected linting issues 1`] = `
+{
+  "errorCount": 5,
+  "filePath": "invalid.vitest.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
+  "messages": [
+    {
+      "column": 1,
+      "line": 4,
+      "message": "Test has no assertions",
+      "ruleId": "vitest/expect-expect",
+      "severity": "error",
+    },
+    {
+      "column": 6,
+      "line": 10,
+      "message": "Focused tests are not allowed",
+      "ruleId": "vitest/no-focused-tests",
+      "severity": "error",
+    },
+    {
+      "column": 6,
+      "line": 15,
+      "message": "Disabled test - if you want to skip a test temporarily, use .todo() instead",
+      "ruleId": "vitest/no-disabled-tests",
+      "severity": "warning",
+    },
+    {
+      "column": 1,
+      "line": 24,
+      "message": "Test is used multiple times in the same describe(suite) block",
+      "ruleId": "vitest/no-identical-title",
+      "severity": "error",
+    },
+    {
+      "column": 3,
+      "line": 30,
+      "message": "Expect must have a corresponding matcher call",
+      "ruleId": "vitest/valid-expect",
+      "severity": "error",
+    },
+    {
+      "column": 3,
+      "line": 35,
+      "message": "Test has no assertions",
+      "ruleId": "vitest/expect-expect",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 6,
+  "warningCount": 1,
+}
+`;
+
 exports[`Rule Conflicts conflicts.arrow-parens.js should not have errors for arrow functions with parentheses (Note: Handled arrow conditionals via ignoredNodes selectors; rule remains at warning) 1`] = `
 {
   "errorCount": 1,

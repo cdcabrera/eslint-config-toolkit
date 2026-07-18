@@ -8,6 +8,7 @@ import nodeConfig from '../configs/node.js';
 import reactConfig from '../configs/react.js';
 import jsonConfig from '../configs/json.js';
 import jestConfig from '../configs/jest.js';
+import vitestConfig from '../configs/vitest.js';
 
 export default defineConfig([
   // Base configuration for all test fixtures
@@ -48,6 +49,12 @@ export default defineConfig([
   {
     files: ['**/__fixtures__/invalid.jest.js'],
     extends: [jestConfig]
+  },
+
+  // Vitest configuration for invalid.vitest.js
+  {
+    files: ['**/__fixtures__/invalid.vitest.js'],
+    extends: [vitestConfig]
   },
 
   // Rule conflicts test configurations

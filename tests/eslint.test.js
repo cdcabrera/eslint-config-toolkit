@@ -31,6 +31,10 @@ describe('ESLint Configurations', () => {
       disableRules: []
     },
     {
+      file: 'invalid.vitest.js',
+      disableRules: []
+    },
+    {
       file: 'invalid.json.json',
       disableRules: []
     },

@@ -8,6 +8,7 @@ export type NodeConfig = Array<Linter.Config>;
 export type ReactConfig = Array<Linter.Config>;
 export type JsonConfig = Array<Linter.Config>;
 export type JestConfig = Array<Linter.Config>;
+export type VitestConfig = Array<Linter.Config>;
 
 // Export individual configurations
 export const base: BaseConfig;
@@ -15,6 +16,7 @@ export const node: NodeConfig;
 export const react: ReactConfig;
 export const json: JsonConfig;
 export const jest: JestConfig;
+export const vitest: VitestConfig;
 export const globals: Globals;
 
 /**
@@ -28,6 +30,7 @@ declare const toolkit: {
     react: ReactConfig;
     json: JsonConfig;
     jest: JestConfig;
+    vitest: VitestConfig;
     globals: Globals;
     defineConfig: typeof defineConfig;
 };
