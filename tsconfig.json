@@ -13,6 +13,6 @@
     "isolatedModules": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["**/*.js"],
+  "include": ["**/*.js", "**/*.ts", "index.d.ts"],
   "exclude": ["node_modules"]
 }

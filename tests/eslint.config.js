@@ -9,12 +9,13 @@ import reactConfig from '../configs/react.js';
 import jsonConfig from '../configs/json.js';
 import jestConfig from '../configs/jest.js';
 import vitestConfig from '../configs/vitest.js';
+import typescriptConfig from '../configs/typescript.js';
 
 export default defineConfig([
   // Base configuration for all test fixtures
   // Disables universally irrelevant rules to reduce noise in test snapshots
   {
-    files: ['**/__fixtures__/*.js', '**/__fixtures__/*.jsx', '**/__fixtures__/*.json'],
+    files: ['**/__fixtures__/*.js', '**/__fixtures__/*.jsx', '**/__fixtures__/*.json', '**/__fixtures__/*.ts'],
     rules: {
       // Disable 'module is not defined' errors which appear in every fixture due to module.exports
       'no-undef': 0
@@ -55,6 +56,12 @@ export default defineConfig([
   {
     files: ['**/__fixtures__/invalid.vitest.js'],
     extends: [vitestConfig]
+  },
+
+  // TypeScript configuration for invalid.typescript.ts
+  {
+    files: ['**/__fixtures__/invalid.typescript.ts'],
+    extends: [typescriptConfig]
   },
 
   // Rule conflicts test configurations

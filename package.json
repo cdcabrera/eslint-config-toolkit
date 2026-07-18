@@ -35,7 +35,8 @@
     "./react": "./configs/react.js",
     "./json": "./configs/json.js",
     "./jest": "./configs/jest.js",
-    "./vitest": "./configs/vitest.js"
+    "./vitest": "./configs/vitest.js",
+    "./typescript": "./configs/typescript.js"
   },
   "files": [
     "index.js",
@@ -64,6 +65,8 @@
     "@eslint/compat": "2.1.0",
     "@eslint/js": "9.39.2",
     "@stylistic/eslint-plugin": "5.10.0",
+    "@typescript-eslint/eslint-plugin": "8.63.0",
+    "@typescript-eslint/parser": "8.63.0",
     "@vitest/eslint-plugin": "1.6.23",
     "eslint-plugin-comment-length": "2.3.0",
     "eslint-plugin-import": "2.32.0",
@@ -75,7 +78,8 @@
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
     "eslint-plugin-unicorn": "64.0.0",
-    "globals": "17.7.0"
+    "globals": "17.7.0",
+    "typescript-eslint": "8.63.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
@@ -87,6 +91,12 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "eslint": ">=9"
+    "eslint": ">=9",
+    "typescript": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   }
 }
