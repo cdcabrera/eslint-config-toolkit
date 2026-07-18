@@ -21,6 +21,7 @@ And configuration for...
 - **React Configuration**: Specific rules for React projects
 - **JSON Configuration**: Specific rules for JSON files
 - **Jest Configuration**: Specific rules for Jest testing
+- **Vitest Configuration**: Specific rules for Vitest testing
 
 ## Requirements
 The basic requirements:
@@ -62,6 +63,8 @@ export default toolkit.base;  // For basic JavaScript projects
 export default toolkit.node;  // For Node.js projects
 // OR
 export default toolkit.react; // For React projects
+// OR
+export default toolkit.vitest; // For Vitest projects
 ```
 
 ### Step 2: Add NPM scripts
@@ -103,7 +106,8 @@ import toolkit from '@cdcabrera/eslint-config-toolkit';
 
 export default [
   ...toolkit.base,
-  ...toolkit.jest,  // Add Jest configuration for test files
+  ...toolkit.jest,    // Add Jest configuration for test files
+  ...toolkit.vitest,  // OR Add Vitest configuration for test files
   {
     // Add your custom overrides
     rules: {

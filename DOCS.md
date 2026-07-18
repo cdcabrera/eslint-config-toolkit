@@ -12,6 +12,7 @@ Comprehensive usage and in-depth explanations for each configuration.
   - [React Configuration](#react-configuration)
   - [JSON Configuration](#json-configuration)
   - [Jest Configuration](#jest-configuration)
+  - [Vitest Configuration](#vitest-configuration)
 - [Advanced Usage](#advanced-usage)
   - [Using Globals](#using-globals)
   - [TypeScript Type Definitions](#typescript-type-definitions)
@@ -69,6 +70,32 @@ export default [
   {
     files: ['**/*.test.js', '**/*.spec.js', '**/tests/**/*.js'],
     ...toolkit.jest
+  }
+];
+```
+
+### Vitest Configuration
+
+The Vitest configuration provides specialized linting for Vitest testing code, similar to our Jest configuration but tailored for the Vitest ecosystem.
+
+Key features:
+
+- **Test Quality**: Prevents disabled or focused tests from being committed
+- **Assertion Validation**: Ensures tests contain proper assertions and expectations
+- **Naming Consistency**: Enforces unique test titles for better reporting
+- **Environment**: Provides Vitest-specific globals (`vi`, `describe`, `it`, `expect`, etc.)
+
+Usage example:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.base,
+  {
+    files: ['**/*.test.js', '**/*.spec.js'],
+    ...toolkit.vitest
   }
 ];
 ```
@@ -200,6 +227,7 @@ Available globals include:
 - `globals.browser`: Browser globals (window, document, etc.)
 - `globals.node`: Node.js globals (process, __dirname, etc.)
 - `globals.jest`: Jest testing globals
+- `globals.vitest`: Vitest testing globals
 - `globals.jquery`: jQuery globals
 - And many more
 
@@ -321,6 +349,9 @@ module.exports = compat.config(toolkit.json);
 
 // For Jest testing
 module.exports = compat.config(toolkit.jest);
+
+// For Vitest testing
+module.exports = compat.config(toolkit.vitest);
 ```
 
 ### Complete Project Examples
@@ -504,6 +535,7 @@ The toolkit includes and is compatible with the following plugins:
 | eslint-plugin-react-hooks    | React Hooks rules          |
 | eslint-plugin-jsx-a11y       | Accessibility rules        |
 | eslint-plugin-jest           | Jest testing rules         |
+| @vitest/eslint-plugin        | Vitest testing rules       |
 | eslint-plugin-json           | JSON linting               |
 | eslint-plugin-unicorn        | Modern best-practice rules |
 

@@ -222,7 +222,7 @@ When adding new rules or configurations:
 1. Add the rule to the appropriate configuration file in the `configs` directory
 2. Add tests for the new rule in the `tests/__fixtures__` directory and related files
 3. Update documentation in `DOCS.md` (required). At minimum update:
-   - Configuration Details → the affected configuration(s) (Base, Node.js, React, JSON, Jest)
+   - Configuration Details → the affected configuration(s) (Base, Node.js, React, JSON, Jest, Vitest)
    - Rule Customizations → if adding/tweaking opinionated defaults
    - Compatibility → ensure the plugin list remains accurate (e.g., @stylistic, import, jsdoc, comment-length, eslint).
    - Advanced Usage → update Prettier Integration, TypeScript Type Definitions, or Legacy Configuration if impacted
