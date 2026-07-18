@@ -57,6 +57,10 @@ const config = [
       // consistent-return: Set to warning level to encourage consistent return values
       'consistent-return': 1,
 
+      // curly: Enforce the use of curly braces for all control statements
+      // Example: if (condition) { doSomething(); }
+      curly: [2, 'all'],
+
       // func-names: Set to as-needed to require names only when needed for recursion or debugging
       'func-names': [2, 'as-needed'],
 

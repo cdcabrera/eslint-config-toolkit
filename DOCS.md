@@ -41,6 +41,7 @@ Key features:
 
 - **Stylistic Rules**: A set of 60+ rules from `@stylistic/eslint-plugin` for consistent code formatting
 - **GitIgnore Integration**: Automatically excludes files in your `.gitignore`, improving performance and simplifying configuration
+- **Control Flow**: Enforces the use of curly braces for all control statements to prevent logic errors and improve readability
 - **Import Management**: Enforces proper module import order and prevents circular dependencies
 - **Documentation**: Requires JSDoc for public APIs with proper parameter and return type documentation
 

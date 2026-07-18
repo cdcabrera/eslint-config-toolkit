@@ -222,6 +222,13 @@ describe('Rule Customizations', () => {
         'Ternary fallbacks should be flagged by unicorn/prefer-logical-operator-over-ternary',
         'The rule provides suggestions for both || and ?? in this version'
       ]
+    },
+    {
+      file: 'custom.curly.js',
+      description: 'should enforce curly braces for all control statements',
+      rule: 'curly',
+      note: 'Set to "all" to ensure consistent use of braces across the codebase',
+      disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
     }
   ])('$file $description (Note: $note)', async ({ file, rule, disableRules }) => {
     const result = await global.lintAndProcessFile(file, { disableRules, testRule: rule });

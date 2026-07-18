@@ -51,6 +51,11 @@ const arrowWithObjectLiteral = () => ({
   foo: 'bar'
 });
 
+// Function with missing curly braces
+function missingCurly(condition) {
+  if (condition) return 'no-curly';
+}
+
 module.exports = {
   foo,
   hello,
@@ -62,5 +67,6 @@ module.exports = {
   incompleteJSDoc,
   arrowWithLineBreak,
   arrowWithoutLineBreak,
-  arrowWithObjectLiteral
+  arrowWithObjectLiteral,
+  missingCurly
 };
