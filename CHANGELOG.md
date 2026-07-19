@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/dc6883979b026c821cab31e545932e5b0597ddfe...74b32ac98a393dce0c0b6ad6c0c0125e3f2bc75b) (2026-07-18)
+
+
+### Features
+*  add typescript config ([#153](https://github.com/cdcabrera/eslint-config-toolkit/pull/153)) ([b34c255](https://github.com/cdcabrera/eslint-config-toolkit/commit/b34c255a5c77cb443472e46fa407104a3b9b2d69))
+*  add vitest config ([#151](https://github.com/cdcabrera/eslint-config-toolkit/pull/151)) ([cc5d28e](https://github.com/cdcabrera/eslint-config-toolkit/commit/cc5d28e2d336d913a591945c1372d7a752ece60d))
+
+### Documentation
+*  add typescript examples ([#154](https://github.com/cdcabrera/eslint-config-toolkit/pull/154)) ([74b32ac](https://github.com/cdcabrera/eslint-config-toolkit/commit/74b32ac98a393dce0c0b6ad6c0c0125e3f2bc75b))
+*  add vitest examples ([#152](https://github.com/cdcabrera/eslint-config-toolkit/pull/152)) ([5d13f3e](https://github.com/cdcabrera/eslint-config-toolkit/commit/5d13f3eecb69dd1c8e95a64c5fb1384f25c81a41))
+
+### Builds
+* **deps** bump eslint-plugin-jsdoc from 62.9.0 to 63.0.10 ([#150](https://github.com/cdcabrera/eslint-config-toolkit/pull/150)) ([7df5d20](https://github.com/cdcabrera/eslint-config-toolkit/commit/7df5d2053215e8788084a81a115a4874d6a04172))
+* **deps** bump prod group with 2 updates ([#148](https://github.com/cdcabrera/eslint-config-toolkit/pull/148)) ([d2dd484](https://github.com/cdcabrera/eslint-config-toolkit/commit/d2dd484fa70d09be1294b29ab1d2bc3d5d52ad27))
+* **deps** bump actions/checkout from 6.0.2 to 7.0.0 ([#141](https://github.com/cdcabrera/eslint-config-toolkit/pull/141)) ([52561f9](https://github.com/cdcabrera/eslint-config-toolkit/commit/52561f9cba4d5d780b62631b297784ade2d12fef))
+* **deps** bump globals from 17.6.0 to 17.7.0 ([#145](https://github.com/cdcabrera/eslint-config-toolkit/pull/145)) ([3c3191c](https://github.com/cdcabrera/eslint-config-toolkit/commit/3c3191c5b1590f17a9d4df0645252c7e3056e47f))
+
 ## [1.0.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/777d52a24de842bf1feb4e3ba52e412ec90ad589...cabe2c9168f5c74183e1982e21d6bffdf6c27c53) (2026-07-02)
 ⚠ **BREAKING CHANGES**
 * Node.js 20 support has been removed. See [#126](https://github.com/cdcabrera/eslint-config-toolkit/pull/126)
