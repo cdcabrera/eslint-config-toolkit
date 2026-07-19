@@ -15,7 +15,13 @@ export default defineConfig([
   // Base configuration for all test fixtures
   // Disables universally irrelevant rules to reduce noise in test snapshots
   {
-    files: ['**/__fixtures__/*.js', '**/__fixtures__/*.jsx', '**/__fixtures__/*.json', '**/__fixtures__/*.ts'],
+    files: [
+      '**/__fixtures__/*.js',
+      '**/__fixtures__/*.jsx',
+      '**/__fixtures__/*.json',
+      '**/__fixtures__/*.jsonc',
+      '**/__fixtures__/*.ts'
+    ],
     rules: {
       // Disable 'module is not defined' errors which appear in every fixture due to module.exports
       'no-undef': 0
@@ -40,9 +46,9 @@ export default defineConfig([
     extends: [reactConfig]
   },
 
-  // JSON configuration for invalid.json.json
+  // JSON configuration for JSON fixtures
   {
-    files: ['**/__fixtures__/invalid.json.json'],
+    files: ['**/__fixtures__/invalid.json.json', '**/__fixtures__/valid.jsonc'],
     extends: [jsonConfig]
   },
 
