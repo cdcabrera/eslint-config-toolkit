@@ -46,7 +46,7 @@ export default defineConfig([
     extends: [reactConfig]
   },
 
-  // JSON configuration for JSON fixtures
+  // JSON configuration for invalid.json.json
   {
     files: ['**/__fixtures__/invalid.json.json', '**/__fixtures__/valid.jsonc'],
     extends: [jsonConfig]
