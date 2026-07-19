@@ -1,4 +1,9 @@
 {
+  "trailingComma": [
+    1,
+    2,
+    3,
+  ],
   "validKey": "validValue",
   "numberValue": 42,
   "booleanValue": true,
@@ -11,10 +16,5 @@
   "quotesIssue": 'single quotes are not valid in JSON',
   "indentationIssue": {
   "badIndent": "this should be indented properly"
-  },
-  "trailingComma": [
-    1,
-    2,
-    3,
-  ]
+  }
 }

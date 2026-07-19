@@ -120,15 +120,16 @@ The JSON configuration includes:
 
 - JSON validation rules
 - Syntax error detection
-- Formatting consistency checks
-- Compatibility with the GitIgnore integration
+- AST-based syntax error detection and formatting checks
+- Built-in support for JSON with Comments and JSON5
+- Support for trailing commas in JSONC files and key sorting rules
 
 Key features:
 
 - **Validation**: Catches syntax errors and formatting issues in JSON files
-- **Performance**: Automatically ignores `package-lock.json` and files in `node_modules`
 - **Integration**: Works seamlessly with existing ESLint configurations
-- **Simplicity**: Provides reliable JSON validation without complex setup
+- **Extensible Rules**: Supports AST-based rules like `json/no-duplicate-keys` and `json/sort-keys`
+- **JSONC Support**: Correctly handles comments and trailing commas in `.jsonc` files
 
 ### Jest Configuration
 
@@ -481,7 +482,7 @@ This section covers common issues you might encounter when using ESLint Config T
 1. Check for rule conflicts by running: `eslint --print-config path/to/your/file.js`
 2. Ensure you're not overriding rules unintentionally in your configuration
 3. Verify that the correct configuration is being applied to your files
-4. Check if you need to add specific file extensions to your ESLint command: `eslint --ext .js,.jsx,.json .`
+4. Ensure your `eslint.config.js` includes the appropriate file patterns for your project
 
 
 ### Performance Issues
@@ -534,21 +535,21 @@ This section provides information about compatibility with different ESLint vers
 
 The toolkit includes and is compatible with the following plugins:
 
-| Plugin                       | Purpose                    |
-|------------------------------|----------------------------|
-| @stylistic/eslint-plugin     | Code style rules           |
-| eslint-plugin-import         | Import/export rules        |
-| eslint-plugin-comment-length | Comment formatting         |
-| eslint-plugin-jsdoc          | Documentation rules        |
-| eslint-plugin-n              | Node.js rules              |
-| eslint-plugin-react          | React rules                |
-| eslint-plugin-react-hooks    | React Hooks rules          |
-| eslint-plugin-jsx-a11y       | Accessibility rules        |
-| eslint-plugin-jest           | Jest testing rules         |
-| @vitest/eslint-plugin        | Vitest testing rules       |
-| typescript-eslint            | TypeScript support         |
-| eslint-plugin-json           | JSON linting               |
-| eslint-plugin-unicorn        | Modern best-practice rules |
+| Plugin                       | Purpose                      |
+|------------------------------|------------------------------|
+| @stylistic/eslint-plugin     | Code style rules             |
+| eslint-plugin-import         | Import/export rules          |
+| eslint-plugin-comment-length | Comment formatting           |
+| eslint-plugin-jsdoc          | Documentation rules          |
+| eslint-plugin-n              | Node.js rules                |
+| eslint-plugin-react          | React rules                  |
+| eslint-plugin-react-hooks    | React Hooks rules            |
+| eslint-plugin-jsx-a11y       | Accessibility rules          |
+| eslint-plugin-jest           | Jest testing rules           |
+| @vitest/eslint-plugin        | Vitest testing rules         |
+| typescript-eslint            | TypeScript support           |
+| @eslint/json                 | JSON, JSONC, & JSON5 support |
+| eslint-plugin-unicorn        | Modern best-practice rules   |
 
 ## Contributing
 

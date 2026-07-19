@@ -43,6 +43,10 @@ describe('ESLint Configurations', () => {
       disableRules: []
     },
     {
+      file: 'valid.jsonc',
+      disableRules: []
+    },
+    {
       file: 'invalid.node.js',
       disableRules: [],
       testNotes: [

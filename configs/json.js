@@ -7,7 +7,7 @@
  */
 
 import { defineConfig } from 'eslint/config';
-import jsonPlugin from 'eslint-plugin-json';
+import jsonPlugin from '@eslint/json';
 
 /**
  * Configuration for linting JSON.
@@ -36,8 +36,30 @@ const config = [
       json: jsonPlugin
     },
 
-    // Set to use recommended JSON plugin configuration
-    extends: [jsonPlugin.configs.recommended]
+    // Set to use the new language-based parser
+    language: 'json/json',
+
+    // Recommended rules for @eslint/json
+    rules: {
+      'json/no-duplicate-keys': 2,
+      'json/no-empty-keys': 2,
+      'json/no-unsafe-values': 2,
+      'json/no-unnormalized-keys': 2
+    }
+  },
+  {
+    // -------------------------------------------------------------------------
+    // JSONC (JSON with Comments) Support
+    // -------------------------------------------------------------------------
+    files: ['**/*.jsonc', '.vscode/*.json'],
+    plugins: { json: jsonPlugin },
+    language: 'json/jsonc',
+    languageOptions: {
+      allowTrailingCommas: true
+    },
+    rules: {
+      'json/no-duplicate-keys': 2
+    }
   }
 ];
 
