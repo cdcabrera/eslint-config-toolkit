@@ -107,8 +107,8 @@ export default [
   {
     rules: {
       // Custom overrides for your React project
-      'react/jsx-no-bind': [1, { allowArrowFunctions: true }],
-      'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }]
+      '@eslint-react/dom-no-dangerously-set-innerhtml': 0,
+      '@eslint-react/jsx-no-useless-fragment': 2
     }
   }
 ];
@@ -412,8 +412,8 @@ export default [
     rules: {
       // Customize rules for your project needs
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-      'react/prop-types': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
+      '@eslint-react/no-missing-key': 'error',
+      '@eslint-react/exhaustive-deps': 'warn'
     }
   }
 ];
@@ -542,8 +542,7 @@ The toolkit includes and is compatible with the following plugins:
 | eslint-plugin-comment-length | Comment formatting           |
 | eslint-plugin-jsdoc          | Documentation rules          |
 | eslint-plugin-n              | Node.js rules                |
-| eslint-plugin-react          | React rules                  |
-| eslint-plugin-react-hooks    | React Hooks rules            |
+| @eslint-react/eslint-plugin  | Modern React rules           |
 | eslint-plugin-jsx-a11y       | Accessibility rules          |
 | eslint-plugin-jest           | Jest testing rules           |
 | @vitest/eslint-plugin        | Vitest testing rules         |

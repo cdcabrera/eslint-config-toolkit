@@ -7,8 +7,7 @@
  */
 
 import { defineConfig } from 'eslint/config';
-import reactPlugin from 'eslint-plugin-react';
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import reactPlugin from '@eslint-react/eslint-plugin';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import importPlugin from 'eslint-plugin-import';
 import babelParser from '@babel/eslint-parser';
@@ -36,8 +35,7 @@ const config = [
     // React plugin configuration
     // -------------------------------------------------------------------------
     plugins: {
-      react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
+      '@eslint-react': reactPlugin,
       'jsx-a11y': jsxA11yPlugin,
       import: importPlugin
     },
@@ -54,79 +52,59 @@ const config = [
     // React core rules
     // -------------------------------------------------------------------------
     rules: {
-      // react/function-component-definition: Set to allow arrow functions, function declarations, and expressions
-      'react/function-component-definition': [
-        2,
-        {
-          namedComponents: ['arrow-function', 'function-declaration', 'function-expression'],
-          unnamedComponents: ['arrow-function', 'function-expression']
-        }
-      ],
+      // Use recommended rules from @eslint-react
+      ...reactPlugin.configs.recommended.rules,
 
-      // react/jsx-boolean-value: Set to never to use shorthand syntax for boolean props
-      // Example: <Component isActive /> instead of <Component isActive={true} />
-      'react/jsx-boolean-value': [2, 'never'],
+      // @eslint-react/no-missing-key: Set to error to require key prop for elements in arrays
+      '@eslint-react/no-missing-key': 2,
 
-      // react/jsx-closing-bracket-location: Set to line-aligned for consistent bracket placement
-      'react/jsx-closing-bracket-location': [2, 'line-aligned'],
+      // @eslint-react/dom-no-dangerously-set-innerhtml: Set to warning due to security implications of raw HTML
+      '@eslint-react/dom-no-dangerously-set-innerhtml': 1,
 
-      // react/jsx-curly-spacing: Set to never have spaces inside JSX curly braces
-      'react/jsx-curly-spacing': [2, { when: 'never', children: true }],
+      // @eslint-react/no-direct-mutation-state: Set to error to prevent direct state mutation which bypasses React lifecycle
+      '@eslint-react/no-direct-mutation-state': 2,
 
-      // react/jsx-equals-spacing: Set to never have spaces around equals signs in JSX props
-      'react/jsx-equals-spacing': [2, 'never'],
+      // @eslint-react/jsx-no-useless-fragment: Set to warning to flag unnecessary fragments that add bloat to the DOM
+      '@eslint-react/jsx-no-useless-fragment': 1,
 
-      // react/jsx-filename-extension: Disabled to allow JSX in .js files
-      'react/jsx-filename-extension': 0,
+      // @eslint-react/dom-no-find-dom-node: Set to error as this API is deprecated and discouraged in modern React
+      '@eslint-react/dom-no-find-dom-node': 2,
 
-      // react/jsx-first-prop-new-line: Set to multiline to place first prop on new line in multiline JSX
-      'react/jsx-first-prop-new-line': [2, 'multiline'],
+      // @eslint-react/jsx-no-children-prop: Set to error to prevent passing children as props instead of as component children
+      '@eslint-react/jsx-no-children-prop': 2,
 
-      // react/jsx-fragments: Set to warning with element to prefer <React.Fragment> over <>
-      'react/jsx-fragments': [1, 'element'],
+      // @eslint-react/dom-no-unknown-property: Set to error to prevent typos in DOM properties and encourage camelCase
+      '@eslint-react/dom-no-unknown-property': 2,
 
-      // react/jsx-indent: Set to 2 spaces for JSX indentation
-      'react/jsx-indent': [2, 2],
+      // -------------------------------------------------------------------------
+      // Stylistic React/JSX rules
+      // -------------------------------------------------------------------------
+      // @stylistic/jsx-indent: Set to 2 spaces for consistent JSX indentation
+      '@stylistic/jsx-indent': [2, 2],
 
-      // react/jsx-indent-props: Set to 2 spaces for JSX props indentation
-      'react/jsx-indent-props': [2, 2],
+      // @stylistic/jsx-indent-props: Set to 2 spaces for consistent JSX props indentation
+      '@stylistic/jsx-indent-props': [2, 2],
 
-      // react/jsx-key: Set to error to require key prop for elements in arrays
-      'react/jsx-key': 2,
+      // @stylistic/jsx-closing-bracket-location: Set to line-aligned for consistent bracket placement in multiline JSX
+      '@stylistic/jsx-closing-bracket-location': [2, 'line-aligned'],
 
-      // react/jsx-max-props-per-line: Set to 1 prop per line for multiline JSX
-      'react/jsx-max-props-per-line': [2, { maximum: 1, when: 'multiline' }],
+      // @stylistic/jsx-curly-spacing: Set to never have spaces inside JSX curly braces
+      '@stylistic/jsx-curly-spacing': [2, { when: 'never', children: true }],
 
-      // react/jsx-no-duplicate-props: Set to error to prevent duplicate props
-      'react/jsx-no-duplicate-props': 2,
+      // @stylistic/jsx-equals-spacing: Set to never have spaces around equals signs in JSX props
+      '@stylistic/jsx-equals-spacing': [2, 'never'],
 
-      // react/jsx-no-undef: Set to error to prevent undefined variables in JSX
-      'react/jsx-no-undef': 2,
+      // @stylistic/jsx-first-prop-new-line: Set to multiline to place first prop on new line in multiline JSX
+      '@stylistic/jsx-first-prop-new-line': [2, 'multiline'],
 
-      // react/jsx-no-useless-fragment: Set to warning to flag unnecessary fragments
-      // Example: <>{child}</> should be just {child}
-      'react/jsx-no-useless-fragment': 1,
+      // @stylistic/jsx-max-props-per-line: Set to 1 prop per line for multiline JSX to improve readability
+      '@stylistic/jsx-max-props-per-line': [2, { maximum: 1, when: 'multiline' }],
 
-      // react/jsx-pascal-case: Set to error to enforce PascalCase for components
-      'react/jsx-pascal-case': 2,
+      // @stylistic/jsx-pascal-case: Set to error to enforce PascalCase for React components
+      '@stylistic/jsx-pascal-case': 2,
 
-      // react/jsx-props-no-spreading: Disabled to allow props spreading
-      // Example: <Component {...props} />
-      'react/jsx-props-no-spreading': 0,
-
-      // react/jsx-sort-props: Disabled but configuration kept for reference
-      'react/jsx-sort-props': [
-        0,
-        {
-          callbacksLast: true,
-          shorthandFirst: true,
-          ignoreCase: true,
-          reservedFirst: true
-        }
-      ],
-
-      // react/jsx-tag-spacing: Set to enforce consistent spacing in JSX tags
-      'react/jsx-tag-spacing': [
+      // @stylistic/jsx-tag-spacing: Set to enforce consistent spacing in JSX tags for better readability
+      '@stylistic/jsx-tag-spacing': [
         2,
         {
           closingSlash: 'never',
@@ -136,73 +114,15 @@ const config = [
         }
       ],
 
-      // react/jsx-uses-react: Set to error to prevent React being marked as unused
-      'react/jsx-uses-react': 2,
-
-      // react/jsx-uses-vars: Set to error to prevent variables in JSX being marked as unused
-      'react/jsx-uses-vars': 2,
-
-      // react/no-children-prop: Set to error to prevent passing children as props
-      // Example: Use <Component><div /></Component> instead of <Component children={<div />} />
-      'react/no-children-prop': 2,
-
-      // react/no-danger: Set to warning due to security implications
-      'react/no-danger': 1,
-
-      // react/no-deprecated: Set to error to prevent usage of deprecated React features
-      'react/no-deprecated': 2,
-
-      // react/no-direct-mutation-state: Set to error to prevent direct state mutation
-      'react/no-direct-mutation-state': 2,
-
-      // react/no-find-dom-node: Set to error as this API is deprecated in StrictMode
-      'react/no-find-dom-node': 2,
-
-      // react/no-is-mounted: Set to error as this API is deprecated
-      'react/no-is-mounted': 2,
-
-      // react/no-string-refs: Set to error as string refs are deprecated
-      'react/no-string-refs': 2,
-
-      // react/no-unescaped-entities: Set to error to prevent invalid characters in JSX
-      'react/no-unescaped-entities': 2,
-
-      // react/no-unknown-property: Set to error to prevent typos in DOM properties
-      'react/no-unknown-property': 2,
-
-      // react/no-unused-prop-types: Set to warning to flag unused propTypes
-      'react/no-unused-prop-types': 1,
-
-      // react/prefer-es6-class: Set to always use ES6 classes for components
-      'react/prefer-es6-class': [2, 'always'],
-
-      // react/prefer-stateless-function: Set to warning to encourage function components
-      'react/prefer-stateless-function': 1,
-
-      // react/prop-types: Disabled to allow alternative type systems
-      'react/prop-types': 0,
-
-      // react/react-in-jsx-scope: Set to error to require React in scope for JSX
-      'react/react-in-jsx-scope': 2,
-
-      // react/require-render-return: Set to error to ensure render methods return a value
-      'react/require-render-return': 2,
-
-      // react/self-closing-comp: Set to error to enforce self-closing for empty components
-      'react/self-closing-comp': 2,
-
-      // react/state-in-constructor: Set to warning with never to encourage class fields
-      'react/state-in-constructor': [1, 'never'],
-
       // -------------------------------------------------------------------------
       // React Hooks rules
       // -------------------------------------------------------------------------
 
-      // react-hooks/exhaustive-deps: Set to warning to flag missing dependencies in hooks
-      'react-hooks/exhaustive-deps': 1,
+      // @eslint-react/exhaustive-deps: Set to warning to flag missing dependencies in hooks
+      '@eslint-react/exhaustive-deps': 1,
 
-      // react-hooks/rules-of-hooks: Set to error to enforce Rules of Hooks
-      'react-hooks/rules-of-hooks': 2,
+      // @eslint-react/rules-of-hooks: Set to error to enforce the Rules of Hooks
+      '@eslint-react/rules-of-hooks': 2,
 
       // -------------------------------------------------------------------------
       // Import rules for React projects

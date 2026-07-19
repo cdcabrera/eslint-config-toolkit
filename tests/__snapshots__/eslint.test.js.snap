@@ -382,7 +382,7 @@ exports[`ESLint Configurations invalid.node.js should have the expected linting 
 
 exports[`ESLint Configurations invalid.react.jsx should have the expected linting issues 1`] = `
 {
-  "errorCount": 24,
+  "errorCount": 22,
   "filePath": "invalid.react.jsx",
   "filtering": {
     "appliedFilters": [
@@ -407,13 +407,6 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "severity": "error",
     },
     {
-      "column": 18,
-      "line": 10,
-      "message": "Value must be omitted for boolean attribute \`disabled\`",
-      "ruleId": "react/jsx-boolean-value",
-      "severity": "error",
-    },
-    {
       "column": 1,
       "line": 14,
       "message": "Missing JSDoc comment.",
@@ -424,7 +417,7 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "column": 10,
       "line": 17,
       "message": "Expected indentation of 8 space characters but found 4.",
-      "ruleId": "react/jsx-indent",
+      "ruleId": "@stylistic/jsx-indent",
       "severity": "error",
     },
     {
@@ -445,7 +438,7 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "column": 9,
       "line": 19,
       "message": "Expected indentation of 6 space characters but found 8.",
-      "ruleId": "react/jsx-indent",
+      "ruleId": "@stylistic/jsx-indent",
       "severity": "error",
     },
     {
@@ -465,8 +458,8 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
     {
       "column": 26,
       "line": 29,
-      "message": "Missing "key" prop for element in iterator",
-      "ruleId": "react/jsx-key",
+      "message": "Missing 'key' for element when rendering list.",
+      "ruleId": "@eslint-react/no-missing-key",
       "severity": "error",
     },
     {
@@ -474,13 +467,6 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "line": 35,
       "message": "Missing JSDoc comment.",
       "ruleId": "jsdoc/require-jsdoc",
-      "severity": "error",
-    },
-    {
-      "column": 31,
-      "line": 36,
-      "message": "No duplicate props allowed",
-      "ruleId": "react/jsx-no-duplicate-props",
       "severity": "error",
     },
     {
@@ -515,7 +501,7 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "column": 15,
       "line": 46,
       "message": "Unknown property 'autofocus' found, use 'autoFocus' instead",
-      "ruleId": "react/no-unknown-property",
+      "ruleId": "@eslint-react/dom-no-unknown-property",
       "severity": "error",
     },
     {
@@ -536,14 +522,14 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "column": 6,
       "line": 58,
       "message": "React Hook React.useEffect has a missing dependency: 'count'. Either include it or remove the dependency array.",
-      "ruleId": "react-hooks/exhaustive-deps",
+      "ruleId": "@eslint-react/exhaustive-deps",
       "severity": "warning",
     },
     {
       "column": 5,
       "line": 62,
       "message": "React Hook "React.useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render.",
-      "ruleId": "react-hooks/rules-of-hooks",
+      "ruleId": "@eslint-react/rules-of-hooks",
       "severity": "error",
     },
     {
@@ -561,10 +547,10 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "severity": "error",
     },
     {
-      "column": 5,
-      "line": 74,
-      "message": "State initialization should be in a class property",
-      "ruleId": "react/state-in-constructor",
+      "column": 3,
+      "line": 77,
+      "message": "Unused method or property 'increment'' of class 'StateMutation'.",
+      "ruleId": "@eslint-react/no-unused-class-component-members",
       "severity": "warning",
     },
     {
@@ -577,8 +563,8 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
     {
       "column": 5,
       "line": 79,
-      "message": "Do not mutate state directly. Use setState().",
-      "ruleId": "react/no-direct-mutation-state",
+      "message": "Do not mutate state directly. Use 'setState()' instead.",
+      "ruleId": "@eslint-react/no-direct-mutation-state",
       "severity": "error",
     },
     {
@@ -596,7 +582,7 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "severity": "error",
     },
   ],
-  "totalIssues": 29,
+  "totalIssues": 27,
   "warningCount": 5,
 }
 `;
