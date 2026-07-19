@@ -224,7 +224,7 @@ When adding new rules or configurations:
 3. Update documentation in `DOCS.md` (required). At minimum update:
    - Configuration Details → the affected configuration(s) (Base, Node.js, React, JSON, Jest, Vitest, TypeScript)
    - Rule Customizations → if adding/tweaking opinionated defaults
-   - Compatibility → ensure the plugin list remains accurate (e.g., @stylistic, import, jsdoc, comment-length, eslint).
+   - Compatibility → ensure the plugin list remains accurate (e.g., @stylistic, import, jsdoc, n, @eslint/json).
    - Advanced Usage → update Prettier Integration, TypeScript Type Definitions, or Legacy Configuration if impacted
    - Examples → add or update examples demonstrating the new/changed behavior
    - Troubleshooting → note new issues or migration tips if users may encounter diffs

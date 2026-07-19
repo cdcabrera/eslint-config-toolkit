@@ -234,7 +234,7 @@ exports[`ESLint Configurations invalid.jest.js should have the expected linting 
 
 exports[`ESLint Configurations invalid.json.json should have the expected linting issues 1`] = `
 {
-  "errorCount": 2,
+  "errorCount": 1,
   "filePath": "invalid.json.json",
   "filtering": {
     "appliedFilters": [
@@ -245,21 +245,14 @@ exports[`ESLint Configurations invalid.json.json should have the expected lintin
   },
   "messages": [
     {
-      "column": 19,
-      "line": 11,
-      "message": "Value expected",
-      "ruleId": "json/*",
-      "severity": "error",
-    },
-    {
-      "column": 7,
-      "line": 18,
-      "message": "Trailing comma",
-      "ruleId": "json/*",
+      "column": 3,
+      "line": 6,
+      "message": "Parsing error: Unexpected token RBracket found.",
+      "ruleId": null,
       "severity": "error",
     },
   ],
-  "totalIssues": 2,
+  "totalIssues": 1,
   "warningCount": 0,
 }
 `;
@@ -704,6 +697,23 @@ exports[`ESLint Configurations invalid.vitest.js should have the expected lintin
   ],
   "totalIssues": 6,
   "warningCount": 1,
+}
+`;
+
+exports[`ESLint Configurations valid.jsonc should have the expected linting issues 1`] = `
+{
+  "errorCount": 0,
+  "filePath": "valid.jsonc",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+    ],
+    "ruleBreakdown": {},
+    "totalFiltered": 0,
+  },
+  "messages": [],
+  "totalIssues": 0,
+  "warningCount": 0,
 }
 `;
 

@@ -14,12 +14,13 @@ Includes...
 - **Stylistic Rules**: Comprehensive code formatting with @stylistic plugin
 - **Accessibility**: Includes JSX accessibility rules when using the React configuration
 - **TypeScript Support**: Linting support for TypeScript projects
+- **JSONC & JSON5**: Native support for extended JSON formats
 
 And configuration for...
 - **Base Configuration**: Core JavaScript rules for any project
 - **Node.js Configuration**: Specific rules for Node.js projects
 - **React Configuration**: Specific rules for React projects
-- **JSON Configuration**: Specific rules for JSON files
+- **JSON Configuration**: Support for JSON, JSONC, and JSON5 files
 - **Jest Configuration**: Specific rules for Jest testing
 - **Vitest Configuration**: Specific rules for Vitest testing
 - **TypeScript Configuration**: Specific rules for TypeScript projects
