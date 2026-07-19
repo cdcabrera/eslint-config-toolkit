@@ -76,6 +76,15 @@ const config = [
       // @eslint-react/dom-no-unknown-property: Set to error to prevent typos in DOM properties and encourage camelCase
       '@eslint-react/dom-no-unknown-property': 2,
 
+      // @stylistic/jsx-shorthand-boolean: Set to error to enforce shorthand syntax for boolean props - set for release under 6.0.0
+      // '@stylistic/jsx-shorthand-boolean': 2,
+
+      // @stylistic/jsx-shorthand-fragment: Set to warning to prefer shorthand <> fragments - set for release under 6.0.0
+      // '@stylistic/jsx-shorthand-fragment': 1,
+
+      // @eslint-react/jsx-no-duplicate-props: Set to error to prevent duplicate properties on JSX elements - unnecessary now
+      // '@eslint-react/jsx-no-duplicate-props': 2,
+
       // -------------------------------------------------------------------------
       // Stylistic React/JSX rules
       // -------------------------------------------------------------------------
