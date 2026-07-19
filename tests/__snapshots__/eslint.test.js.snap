@@ -2,7 +2,7 @@
 
 exports[`ESLint Configurations invalid.base.js should have the expected linting issues 1`] = `
 {
-  "errorCount": 15,
+  "errorCount": 17,
   "filePath": "invalid.base.js",
   "filtering": {
     "appliedFilters": [
@@ -133,14 +133,35 @@ exports[`ESLint Configurations invalid.base.js should have the expected linting 
     },
     {
       "column": 1,
-      "line": 54,
+      "line": 55,
+      "message": "Missing JSDoc comment.",
+      "ruleId": "jsdoc/require-jsdoc",
+      "severity": "error",
+    },
+    {
+      "column": 10,
+      "line": 55,
+      "message": "Expected to return a value at the end of function 'missingCurly'.",
+      "ruleId": "consistent-return",
+      "severity": "warning",
+    },
+    {
+      "column": 18,
+      "line": 56,
+      "message": "Expected { after 'if' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
+    {
+      "column": 1,
+      "line": 59,
       "message": "'module' is not defined.",
       "ruleId": "no-undef",
       "severity": "error",
     },
   ],
-  "totalIssues": 18,
-  "warningCount": 3,
+  "totalIssues": 21,
+  "warningCount": 4,
 }
 `;
 
@@ -802,7 +823,7 @@ exports[`Rule Customizations custom.array-bracket-newline.js should enforce cons
 
 exports[`Rule Customizations custom.brace-style.js should enforce consistent line breaking and formatting (Note: Configured as 1tbs with allowSingleLine: true to allow consistent brace style with flexibility for single-line blocks) 1`] = `
 {
-  "errorCount": 12,
+  "errorCount": 15,
   "filePath": "custom.brace-style.js",
   "filtering": {
     "appliedFilters": [
@@ -918,14 +939,35 @@ exports[`Rule Customizations custom.brace-style.js should enforce consistent lin
       "severity": "error",
     },
     {
+      "column": 13,
+      "line": 136,
+      "message": "Expected { after 'if' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
+    {
+      "column": 31,
+      "line": 137,
+      "message": "Expected { after 'for' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
+    {
       "column": 10,
       "line": 138,
       "message": "Unexpected constant condition.",
       "ruleId": "no-constant-condition",
       "severity": "error",
     },
+    {
+      "column": 17,
+      "line": 138,
+      "message": "Expected { after 'while' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 15,
+  "totalIssues": 18,
   "warningCount": 3,
 }
 `;
@@ -989,6 +1031,70 @@ exports[`Rule Customizations custom.cond-assign.js should allow assignments in w
   "messages": [],
   "totalIssues": 0,
   "warningCount": 0,
+}
+`;
+
+exports[`Rule Customizations custom.curly.js should enforce curly braces for all control statements (Note: Set to "all" to ensure consistent use of braces across the codebase) 1`] = `
+{
+  "errorCount": 3,
+  "filePath": "custom.curly.js",
+  "filtering": {
+    "appliedFilters": [
+      "no-undef",
+      "jsdoc/require-jsdoc",
+      "jsdoc/tag-lines",
+      "jsdoc/require-param",
+      "jsdoc/require-returns",
+      "arrow-body-style",
+      "@stylistic/max-statements-per-line",
+      "@stylistic/padding-line-between-statements",
+    ],
+    "ruleBreakdown": {
+      "jsdoc/require-returns": 2,
+      "jsdoc/tag-lines": 2,
+      "no-undef": 2,
+    },
+    "totalFiltered": 6,
+  },
+  "messages": [
+    {
+      "column": 10,
+      "line": 8,
+      "message": "Expected to return a value at the end of function 'curlyCorrect'.",
+      "ruleId": "consistent-return",
+      "severity": "warning",
+    },
+    {
+      "column": 10,
+      "line": 26,
+      "message": "Expected to return a value at the end of function 'curlyIncorrect'.",
+      "ruleId": "consistent-return",
+      "severity": "warning",
+    },
+    {
+      "column": 18,
+      "line": 27,
+      "message": "Expected { after 'if' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
+    {
+      "column": 21,
+      "line": 29,
+      "message": "Expected { after 'while' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
+    {
+      "column": 32,
+      "line": 31,
+      "message": "Expected { after 'for' condition.",
+      "ruleId": "curly",
+      "severity": "error",
+    },
+  ],
+  "totalIssues": 5,
+  "warningCount": 2,
 }
 `;
 
