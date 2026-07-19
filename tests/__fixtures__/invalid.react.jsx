@@ -2,10 +2,7 @@
 
 import React from 'react';
 
-// Missing React import (will be caught by react-in-jsx-scope)
-// import React from 'react';
-
-// Boolean prop with explicit value (should be implicit)
+// Boolean prop with explicit value (should be implicit - pending @stylistic v6.0.0)
 function BooleanProp() {
   return <button disabled={true}>Click me</button>;
 }
@@ -31,9 +28,16 @@ function MissingKey() {
   );
 }
 
-// Duplicate props
+// Duplicate props (coverage gap: react/jsx-no-duplicate-props has no @eslint-react equivalent).
+// Uses a known attribute (`id`) so @eslint-react/dom-no-unknown-property does not mask the gap;
+// expected to produce NO duplicate-prop violation so the regression is visible in the snapshot.
 function DuplicateProps() {
-  return <div className="one" className="two">Duplicate</div>;
+  return <div id="first" id="second">Duplicate props</div>;
+}
+
+// Children passed as a prop instead of JSX children
+function ChildrenProp() {
+  return <div children="Children prop" />;
 }
 
 // Accessibility issues
@@ -84,9 +88,19 @@ class StateMutation extends React.Component {
   }
 }
 
-// Missing prop types
-function MissingPropTypes(props) {
-  return <div>{props.name}</div>;
+// JSX scope tracking: `Child` is only referenced from JSX and is NOT exported, so it must
+// not be reported by no-unused-vars. `UndeclaredChild` must be reported by toolkit/jsx-uses-vars.
+function Child() {
+  return <span />;
+}
+
+function ScopeTracking() {
+  return (
+    <div>
+      <Child />
+      <UndeclaredChild />
+    </div>
+  );
 }
 
 export {
@@ -94,8 +108,9 @@ export {
   BadIndentation,
   MissingKey,
   DuplicateProps,
+  ChildrenProp,
   AccessibilityIssues,
   HooksIssues,
   StateMutation,
-  MissingPropTypes
+  ScopeTracking
 };

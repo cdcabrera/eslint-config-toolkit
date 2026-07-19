@@ -18,4 +18,14 @@ This manifest serves as a central registry for rules and APIs that have historic
 
 - **Mandatory Logic**: The `version` field must always be synchronized with the `engines.node` field in the root `package.json`.
 
-Last updated: May 3, 2026
+## toolkit/jsx-uses-vars
+
+- **Issues**: Standard JS parsers (`espree`, `@babel/eslint-parser`) do not generate scope references for `JSXOpeningElement`, causing false-positive `no-unused-vars` diagnostics on declared components and silent misses on undeclared tags (`no-undef`).
+- **Mandatory Logic/Configuration**:
+  - **Registration & Severity**: Must remain enabled with severity `2` (`error`) under the `toolkit` namespace in `configs/react.js`. Consolidates `react/jsx-uses-vars`, `react/jsx-uses-react` (automatic runtime assumed), and `react/jsx-no-undef` without re-introducing `eslint-plugin-react`.
+  - **AST Traversal**: Inspect `JSXOpeningElement` and resolve nested member expressions to root identifiers (`<UI.Button />` -> `UI`).
+  - **Exclusions**: Skip intrinsic lowercase elements (`/^[a-z]/`), `<this.Component>`, and `JSXNamespacedName` (`<svg:rect>`), but retain lowercase member expressions (`<components.button />`).
+  - **Scope Resolution**: Use modern `sourceCode.getScope()` and `sourceCode.markVariableAsUsed()` (avoid deprecated `context` APIs); traverse `scope.upper` against `scope.set` to check globals before emitting undeclared diagnostics.
+  - **TypeScript Interoperability**: Safe to disable (`0`) under `@typescript-eslint/parser` as TypeScript handles JSX scopes natively.
+
+Last updated: November 22, 2026
