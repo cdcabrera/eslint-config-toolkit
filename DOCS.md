@@ -535,21 +535,21 @@ This section provides information about compatibility with different ESLint vers
 
 The toolkit includes and is compatible with the following plugins:
 
-| Plugin                       | Purpose                    |
-|------------------------------|----------------------------|
-| @stylistic/eslint-plugin     | Code style rules           |
-| eslint-plugin-import         | Import/export rules        |
-| eslint-plugin-comment-length | Comment formatting         |
-| eslint-plugin-jsdoc          | Documentation rules        |
-| eslint-plugin-n              | Node.js rules              |
-| eslint-plugin-react          | React rules                |
-| eslint-plugin-react-hooks    | React Hooks rules          |
-| eslint-plugin-jsx-a11y       | Accessibility rules        |
-| eslint-plugin-jest           | Jest testing rules         |
-| @vitest/eslint-plugin        | Vitest testing rules       |
-| typescript-eslint            | TypeScript support         |
+| Plugin                       | Purpose                      |
+|------------------------------|------------------------------|
+| @stylistic/eslint-plugin     | Code style rules             |
+| eslint-plugin-import         | Import/export rules          |
+| eslint-plugin-comment-length | Comment formatting           |
+| eslint-plugin-jsdoc          | Documentation rules          |
+| eslint-plugin-n              | Node.js rules                |
+| eslint-plugin-react          | React rules                  |
+| eslint-plugin-react-hooks    | React Hooks rules            |
+| eslint-plugin-jsx-a11y       | Accessibility rules          |
+| eslint-plugin-jest           | Jest testing rules           |
+| @vitest/eslint-plugin        | Vitest testing rules         |
+| typescript-eslint            | TypeScript support           |
 | @eslint/json                 | JSON, JSONC, & JSON5 support |
-| eslint-plugin-unicorn        | Modern best-practice rules |
+| eslint-plugin-unicorn        | Modern best-practice rules   |
 
 ## Contributing
 
