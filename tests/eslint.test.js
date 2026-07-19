@@ -229,6 +229,13 @@ describe('Rule Customizations', () => {
       rule: 'curly',
       note: 'Set to "all" to ensure consistent use of braces across the codebase',
       disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
+    },
+    {
+      file: 'custom.id-length.js',
+      description: 'should enforce minimum identifier length with exceptions',
+      rule: 'id-length',
+      note: 'Set min to 2, exempting properties and common loop/internal variables',
+      disableRules: [...global.FILTERABLE_RULES.documentation, ...global.FILTERABLE_RULES.style]
     }
   ])('$file $description (Note: $note)', async ({ file, rule, disableRules }) => {
     const result = await global.lintAndProcessFile(file, { disableRules, testRule: rule });

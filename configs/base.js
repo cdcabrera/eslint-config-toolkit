@@ -64,6 +64,13 @@ const config = [
       // func-names: Set to as-needed to require names only when needed for recursion or debugging
       'func-names': [2, 'as-needed'],
 
+      // id-length: Enforce a minimum identifier length with specific exceptions
+      'id-length': [2, {
+        min: 2,
+        properties: 'never',
+        exceptions: ['a', 'b', 'i', 'j', 'k', '_']
+      }],
+
       // no-bitwise: Set to warning level to flag potential operator confusion (& vs &&)
       'no-bitwise': 1,
 

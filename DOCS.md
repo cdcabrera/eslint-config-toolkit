@@ -43,6 +43,7 @@ Key features:
 - **GitIgnore Integration**: Automatically excludes files in your `.gitignore`, improving performance and simplifying configuration
 - **Control Flow**: Enforces the use of curly braces for all control statements to prevent logic errors and improve readability
 - **Import Management**: Enforces proper module import order and prevents circular dependencies
+- **Naming Standards**: Enforces a minimum identifier length of 2 characters (with common exceptions like `i`, `j`, `_`) for clarity
 - **Documentation**: Requires JSDoc for public APIs with proper parameter and return type documentation
 
 ### Node.js Configuration
