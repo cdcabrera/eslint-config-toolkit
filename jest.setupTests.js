@@ -1,6 +1,11 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import * as babelParser from '@babel/parser';
+import { jest } from '@jest/globals';
 import { ESLint } from 'eslint';
+
+// Provide ESM `@babel/parser` to `@babel/eslint-parser`'s `createRequire` on Node < 24.9
+jest.mock('@babel/parser', () => babelParser);
 
 /**
  * Rule Filtering Policy
