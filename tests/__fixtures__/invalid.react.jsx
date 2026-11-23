@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-// Boolean prop with explicit value (should be implicit - pending @stylistic v6.0.0)
+// Boolean prop with explicit value (should be implicit)
 function BooleanProp() {
   return <button disabled={true}>Click me</button>;
 }
@@ -103,6 +103,11 @@ function ScopeTracking() {
   );
 }
 
+// Explicit React.Fragment without attributes (allowed: @stylistic/jsx-shorthand-fragment is disabled)
+function FragmentSyntax() {
+  return <React.Fragment>Fragment content</React.Fragment>;
+}
+
 export {
   BooleanProp,
   BadIndentation,
@@ -112,5 +117,6 @@ export {
   AccessibilityIssues,
   HooksIssues,
   StateMutation,
-  ScopeTracking
+  ScopeTracking,
+  FragmentSyntax
 };

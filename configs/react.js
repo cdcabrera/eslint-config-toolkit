@@ -155,13 +155,11 @@ const config = [
       // Stylistic React/JSX rules
       // -------------------------------------------------------------------------
 
-      // @stylistic/jsx-shorthand-boolean: Set to error to enforce shorthand syntax for boolean props
-      // (replaces react/jsx-boolean-value 'never'). Rule ships in @stylistic/eslint-plugin 6.0.0; enable on upgrade.
-      // '@stylistic/jsx-shorthand-boolean': 2,
+      // @stylistic/jsx-shorthand-boolean: Set to error to enforce shorthand syntax for boolean props (replaces react/jsx-boolean-value)
+      '@stylistic/jsx-shorthand-boolean': 2,
 
-      // @stylistic/jsx-shorthand-fragment: Set to warning with never to prefer <React.Fragment> over <>
-      // (replaces react/jsx-fragments 'element'). Rule ships in @stylistic/eslint-plugin 6.0.0; enable on upgrade.
-      // '@stylistic/jsx-shorthand-fragment': [1, 'never'],
+      // @stylistic/jsx-shorthand-fragment: Disable to allow <React.Fragment> when no attributes are present
+      '@stylistic/jsx-shorthand-fragment': 0,
 
       // @stylistic/jsx-closing-bracket-location: Set to line-aligned for consistent bracket placement in multiline JSX
       '@stylistic/jsx-closing-bracket-location': [2, 'line-aligned'],
