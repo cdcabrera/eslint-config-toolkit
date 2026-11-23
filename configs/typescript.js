@@ -43,15 +43,33 @@ const config = [
       '@typescript-eslint': tsEslint.plugin
     },
     rules: {
-      // Disable base rules that TypeScript handles
+      // -------------------------------------------------------------------------
+      // Disabled base rules handled natively by TypeScript
+      // -------------------------------------------------------------------------
+
+      // no-unused-vars: Set to off in favor of @typescript-eslint/no-unused-vars
       'no-unused-vars': 0,
+
+      // no-undef: Set to off since the TypeScript compiler checks undeclared identifiers
       'no-undef': 0,
+
+      // import/no-unresolved: Set to off since TypeScript resolves module imports and type paths
       'import/no-unresolved': 0,
+
+      // jsdoc/require-returns: Set to off since return types are expressed in TypeScript signatures
       'jsdoc/require-returns': 0,
+
+      // jsdoc/require-returns-type: Set to off since TypeScript annotations provide return types
       'jsdoc/require-returns-type': 0,
+
+      // jsdoc/require-param-type: Set to off since TypeScript annotations provide parameter types
       'jsdoc/require-param-type': 0,
 
+      // -------------------------------------------------------------------------
       // TypeScript-specific rules
+      // -------------------------------------------------------------------------
+
+      // @typescript-eslint/consistent-type-imports: Set to error with inline-type-imports to enforce explicit type imports
       '@typescript-eslint/consistent-type-imports': [
         2,
         {
@@ -60,15 +78,21 @@ const config = [
           disallowTypeAnnotations: false
         }
       ],
+
+      // @typescript-eslint/consistent-type-exports: Set to error with inline type specifiers to enforce explicit type exports
       '@typescript-eslint/consistent-type-exports': [
         2,
         {
           fixMixedExportsWithInlineTypeSpecifier: true
         }
       ],
+
+      // @typescript-eslint/no-explicit-any: Set to warning to discourage unsafe any types while allowing gradual typing
       '@typescript-eslint/no-explicit-any': 1,
+
+      // @typescript-eslint/no-unused-vars: Set to error while ignoring underscore-prefixed parameters and variables
       '@typescript-eslint/no-unused-vars': [
-        'error',
+        2,
         {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_'
@@ -83,7 +107,10 @@ const config = [
   {
     files: ['**/*.test.ts', '**/__tests__/**/*.ts'],
     rules: {
+      // @typescript-eslint/no-explicit-any: Set to off in tests for flexible mocking and fixtures
       '@typescript-eslint/no-explicit-any': 0,
+
+      // no-console: Set to off in tests to allow diagnostic output
       'no-console': 0
     }
   }

@@ -346,7 +346,7 @@ Available globals include:
 
 ### TypeScript Type Definitions
 
-The toolkit includes TypeScript type definitions for consuming the library itself. Note that this toolkit does not provide support for linting TypeScript files - it only includes type definitions that provide the following benefits when using the toolkit:
+In addition to linting TypeScript files via `toolkit.typescript` (see [TypeScript Configuration](#typescript-configuration)), the toolkit includes TypeScript type definitions for consuming the library itself:
 
 - **Better IDE Integration**: Get autocompletion and type checking when using the toolkit
 - **Error Prevention**: Catch configuration errors before running ESLint
@@ -377,7 +377,7 @@ export default [
 
 The type definitions cover all exports from the toolkit, including configuration arrays, utility functions, and the globals object.
 
-If you need to lint TypeScript files in your project, you would need to add additional ESLint plugins such as `@typescript-eslint/eslint-plugin` and configure them alongside this toolkit.
+To lint TypeScript source files (`.ts`, `.tsx`, `.mts`, `.cts`), include `...toolkit.typescript` in your ESLint configuration as shown in [TypeScript Configuration](#typescript-configuration).
 
 ### Prettier Integration
 
@@ -465,6 +465,9 @@ module.exports = compat.config(toolkit.jest);
 
 // For Vitest testing
 module.exports = compat.config(toolkit.vitest);
+
+// For TypeScript projects
+module.exports = compat.config(toolkit.typescript);
 ```
 
 ### Complete Project Examples

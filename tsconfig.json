@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
+    "strict": false,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "emitDeclarationOnly": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "module": "ESNext",
     "target": "ESNext",
     "preserveConstEnums": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": false
   },
   "include": ["**/*.js", "**/*.ts", "index.d.ts"],
   "exclude": ["node_modules"]

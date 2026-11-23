@@ -1,5 +1,5 @@
 // FIXTURE: This file contains intentional linting issues to test the TypeScript configuration
-import { type BaseConfig } from '../..'; // Should trigger @typescript-eslint/consistent-type-imports if not using 'import type' or inline
+import { BaseConfig, type NodeConfig } from '../..'; // Should trigger @typescript-eslint/consistent-type-imports if not using 'import type' or inline
 
 // Should trigger @typescript-eslint/no-explicit-any (warning)
 const data: any = {
@@ -7,7 +7,7 @@ const data: any = {
 };
 
 // Should trigger @typescript-eslint/no-unused-vars (error)
-const unusedVar = 'I am not used';
+const unusedVar: BaseConfig = [];
 
 
 // Should NOT trigger no-undef or no-unused-vars (JS versions)
@@ -21,4 +21,5 @@ function testJsDoc(param) {
   return param;
 }
 
-export { data, testJsDoc };
+// Should trigger @typescript-eslint/consistent-type-exports for NodeConfig (error)
+export { NodeConfig, data, testJsDoc };

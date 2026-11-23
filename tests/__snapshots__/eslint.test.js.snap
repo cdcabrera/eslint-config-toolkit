@@ -603,7 +603,7 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
 
 exports[`ESLint Configurations invalid.typescript.ts should have the expected linting issues 1`] = `
 {
-  "errorCount": 2,
+  "errorCount": 3,
   "filePath": "invalid.typescript.ts",
   "filtering": {
     "appliedFilters": [
@@ -614,10 +614,10 @@ exports[`ESLint Configurations invalid.typescript.ts should have the expected li
   },
   "messages": [
     {
-      "column": 15,
+      "column": 1,
       "line": 2,
-      "message": "'BaseConfig' is defined but never used. Allowed unused vars must match /^_/u.",
-      "ruleId": "@typescript-eslint/no-unused-vars",
+      "message": "All imports in the declaration are only used as types. Use \`import type\`.",
+      "ruleId": "@typescript-eslint/consistent-type-imports",
       "severity": "error",
     },
     {
@@ -634,8 +634,15 @@ exports[`ESLint Configurations invalid.typescript.ts should have the expected li
       "ruleId": "@typescript-eslint/no-unused-vars",
       "severity": "error",
     },
+    {
+      "column": 1,
+      "line": 25,
+      "message": "Type export NodeConfig is not a value and should be exported using \`export type\`.",
+      "ruleId": "@typescript-eslint/consistent-type-exports",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 3,
+  "totalIssues": 4,
   "warningCount": 1,
 }
 `;
