@@ -10,6 +10,8 @@ Comprehensive usage and in-depth explanations for each configuration.
   - [Base Configuration](#base-configuration)
   - [Node.js Configuration](#nodejs-configuration)
   - [React Configuration](#react-configuration)
+    - [Built-in JSX Scope Tracking (toolkit/jsx-uses-vars)](#built-in-jsx-scope-tracking-toolkitjsx-uses-vars)
+    - [Migration and Legacy Interoperability](#migration-and-legacy-interoperability)
   - [JSON Configuration](#json-configuration)
   - [Jest Configuration](#jest-configuration)
   - [Vitest Configuration](#vitest-configuration)
@@ -88,6 +90,7 @@ The React configuration extends the base configuration and adds:
 - JSX Accessibility rules
 - Common browser globals
 - Babel parser for better JSX support
+- Built-in JSX component scope tracking (`toolkit/jsx-uses-vars`)
 
 Key features:
 
@@ -95,6 +98,7 @@ Key features:
 - **Hooks Validation**: Ensures React Hooks follow the rules of hooks and have proper dependencies
 - **Accessibility**: Includes JSX-a11y rules to make your React applications more accessible
 - **Babel Integration**: Uses Babel parser for improved JSX syntax support without requiring a Babel config file
+- **JSX Scope Tracking**: Automatically marks JSX component identifiers as used and flags undeclared components via built-in `toolkit/jsx-uses-vars`
 
 Usage example:
 
@@ -107,8 +111,69 @@ export default [
   {
     rules: {
       // Custom overrides for your React project
-      'react/jsx-no-bind': [1, { allowArrowFunctions: true }],
-      'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }]
+      '@eslint-react/dom-no-dangerously-set-innerhtml': 0,
+      '@eslint-react/jsx-no-useless-fragment': 2
+    }
+  }
+];
+```
+
+> **Note:** React rules are powered by `@eslint-react/eslint-plugin` under the unified `@eslint-react/*` namespace (replacing legacy `react/*` and `react-hooks/*` plugins). For migration details and legacy plugin coexistence, see [Migration and Legacy Interoperability](#migration-and-legacy-interoperability).
+
+#### Built-in JSX Scope Tracking (toolkit/jsx-uses-vars)
+
+Standard JavaScript and Babel parsers do not track variable references in JSX opening tags. Without tracking, rendered components trigger false-positive `no-unused-vars` errors, and undeclared components bypass `no-undef`.
+
+Instead of requiring the `eslint-plugin-react` package solely for scope tracking, `toolkit.react` embeds a single lightweight rule (`toolkit/jsx-uses-vars`) that replaces three legacy rules:
+
+| Replaced Legacy Rule | Built-in Rule | What It Does |
+| :--- | :--- | :--- |
+| `react/jsx-uses-vars` | `toolkit/jsx-uses-vars` | Marks JSX components as used (prevents false `no-unused-vars`) |
+| `react/jsx-uses-react` | `toolkit/jsx-uses-vars` | Marks `React` as used when referenced in JSX (e.g., `<React.Fragment>`) |
+| `react/jsx-no-undef` | `toolkit/jsx-uses-vars` | Flags undeclared JSX components as errors |
+
+##### Why and How to Turn It Off
+
+The rule is enabled as an error (`2`) by default. If your project uses TypeScript with `@typescript-eslint/parser`, TypeScript handles JSX scope tracking natively. You can turn it off in your `eslint.config.js`:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+
+export default [
+  ...toolkit.react,
+  {
+    rules: {
+      'toolkit/jsx-uses-vars': 0 // Turn off when using TypeScript
+    }
+  }
+];
+```
+
+#### Migration and Legacy Interoperability
+
+The React configuration uses an explicit allowlist of `@eslint-react/*` rules rather than spreading `@eslint-react/recommended`, avoiding premature React 19 or Compiler constraints.
+
+- **Dropped Rules**: Obsolete rules without an `@eslint-react` equivalent are no longer enforced: `react/prop-types`, `react/no-unused-prop-types`, `react/jsx-no-duplicate-props`, `react/no-string-refs`, and `react/no-unescaped-entities`.
+- **Deferred Rules**: Boolean prop shorthand (`react/jsx-boolean-value`) and fragment syntax (`react/jsx-fragments`) are deferred pending `@stylistic/eslint-plugin` v6.0.0.
+
+##### Running Alongside Legacy Plugins
+
+To retain specific legacy `react/*` or `react-hooks/*` rules during an incremental migration, install `eslint-plugin-react` directly in your project and register it:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+import legacyReact from 'eslint-plugin-react';
+
+export default [
+  ...toolkit.react,
+  {
+    plugins: {
+      react: legacyReact
+    },
+    rules: {
+      'react/no-unescaped-entities': 2 // Retain legacy rule during transition
     }
   }
 ];
@@ -412,8 +477,8 @@ export default [
     rules: {
       // Customize rules for your project needs
       'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
-      'react/prop-types': 'error',
-      'react-hooks/exhaustive-deps': 'warn'
+      '@eslint-react/no-missing-key': 'error',
+      '@eslint-react/exhaustive-deps': 'warn'
     }
   }
 ];
@@ -542,8 +607,8 @@ The toolkit includes and is compatible with the following plugins:
 | eslint-plugin-comment-length | Comment formatting           |
 | eslint-plugin-jsdoc          | Documentation rules          |
 | eslint-plugin-n              | Node.js rules                |
-| eslint-plugin-react          | React rules                  |
-| eslint-plugin-react-hooks    | React Hooks rules            |
+| @eslint-react/eslint-plugin  | Modern React rules           |
+| toolkit (built-in)           | JSX scope tracking rules     |
 | eslint-plugin-jsx-a11y       | Accessibility rules          |
 | eslint-plugin-jest           | Jest testing rules           |
 | @vitest/eslint-plugin        | Vitest testing rules         |
