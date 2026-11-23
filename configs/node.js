@@ -67,7 +67,7 @@ const config = [
       'n/no-unsupported-features/es-syntax': [
         1,
         {
-          version: '>=22.0.0',
+          version: '>=22.18.0',
           ignores: []
         }
       ],

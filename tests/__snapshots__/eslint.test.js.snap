@@ -347,13 +347,6 @@ exports[`ESLint Configurations invalid.node.js should have the expected linting 
       "severity": "error",
     },
     {
-      "column": 38,
-      "line": 27,
-      "message": "'promise-withresolvers' is not supported until Node.js >=22.11.0. The configured version range is '>=22.0.0'.",
-      "ruleId": "n/no-unsupported-features/es-syntax",
-      "severity": "warning",
-    },
-    {
       "column": 1,
       "line": 33,
       "message": "\`fs\` import should occur before import of \`util\`",
@@ -375,8 +368,8 @@ exports[`ESLint Configurations invalid.node.js should have the expected linting 
       "severity": "error",
     },
   ],
-  "totalIssues": 15,
-  "warningCount": 5,
+  "totalIssues": 14,
+  "warningCount": 4,
 }
 `;
 

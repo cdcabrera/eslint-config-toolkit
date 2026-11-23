@@ -23,10 +23,10 @@ function dynamicRequire(moduleName) {
 }
 
 // Node.js 22 Features
-// This will trigger for 'n/no-unsupported-features/es-syntax' when version is >=22.0.0 but not >=22.11.0
+// Supported in Node.js >=22.11.0 (does NOT trigger 'n/no-unsupported-features/es-syntax' when version is >=22.18.0)
 const { promise, resolve, reject } = Promise.withResolvers();
 
-// These should NOT trigger 'n/no-unsupported-features/es-syntax' when version is >=22.0.0
+// These should NOT trigger 'n/no-unsupported-features/es-syntax' when version is >=22.18.0
 const asyncArray = async () => await Array.fromAsync([1, 2, 3]);
 
 // Import/Export Declarations in CJS (should be flagged if treated as CJS)
