@@ -154,8 +154,31 @@ export default [
 
 The React configuration uses an explicit allowlist of `@eslint-react/*` rules rather than spreading `@eslint-react/recommended`, avoiding premature React 19 or Compiler constraints.
 
-- **Dropped Rules**: Obsolete rules without an `@eslint-react` equivalent are no longer enforced: `react/prop-types`, `react/no-unused-prop-types`, `react/jsx-no-duplicate-props`, `react/no-string-refs`, and `react/no-unescaped-entities`.
-- **Deferred Rules**: Boolean prop shorthand (`react/jsx-boolean-value`) and fragment syntax (`react/jsx-fragments`) are deferred pending `@stylistic/eslint-plugin` v6.0.0.
+- **Dropped Rules**: Obsolete rules without an `@eslint-react` or `@stylistic` equivalent are no longer enforced: `react/prop-types`, `react/no-unused-prop-types`, `react/jsx-no-duplicate-props`, `react/no-string-refs`, `react/no-unescaped-entities`, and `react/jsx-fragments` (`element` mode).
+- **Stylistic JSX Shorthand Rules**: Boolean prop shorthand (`@stylistic/jsx-shorthand-boolean`) is enforced via `@stylistic/eslint-plugin` v6, while `@stylistic/jsx-shorthand-fragment` is disabled (`0`) to allow explicit `<React.Fragment>`.
+
+##### Enforcing Explicit `<React.Fragment>`
+To restore the legacy `react/jsx-fragments` (`element` mode) warning without installing `eslint-plugin-react`, you can configure ESLint's built-in `no-restricted-syntax` rule in your `eslint.config.js`:
+
+```js
+// eslint.config.js
+import toolkit from '@cdcabrera/eslint-config-toolkit';
+export default [
+  ...toolkit.react,
+  {
+    rules: {
+      // no-restricted-syntax: Set to warning on JSXFragment to prefer <React.Fragment> over <> (replaces react/jsx-fragments 'element')
+      'no-restricted-syntax': [
+        1,
+        {
+          selector: 'JSXFragment',
+          message: 'Prefer React.Fragment over fragment shorthand.'
+        }
+      ]
+    }
+  }
+];
+```
 
 ##### Running Alongside Legacy Plugins
 

@@ -382,7 +382,7 @@ exports[`ESLint Configurations invalid.node.js should have the expected linting 
 
 exports[`ESLint Configurations invalid.react.jsx should have the expected linting issues 1`] = `
 {
-  "errorCount": 23,
+  "errorCount": 25,
   "filePath": "invalid.react.jsx",
   "filtering": {
     "appliedFilters": [
@@ -404,6 +404,13 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "line": 6,
       "message": "Missing JSDoc comment.",
       "ruleId": "jsdoc/require-jsdoc",
+      "severity": "error",
+    },
+    {
+      "column": 18,
+      "line": 7,
+      "message": "Omit the value for boolean attributes.",
+      "ruleId": "@stylistic/jsx-shorthand-boolean",
       "severity": "error",
     },
     {
@@ -581,8 +588,15 @@ exports[`ESLint Configurations invalid.react.jsx should have the expected lintin
       "ruleId": "toolkit/jsx-uses-vars",
       "severity": "error",
     },
+    {
+      "column": 1,
+      "line": 107,
+      "message": "Missing JSDoc comment.",
+      "ruleId": "jsdoc/require-jsdoc",
+      "severity": "error",
+    },
   ],
-  "totalIssues": 27,
+  "totalIssues": 29,
   "warningCount": 4,
 }
 `;
