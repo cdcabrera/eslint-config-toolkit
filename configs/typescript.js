@@ -92,7 +92,7 @@ const config = [
 
       // @typescript-eslint/no-unused-vars: Set to error while ignoring underscore-prefixed parameters and variables
       '@typescript-eslint/no-unused-vars': [
-        'error',
+        2,
         {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_'
