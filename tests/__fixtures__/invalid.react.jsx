@@ -103,7 +103,7 @@ function ScopeTracking() {
   );
 }
 
-// Explicit React.Fragment without attributes
+// Explicit React.Fragment without attributes (allowed: @stylistic/jsx-shorthand-fragment is disabled)
 function FragmentSyntax() {
   return <React.Fragment>Fragment content</React.Fragment>;
 }
