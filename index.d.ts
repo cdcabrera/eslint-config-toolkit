@@ -24,7 +24,7 @@ export const globals: Globals;
 /**
  * A toolkit object containing configuration utilities and helper functions
  * for ESLint. It includes pre-defined configurations for base projects,
- * `Node.js`, `React`, `JSON`, `Jest`, and `globals`.
+ * `Node.js`, `React`, `JSON`, `Jest`, `Vitest`, `TypeScript`, and `globals`.
  */
 declare const toolkit: {
     base: BaseConfig;

@@ -36,7 +36,13 @@ describe('ESLint Configurations', () => {
     },
     {
       file: 'invalid.typescript.ts',
-      disableRules: []
+      disableRules: [],
+      testNotes: [
+        'Verified that type-only imports and exports without explicit type specifiers are flagged by @typescript-eslint/consistent-type-imports and @typescript-eslint/consistent-type-exports.',
+        'Verified that explicit any is flagged as a warning by @typescript-eslint/no-explicit-any.',
+        'Verified that unused variables are flagged by @typescript-eslint/no-unused-vars while base no-unused-vars and no-undef are disabled.',
+        'Verified that JSDoc type rules (jsdoc/require-returns, jsdoc/require-returns-type, jsdoc/require-param-type) are disabled for TypeScript files.'
+      ]
     },
     {
       file: 'invalid.json.json',

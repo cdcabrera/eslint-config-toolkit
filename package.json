@@ -48,7 +48,7 @@
     "test": "npm run test:lint && npm run test:spell && npm run test:spell-docs && npm run test:types && npm run test:ci",
     "test:ci": "export CI=true; npm run test:jest -- --collectCoverage --coverageReporters=\"lcov\" --coverageReporters=\"json-summary\"",
     "test:clearCache": "npm run test:jest -- --clearCache",
-    "test:configs": "eslint --config ./tests/eslint.config.js ./tests/__fixtures__/*.js*",
+    "test:configs": "eslint --config ./tests/eslint.config.js './tests/__fixtures__/*.{js,jsx,json,jsonc,ts}'",
     "test:dev": "npm run test:spell && npm run test:spell-docs && npm run test:types && npm run test:jest-watch",
     "test:lint": "eslint ./configs ./tests/*.js ./index.js",
     "test:lint-watch": "nodemon --watch configs --watch tests --watch index.js --ext js,jsx --exec \"npm run test:lint\"",
@@ -87,7 +87,7 @@
     "eslint": "^9.39.4",
     "jest": "^30.4.2",
     "nodemon": "^3.1.14",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "eslint": ">=9",
