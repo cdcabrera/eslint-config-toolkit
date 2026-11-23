@@ -57,7 +57,13 @@ describe('ESLint Configurations', () => {
     },
     {
       file: 'invalid.react.jsx',
-      disableRules: []
+      disableRules: [],
+      testNotes: [
+        'Verified that explicit boolean prop values (disabled={true}) are flagged by @stylistic/jsx-shorthand-boolean.',
+        'Verified that explicit <React.Fragment> syntax is allowed because @stylistic/jsx-shorthand-fragment is disabled.',
+        'Verified that JSX-referenced components (Child) are tracked by toolkit/jsx-uses-vars and not flagged by no-unused-vars.',
+        'Verified that duplicate props (DuplicateProps) produce no duplicate-prop violation due to the documented @eslint-react coverage gap.'
+      ]
     }
   ])('$file should have the expected linting issues', async ({ file, disableRules }) => {
     const result = await global.lintAndProcessFile(file, { disableRules });
