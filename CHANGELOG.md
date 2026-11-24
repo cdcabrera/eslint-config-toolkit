@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/8092bcdb95165445cd506ecd0433e147b66314ce...b84f1aa041daa2fb41319b992c76bffe0ad0fe43) (2026-11-24)
+⚠ **BREAKING CHANGES**
+* Minimum required Node.js version is now >=22.18.0, and `@babel` packages have been upgraded to v8 (with `@babel/core` added). See [#180](https://github.com/cdcabrera/eslint-config-toolkit/pull/180)
+* `eslint-plugin-react` and `eslint-plugin-react-hooks` have been replaced with `@eslint-react/eslint-plugin`. See [#159](https://github.com/cdcabrera/eslint-config-toolkit/pull/159)
+* `eslint-plugin-json` has been replaced with `@eslint/json` (adding JSONC and JSON5 support). See [#158](https://github.com/cdcabrera/eslint-config-toolkit/pull/158)
+* Base configuration now enforces the `id-length` rule. See [#157](https://github.com/cdcabrera/eslint-config-toolkit/pull/157)
+* Base configuration now enforces the `curly` rule. See [#156](https://github.com/cdcabrera/eslint-config-toolkit/pull/156)
+
+### Features
+* ⚠  add package @eslint-react/eslint-plugin ([#159](https://github.com/cdcabrera/eslint-config-toolkit/pull/159)) ([78f4245](https://github.com/cdcabrera/eslint-config-toolkit/commit/78f42456f213d6efc218dea3f5d905738ca714ab))
+* ⚠  add package @eslint/json ([#158](https://github.com/cdcabrera/eslint-config-toolkit/pull/158)) ([dabe969](https://github.com/cdcabrera/eslint-config-toolkit/commit/dabe96953a2c46487af43a3e7561f1ac782f7c26))
+* ⚠  add id-length rule ([#157](https://github.com/cdcabrera/eslint-config-toolkit/pull/157)) ([39bafd8](https://github.com/cdcabrera/eslint-config-toolkit/commit/39bafd8754234c6108102093e462b66d79861446))
+* ⚠  add curly rule ([#156](https://github.com/cdcabrera/eslint-config-toolkit/pull/156)) ([7147f97](https://github.com/cdcabrera/eslint-config-toolkit/commit/7147f977693e6175729532642a9c6c76c4c879bc))
+
+### Continuous Integrations
+*  remove dup workflow caching ([#163](https://github.com/cdcabrera/eslint-config-toolkit/pull/163)) ([c673f41](https://github.com/cdcabrera/eslint-config-toolkit/commit/c673f418e663e40c55fb23632d79ea8904b31da1))
+
+### Builds
+* **deps** package Jest from 30.4.2 to 30.5.2 ([#179](https://github.com/cdcabrera/eslint-config-toolkit/pull/179)) ([f5679ab](https://github.com/cdcabrera/eslint-config-toolkit/commit/f5679aba3e6215d66b12d87dc2fea2a19d83456b))
+* **deps** lock update ([#175](https://github.com/cdcabrera/eslint-config-toolkit/pull/175)) ([7f7477a](https://github.com/cdcabrera/eslint-config-toolkit/commit/7f7477a9e7f7d5ed82f59c3842414b5ca6075646))
+* **deps** lock update ([#174](https://github.com/cdcabrera/eslint-config-toolkit/pull/174)) ([f6d2e12](https://github.com/cdcabrera/eslint-config-toolkit/commit/f6d2e124e0e230dff721e3e3385ef88fdf95a394))
+* **deps** bump the prod group with 7 updates ([#171](https://github.com/cdcabrera/eslint-config-toolkit/pull/171)) ([d5c613d](https://github.com/cdcabrera/eslint-config-toolkit/commit/d5c613d0f7136c5060d217d7771a0e72e5667b4f))
+* **deps** bump the prod group with 6 updates ([#170](https://github.com/cdcabrera/eslint-config-toolkit/pull/170)) ([beb2256](https://github.com/cdcabrera/eslint-config-toolkit/commit/beb2256862f5fed1ef1b9c0def0202799ff76fe4))
+* **deps** bump the prod group with 7 updates ([#168](https://github.com/cdcabrera/eslint-config-toolkit/pull/168)) ([39eb701](https://github.com/cdcabrera/eslint-config-toolkit/commit/39eb701d22b0309abf7d4b4ff2bc1be4b5ea69e2))
+* **deps-dev** changelog-light from 3.0.8 to 3.1.0 ([#166](https://github.com/cdcabrera/eslint-config-toolkit/pull/166)) ([b8c5ec7](https://github.com/cdcabrera/eslint-config-toolkit/commit/b8c5ec78c07575253af49ba7fe863df4e81b0b6d))
+* **deps** bump actions/setup-node from 6 to 7 ([#164](https://github.com/cdcabrera/eslint-config-toolkit/pull/164)) ([415528d](https://github.com/cdcabrera/eslint-config-toolkit/commit/415528dd66ed7c80f6a9d6d503e832da3f98c589))
+* **deps** bump actions/checkout from 7.0.0 to 7.0.1 ([#165](https://github.com/cdcabrera/eslint-config-toolkit/pull/165)) ([d55409c](https://github.com/cdcabrera/eslint-config-toolkit/commit/d55409c16763d3a1667d120f810db6095321f534))
+* **deps** bump the prod group with 5 updates ([#162](https://github.com/cdcabrera/eslint-config-toolkit/pull/162)) ([ca73a3f](https://github.com/cdcabrera/eslint-config-toolkit/commit/ca73a3fb35610b6dbb2085f0c76f5e0dd4bf65f3))
+
+### Bug Fixes
+* ⚠  add @babel/core and bump @babel packages to 8 ([#180](https://github.com/cdcabrera/eslint-config-toolkit/pull/180)) ([b84f1aa](https://github.com/cdcabrera/eslint-config-toolkit/commit/b84f1aa041daa2fb41319b992c76bffe0ad0fe43))
+*  bump typescript-eslint packages to 8.72.2 ([#178](https://github.com/cdcabrera/eslint-config-toolkit/pull/178)) ([6587868](https://github.com/cdcabrera/eslint-config-toolkit/commit/658786855bfcf630ade22f47a4cbe13d4a2c41bb))
+*  bump typescript and adjust configuration ([#177](https://github.com/cdcabrera/eslint-config-toolkit/pull/177)) ([f8600fa](https://github.com/cdcabrera/eslint-config-toolkit/commit/f8600fa9a6afdf6951664811bebf8fba5c796996))
+*  bump @stylistic/eslint-plugin and activate rules ([#176](https://github.com/cdcabrera/eslint-config-toolkit/pull/176)) ([80f2f8d](https://github.com/cdcabrera/eslint-config-toolkit/commit/80f2f8d7a2d43ad7757c141c597de90b851a5557))
+
 ## [1.1.0](https://github.com/cdcabrera/eslint-config-toolkit/compare/dc6883979b026c821cab31e545932e5b0597ddfe...74b32ac98a393dce0c0b6ad6c0c0125e3f2bc75b) (2026-07-18)
 
 
