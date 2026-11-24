@@ -610,11 +610,12 @@ This section provides information about compatibility with different ESLint vers
 
 ### ESLint Version Compatibility
 
-| ESLint Config Toolkit | ESLint  | Node.js   |
-|-----------------------|---------|-----------|
-| 0.1.x                 | ≥ 9.0.0 | ≥ 20.0.0  |
-| 1.x.x                 | ≥ 9.0.0 | ≥ 22.0.0  |
-| 2.x.x                 | ≥ 9.0.0 | ≥ 22.18.0 |
+| ESLint Config Toolkit | ESLint    | Node.js   |
+|-----------------------|-----------|-----------|
+| 0.1.x                 | ≥ 9.0.0   | ≥ 20.0.0  |
+| 1.x.x                 | ≥ 9.0.0   | ≥ 22.0.0  |
+| 2.x.x                 | ≥ 9.0.0   | ≥ 22.18.0 |
+| 3.x.x                 | ≥ 10.0.0  | ≥ 22.18.0 |
 
 ### Configuration Format Compatibility
 
