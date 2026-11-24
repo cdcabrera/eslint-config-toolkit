@@ -7,6 +7,7 @@
  */
 
 import { defineConfig } from 'eslint/config';
+import { fixupPluginRules } from '@eslint/compat';
 import reactPlugin from '@eslint-react/eslint-plugin';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import importPlugin from 'eslint-plugin-import';
@@ -91,8 +92,8 @@ const config = [
     plugins: {
       '@eslint-react': reactPlugin,
       toolkit: { rules: { 'jsx-uses-vars': jsxUsesVars } },
-      'jsx-a11y': jsxA11yPlugin,
-      import: importPlugin
+      'jsx-a11y': fixupPluginRules(jsxA11yPlugin),
+      import: fixupPluginRules(importPlugin)
     },
 
     // Spread @eslint-react's default settings (react-x.version: 'detect', importSource: 'react',

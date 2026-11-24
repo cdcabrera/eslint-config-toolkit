@@ -7,8 +7,8 @@
  */
 
 import { join } from 'node:path';
-import { defineConfig } from 'eslint/config';
-import { includeIgnoreFile } from '@eslint/compat';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
+import { fixupPluginRules } from '@eslint/compat';
 import eslintJs from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import importPlugin from 'eslint-plugin-import';
@@ -129,6 +129,9 @@ const config = [
         }
       ],
 
+      // no-unassigned-vars: Disabled to evaluate new @eslint/js v10 recommended rule separately
+      'no-unassigned-vars': 0,
+
       // no-unused-vars: Set to warning with ignoreRestSiblings to allow object destructuring patterns
       'no-unused-vars': [
         1,
@@ -139,6 +142,9 @@ const config = [
           caughtErrors: 'none'
         }
       ],
+
+      // no-useless-assignment: Disabled to evaluate new @eslint/js v10 recommended rule separately
+      'no-useless-assignment': 0,
 
       // no-var: Set to error to enforce let/const over var
       'no-var': 2,
@@ -153,6 +159,9 @@ const config = [
           allowEmptyReject: true
         }
       ],
+
+      // preserve-caught-error: Disabled to evaluate new @eslint/js v10 recommended rule separately
+      'preserve-caught-error': 0,
 
       // prefer-spread: Set to warning to encourage spread syntax over .apply()
       'prefer-spread': 1,
@@ -440,7 +449,7 @@ const config = [
   // -------------------------------------------------------------------------
   {
     plugins: {
-      import: importPlugin
+      import: fixupPluginRules(importPlugin)
     },
     rules: {
       // import/default: Set to error to ensure default exports exist when imported

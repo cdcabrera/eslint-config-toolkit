@@ -32,7 +32,7 @@ The basic requirements:
 ## Installation
 
 Toolkit has **one required peer dependency**:
-- **eslint**: The core ESLint package (>=9)
+- **eslint**: The core ESLint package (>=10)
 
 ```bash
 # Using npm
